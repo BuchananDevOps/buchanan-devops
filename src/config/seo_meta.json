@@ -1,0 +1,25 @@
+{
+    "title": "Buchanan Devops | Digital Development",
+    "titleTemplate": "%s - Buchanan Devops",
+    "description": "Buchanan Devops Digital Development - https://buchanandevops.com",
+    "openGraph": {
+      "title": "Buchanan Devops | Digital Development",
+      "description": "Buchanan Devops Digital Development - https://buchanandevops.com",
+      "type": "website",
+      "url": "https://buchanandevops.com",
+      "site_name": "Buchanan Devops Digital Development",
+      "images": [
+        {
+          "url": "/card.png",
+          "width": "800",
+          "height": "600",
+          "alt": "Buchanan Devops"
+        }
+      ]
+    },
+    "twitter": {
+      "handle": "@buchanandevops",
+      "site": "@buchanandevops",
+      "cardType": "summary_large_image"
+    }
+  }

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://qrc.global
+
+# Sitemaps
+Sitemap: https://qrc.global/sitemap.xml
