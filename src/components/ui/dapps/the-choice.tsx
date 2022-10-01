@@ -13,11 +13,11 @@ const TheChoice: React.FC = () => {
             <Row justify="center">
                 <StyledImg width="125px" src="/content/red-pill-trace.svg" alt="dapp technology" />
                 <Text h1 css={{ fontSize: '4rem', ml: '$10' }}>
-                    It's just a Choice
+                    It&apos;s just a Choice
                     <Text css={{ fontSize: '1.5rem',color: '$red600' }}>
                         Between fear, or love. - Bill Hicks
                         <Text>
-                            We've had the pleasure to partner with the most innovative, disruptive, and<br/>
+                            We&apos;ve had the pleasure to partner with the most innovative, disruptive, and<br/>
                             forward-thinking companies in the world over the past few years. Witnessing the<br/>
                             evolution of what was once a dream, become a reality, has been nothing short of<br/>
                             inspiring. We are proud to be a part of this movement, and excited to announce<br/>

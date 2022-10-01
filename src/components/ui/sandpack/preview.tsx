@@ -68,7 +68,7 @@ export const Preview = ({
   loadingScreenRegisteredRef.current = true;
 
   React.useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+
     const iframeElement = iframeRef.current!;
     const clientIdValue = clientId.current;
 

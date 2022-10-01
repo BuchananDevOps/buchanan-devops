@@ -74,7 +74,7 @@ const IntroDevelopSection = () => {
         >
           <Col>
             <Text css={{ color: '#888', marginTop: '-40px' }}>
-              Development Operations, "DevOps" for short requires strategy and
+              Development Operations, &quot;DevOps&quot; for short requires strategy and
               intent for your companies technical challenges. Under our DevOps
               model, development professionals are merged into single team where
               the engineers work across the entire application lifecycle while

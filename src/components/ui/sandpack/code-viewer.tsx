@@ -109,7 +109,6 @@ const SandpackCodeViewer = React.forwardRef<any, CodeViewerProps>(
           readOnly
           code={propCode || code}
           decorators={isAppFile ? decorators : []}
-          filePath={sandpack.activePath}
           initMode={initMode || sandpack.initMode}
           showLineNumbers={showLineNumbers}
           showReadOnly={false}

@@ -63,7 +63,7 @@ const WhySeo: React.FC = () => {
           Search Engine Optimization (SEO) is the organization of data to
           properly reach the targeted customer base within the search engine
           results. We achieve our results through the process of Integrating
-          Schema's, Keyword Research, On-Page Optimization Techniques, Site
+          Schema&apos;s, Keyword Research, On-Page Optimization Techniques, Site
           Organization, Backlinks, and more.
         </Subtitle>
         <Box

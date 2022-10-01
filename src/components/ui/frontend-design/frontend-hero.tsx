@@ -17,9 +17,9 @@ const FrontendHero: React.FC = () => {
             user experience. We then iterate and improve the design and
             functionality based on the feedback we receive from your company on
             the MVP. To address the content below, understand, there are two
-            types of "packages". Either your providing information about your
+            types of &quot;packages&quot;. Either your providing information about your
             business and services, or you have a tangible product that you want
-            to sell. It's that simple.
+            to sell. It&apos;s that simple.
           </Text>
         </Text>
       </Row>

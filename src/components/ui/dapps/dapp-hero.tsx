@@ -100,7 +100,7 @@ const DappHero: React.FC = () => {
               Decentralized Apps (Dapps) are the future of the internet. They
               are applications that run on a decentralized network (blockchain),
               such as Ethereum, and are not controlled or hosted by third party
-              services. Dapp's bring complete freedom to a business with no
+              services. Dapp&apos;s bring complete freedom to a business with no
               restrcitions, <br></br>no censorship, and no fees.
             </StyledSubtitle>
             <Spacer y={1.5} />

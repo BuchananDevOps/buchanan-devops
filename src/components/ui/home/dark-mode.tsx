@@ -168,7 +168,7 @@ const DarkModeSection = () => {
           <img src="/dark-mode-gradient.svg" alt="dark mode background" />
         </Box>
         <Row justify="flex-start">
-          <Title>Marketing shouldn't </Title>
+          <Title>Marketing shouldn&apos;t </Title>
         </Row>
         <Row justify="flex-start">
           <Title>comsume your</Title>
@@ -177,7 +177,7 @@ const DarkModeSection = () => {
         </Row>
         <Subtitle>
           By using organic SEO and tried social media marketing, we can help you
-          reach your target audience without breaking the bank. Overtime we'll
+          reach your target audience without breaking the bank. Overtime we&apos;ll
           be able to hone in on what really makes your customers bite,
           consistently improving your ROI.
         </Subtitle>

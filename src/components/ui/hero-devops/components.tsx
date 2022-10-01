@@ -238,7 +238,7 @@ const HeroComponents = () => {
               }}
               size={12}
             >
-              Building the Future with Dapp's
+              Building the Future with Dapp&apos;s
             </Text>
           </Col>
         </Card.Header>

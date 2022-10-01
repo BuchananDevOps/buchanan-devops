@@ -11,8 +11,8 @@ const LongTermSupportSection: React.FC = () => {
         <Title color="cyan">Support.</Title>
       </Row>
       <Subtitle>
-        We don't just build your website and leave you to it. We provide long
-        term support and maintenance for all of our clients. We'll keep your
+        We don&apos;t just build your website and leave you to it. We provide long
+        term support and maintenance for all of our clients. We&apos;ll keep your
         website up to date and secure so you can focus on running your business.
       </Subtitle>
       <Spacer y={3} css={{ '@xsMax': { mt: '$14' } }} />

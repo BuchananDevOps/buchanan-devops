@@ -47,49 +47,49 @@ export default {
     {
       title: 'Search Marketing (SEM)',
       description:
-        'All NextUI components support cross-browser server-side rendering and provides a simple way to implement it in your project.',
+        'SEM combined with SEO will drive traffic and increase brand awareness for your business.',
       icon: <Server fill="#FF4ECD" />,
     },
     {
       title: 'Digital Marketing',
       description:
-        'NextUI components follow the WAI-ARIA guidelines, provide keyboard support and sensible focus management.',
+        'Branding, Social Media Marketing, Email Marketing, and more. Establishing your brand is key.',
       icon: <TagUser fill="#FF4ECD" />,
     },
     {
       title: 'Business Development',
       description:
-        'Focus ring will appear only when user navigates with keyboard or screen reader.',
+        'Focus of your journey while implementing our strategies and tactics for revenue growth.',
       icon: <RoundPointer fill="#FF4ECD" />,
     },
     {
-      title: 'Front-End Development',
+      title: 'Graphic Design',
       description:
-        'NextUI provides a set of common media queries that, along with Stitches breakpoints allow you create responsive layouts faster.',
+        'We offer complete graphic design services for your business. From logo design to business cards.',
       icon: <Maximize fill="#FF4ECD" />,
     },
     {
-      title: 'GraphQL API ',
+      title: 'GraphQL API Development',
       description:
-        'Build type safe applications, NextUI has a fully-typed API to minimize the learning curve, and help you build applications.',
+        'GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data.',
       icon: <CodeDocument filled={false} fill="#FF4ECD" />,
     },
     {
-      title: 'Override components tags',
+      title: 'Static Site Generation',
       description:
-        'A polymorphic `as` prop is included in all NextUI components.',
+        'The fastest websites are static sites. We use Next.js to generate static sites with React.',
       icon: <HtmlLogo fill="#FF4ECD" />,
     },
     {
       title: 'Decentralized Applications',
       description:
-        "Since NextUI is based on Stitches, it only injects the styles which are actually used, so your users don't download unnecessary CSS.",
+        "The future of the internet is decentralized. We'd love to incorporate blockchain technology into your business.",
       icon: <Flash fill="#FF4ECD" />,
     },
     {
       title: 'Project Management',
       description:
-        'NextUI components are unique and are not tied to any visual trend or design rule, which makes us unique and of course your projects as well.',
+        'Managing digital projects is a complex process. We have a proven process to manage your project.',
       icon: <Magic fill="#FF4ECD" />,
     },
   ],

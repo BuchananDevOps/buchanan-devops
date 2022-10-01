@@ -18,13 +18,7 @@ export type TitleProps = Props & typeof defaultProps;
 const Title: React.FC<TitleProps> = ({ title, desc }) => {
   return (
     <>
-      <h3
-        className="linked-heading"
-        data-name={title}
-        id={`${isString(title) && kebabCase(title)}`}
-      >
-        <Anchor>{title}</Anchor>
-      </h3>
+
       {desc && <ReactMarkdown className="react-markdown">{desc}</ReactMarkdown>}
       <style jsx>{`
         h3 {

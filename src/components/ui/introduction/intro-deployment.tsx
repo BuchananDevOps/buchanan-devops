@@ -66,8 +66,8 @@ const IntroDeploymentSection = () => {
               <a style={{ color: '#FF5B4F' }} href="">
                 Search Engine Optimization
               </a>
-              , better known as "seo" is the process of incorporating metadata,
-              schema's and certain straitegies to ensure your company is found
+              , better known as &quot;seo&quot; is the process of incorporating metadata,
+              schema&apos;s and certain straitegies to ensure your company is found
               under the proper context and specific searches which as
               advantageous to your company.{' '}
             </Text>
@@ -76,7 +76,7 @@ const IntroDeploymentSection = () => {
             <Text css={{ color: '#888' }}>
               From local seo to ecommerce seo, our approach to the process is a
               pwoerful way to bring traffic to your website and gain the
-              notarity your company deserves. We've been nominated as a top
+              notarity your company deserves. We&apos;ve been nominated as a top
               digital marketing agency in the United States with clutch.{' '}
             </Text>
           </Grid>

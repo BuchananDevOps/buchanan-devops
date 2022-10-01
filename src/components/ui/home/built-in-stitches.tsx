@@ -87,7 +87,7 @@ const BuiltInStitchesSection = () => {
           <Title color="violet">schemas.</Title>
         </Row>
         <Subtitle>
-          Our main focus is defining your data with schemas. We've seen
+          Our main focus is defining your data with schemas. We&apos;ve seen
           tremendous search engine success over the last 13 years with microdata
           scehma integration for search engine indexing.
         </Subtitle>

@@ -94,7 +94,6 @@ const Editor: React.FC<Props> = ({ initialOpen, code }) => {
                 >
                   <a
                     className="icon"
-                    href={`${ISSUE_REPORT_URL}${componentTitle}`}
                     rel="noopener noreferrer"
                     target="_blank"
                     title="Report a bug"

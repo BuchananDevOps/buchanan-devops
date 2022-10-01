@@ -125,9 +125,11 @@ const Sandpack: React.FC<React.PropsWithChildren<SandpackProps>> = ({
     }, {});
 
   return (
+    //ts-ignore
     <SandpackProvider
       skipEval
       customSetup={{
+        
         files: {
           ...sortedFiles,
           [entryFile]: {
