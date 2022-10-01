@@ -14,9 +14,6 @@ const CopyButton = () => {
     event.stopPropagation();
     event.preventDefault();
     setCopied(true);
-    const code = sandpack.files[sandpack.activePath].code;
-
-    copy(code);
   };
 
   const handleTooltipVisibleChange = () => {
