@@ -19,7 +19,6 @@ import BugReportButton from './bugreport-button';
 import { StyledPlaygroundButtons } from './styles';
 import LanguageSelector from './language-selector';
 import { HighlightedLines } from './types';
-import CodeViewer from './code-viewer';
 
 interface Props {
   files?: SandpackFiles;
@@ -188,12 +187,6 @@ const Sandpack: React.FC<React.PropsWithChildren<SandpackProps>> = ({
             }}
             xs={12}
           >
-            {showEditor && (
-              <CodeViewer
-                containerRef={editorContainerRef}
-                decorators={decorators}
-              />
-            )}
             <StyledPlaygroundButtons className="sp-playground-buttons">
               {showReportBug && <BugReportButton />}
               {showCopyCode && <CopyButton />}

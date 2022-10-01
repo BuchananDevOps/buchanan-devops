@@ -34,13 +34,18 @@
       ],
       "@data/*": ["data/*"]
     },
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "esnext",
+    "lib": ["dom", "es2015", "ESNext.String"],
+    "allowSyntheticDefaultImports": true,
     "allowJs": true,
+    "types": [
+      "node"
+    ],
     "skipLibCheck": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+    "experimentalDecorators": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
