@@ -2,11 +2,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import { Loading } from '@nextui-org/react';
 import withDefaults from '@utils/with-defaults';
-import {
-  SandpackFiles,
-  SandpackPredefinedTemplate,
-  SandpackHighlightedLines,
-} from '@components';
+
 import { Box } from '@primitives';
 import { isEmpty } from 'lodash';
 
@@ -25,15 +21,7 @@ const DynamicLive = dynamic(() => import('./dynamic-live'), {
   ),
 });
 
-const DynamicSandpack = dynamic(() => import('../sandpack'), {
-  ssr: false,
-  // eslint-disable-next-line react/display-name
-  loading: () => (
-    <div style={{ padding: '20pt 0' }}>
-      <Loading type="spinner" />
-    </div>
-  ),
-});
+
 
 interface Props {
   title?: React.ReactNode | string;
@@ -49,9 +37,6 @@ interface Props {
   removeEntryContainer?: boolean;
   previewHeight?: string | number;
   overflow?: 'auto' | 'visible' | 'hidden';
-  files?: SandpackFiles;
-  template?: SandpackPredefinedTemplate;
-  highlightedLines?: SandpackHighlightedLines;
   code?: string;
 }
 
@@ -79,7 +64,6 @@ const Playground: React.FC<PlaygroundProps> = ({
   code: inputCode,
   initialEditorOpen,
   showEditor,
-  highlightedLines,
   showSandpackPreview,
   showWindowActions,
   iframeInitialWidth,
@@ -171,34 +155,7 @@ const Playground: React.FC<PlaygroundProps> = ({
           ov: 'auto',
         }}
       >
-        {isSanpackEditor ? (
-          <DynamicSandpack
-            files={files}
-            highlightedLines={highlightedLines}
-            removeEntryContainer={removeEntryContainer}
-            showPreview={showSandpackPreview}
-          >
-            <LiveCode
-              code={code}
-              enableResize={enableResize || asIframe}
-              height={previewHeight}
-              iframeInitialWidth={iframeInitialWidth}
-              iframeSrc={iframeSrc}
-              iframeTitle={title}
-              noInline={noInline}
-              overflow={overflow}
-              showEditor={false}
-              showWindowActions={showWindowActions || asIframe}
-            />
-          </DynamicSandpack>
-        ) : (
-          <DynamicLive
-            code={code}
-            initialEditorOpen={initialEditorOpen}
-            overflow={overflow}
-            showEditor={showEditor}
-          />
-        )}
+
       </Box>
     </>
   );

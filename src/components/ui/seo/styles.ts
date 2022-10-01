@@ -1,6 +1,8 @@
-import { styled, keyframes, VariantProps } from '@nextui-org/react';
-import { darkTheme } from '@theme/shared';
+import { styled, keyframes, VariantProps, Grid } from '@nextui-org/react';
+import { lightTheme } from '@theme/shared';
 import { spin, growAndShrink } from '@utils/animations';
+import { StyledCardBlur } from '@components';
+
 export const StyledGradientWrapper = styled('div', {
   position: 'absolute',
   height: '100vh',
@@ -50,3 +52,30 @@ export const FeatureGradientLight = styled('div', {
   height: '500px',
   zIndex: -3,
 });
+
+export const SeoFeatureItem = styled(Grid, StyledCardBlur, {
+  transition: '$default',
+  minWidth: '100%',
+  '& .icon-wrapper': {
+    dflex: 'center',
+    background: 'rgb(42,22,60)',
+    br: '$pill',
+    p: '$4',
+  },
+  [`.${lightTheme} &`]: {
+    '& .icon-wrapper': {
+      background: '$pink100',
+    },
+  },
+  variants: {
+    clickable: {
+      true: {
+        cursor: 'pointer',
+        '&:hover': {
+          opacity: 0.8,
+        },
+      },
+    },
+  },
+});
+

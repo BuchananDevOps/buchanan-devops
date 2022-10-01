@@ -1,5 +1,4 @@
 import {
-  SeoFeatures,
   SeoHero,
   FeaturesGrid,
   WhySeo,
@@ -14,7 +13,6 @@ const SearchEngineOptimization: NextPage = () => {
   return (
     <>
       <SeoHero />
-
       <FeaturesGrid features={seoContent.seoFeatures} />
       <WhySeo />
       <AngledGradientHeading />

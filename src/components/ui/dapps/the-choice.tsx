@@ -9,25 +9,30 @@ const TheChoice: React.FC = () => {
 
     return (
         <Section id="dapp-technology" css={{ height: '55vh' }}>
-            <Spacer y={3} />
-            <Row justify="center">
-                <StyledImg width="125px" src="/content/red-pill-trace.svg" alt="dapp technology" />
-                <Text h1 css={{ fontSize: '4rem', ml: '$10' }}>
-                    It&apos;s just a Choice
+            <Grid.Container gap={2} css={{ px: 0 }}>
+                <Grid xs={12} md={6}>
+                     <Row justify="center">
+                <StyledImg css={{ '@xsMax': { width: '50px;' } }} width="110px" src="/content/red-pill-trace.svg" alt="dapp technology" />
+                <Text h1 css={{ fontSize: '4rem', ml: '$10','@xsMax': { fontSize: '2rem' } }}>
+                    It&apos;s just a choice
                     <Text css={{ fontSize: '1.5rem',color: '$red600' }}>
                         Between fear, or love. - Bill Hicks
-                        <Text>
-                            We&apos;ve had the pleasure to partner with the most innovative, disruptive, and<br/>
-                            forward-thinking companies in the world over the past few years. Witnessing the<br/>
-                            evolution of what was once a dream, become a reality, has been nothing short of<br/>
-                            inspiring. We are proud to be a part of this movement, and excited to announce<br/>
-                            Social Capital (SC) as our newest partner. We are thrilled to be working with<br/>
-                            Chamath Palihapitiya and his team at SC which has allocated $450 million <br/>
-                            from Fund V earmarked with an investment period of 5 years.
+                        <Text css={{ '@xsMax': { fontSize: '.9rem' } }}>
+                            We&apos;ve had the pleasure to partner with the most innovative, disruptive, and
+                            forward-thinking companies in the world over the past few years. Witnessing the
+                            evolution of what was once a dream, become a reality, has been nothing short of
+                            inspiring. We are proud to be a part of this movement, and excited about the
+                            future of the blockchain and decentralized web apps.
                         </Text>
                     </Text>
                 </Text>
             </Row>
+                </Grid>
+                <Grid xs={12} md={6}>
+                    <FloatingLogos />
+                    </Grid>
+            </Grid.Container>
+           
             <Spacer y={7} />
            
             </Section>

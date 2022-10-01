@@ -74,13 +74,11 @@ const Hero: React.FC = () => {
             },
           }}
         >
-          <StyledTitle css={{ mb: 0 }}>We build&nbsp;</StyledTitle>
+          <StyledTitle css={{ mb: 0 }}>Infinite forms of&nbsp;</StyledTitle>
           <StyledGradientTitle css={{ mb: 0 }}>
-            composable&nbsp;
+            creation.
           </StyledGradientTitle>
-          <StyledTitle css={{ mb: 0, '@xsMax': { d: 'inline-block' } }}>
-            digital products.
-          </StyledTitle>
+
 
           <StyledSubtitle className="hero__text-subtitle">
             We are a digital design, development and marketing agency that works
