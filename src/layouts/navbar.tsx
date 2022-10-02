@@ -166,9 +166,11 @@ const Navbar: React.FC<Props> = ({ isHome, hasNotify }) => {
                 >
                   DevOps
                 </Dropdown.Button>
+
                 <Dropdown.Menu
                   onAction={(actionKey) => {
-                    router.push(actionKey);
+                    //ts-ignore
+                    router.push(`${actionKey}`);
                   }}
                   aria-label="DevOps Services"
                   css={{
