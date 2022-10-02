@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://qrc.global
+Host: https://buchanandevops.com
 
 # Sitemaps
-Sitemap: https://qrc.global/sitemap.xml
+Sitemap: https://buchanandevops.com/sitemap.xml

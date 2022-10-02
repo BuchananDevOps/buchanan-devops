@@ -483,6 +483,11 @@
     stream-browserify "^3.0.0"
     util "^0.12.4"
 
+"@corex/deepmerge@^4.0.29":
+  version "4.0.29"
+  resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-4.0.29.tgz#af9debf07d7f6b0d2a9d04a266abf2c1418ed2f6"
+  integrity sha512-q/yVUnqckA8Do+EvAfpy7RLdumnBy9ZsducMUtZTvpdbJC7azEf1hGtnYYxm0QfphYxjwggv6XtH64prvS1W+A==
+
 "@emotion/is-prop-valid@^0.8.2":
   version "0.8.8"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz#db28b1c4368a259b60a97311d6a952d4fd01ac1a"
@@ -6653,6 +6658,14 @@ next-plausible@^3.6.2:
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/next-plausible/-/next-plausible-3.6.2.tgz#262abdbe4b566d8a26505bba0179306ece8c3167"
   integrity sha512-WhyFo0ZjoActGHFtkBiTxgZ0ALLkrKEqpgH/G2JXFqfg2Dx6/ne2fjKvXDGyyL4IYIXnWz/UFJFq40TxbGa5zA==
+
+next-sitemap@^3.1.23:
+  version "3.1.23"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-3.1.23.tgz#df696e0a0f5da643d624ec141ac0680401bd8af4"
+  integrity sha512-szQ5uvxn4/7P01U/rvzEccOcYk0Nm+kI3BGzHheREV+HDcj+IilrhXCuNqv4dBWy49eqsgCmjHuEDINx3/teMQ==
+  dependencies:
+    "@corex/deepmerge" "^4.0.29"
+    minimist "^1.2.6"
 
 next-themes@^0.2.1:
   version "0.2.1"
