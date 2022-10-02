@@ -80,7 +80,7 @@ const BuiltInStitchesSection = () => {
           <img src="/customization-gradient.svg" alt="theming background" />
         </Box>
         <Row justify="flex-start">
-          <Title>Define your data</Title>
+          <Title>Define your business</Title>
         </Row>
         <Row justify="flex-start">
           <Title>with &nbsp;</Title>
@@ -91,7 +91,10 @@ const BuiltInStitchesSection = () => {
           tremendous search engine success over the last 13 years with microdata
           scehma integration for search engine indexing.
         </Subtitle>
-        <Grid.Container gap={2}>
+        <NextLink href="/devops/search-engine-optimization">
+                <BlockLink color="violet">Search Engine Optimization</BlockLink>
+              </NextLink>
+        <Grid.Container gap={2} css={{ '@mdMax': { display: 'none' } }}>
           <Grid
             xs={12}
             sm={6}
@@ -153,9 +156,7 @@ const BuiltInStitchesSection = () => {
                   </Collapse>
                 ))}
               </Collapse.Group>
-              <NextLink href="/devops/search-engine-optimization">
-                <BlockLink color="violet">Learn more</BlockLink>
-              </NextLink>
+             
             </Col>
           </Grid>
           <Grid

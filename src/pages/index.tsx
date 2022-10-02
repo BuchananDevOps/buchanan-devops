@@ -27,9 +27,9 @@ const Home: NextPage = () => {
       <CustomizationSection />
       <ComparationSection />
       <BuiltInStitchesSection />
-
-      <DarkModeSection />
-
+      <Section css={{ '@mdMax': { display: 'none' } }}>
+        <DarkModeSection />
+      </Section>
       <LastButNotLeastSection />
       {/* Installation banner */}
       <Section css={{ zIndex: '$10' }}>

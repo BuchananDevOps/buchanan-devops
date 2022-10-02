@@ -65,16 +65,14 @@ const CustomThemesSection = () => {
           <img src="/theming-gradient.svg" alt="theming background" />
         </Box>
         <Row justify="flex-start">
-          <Title>Introduce tried and true</Title>
+          <Title>We develop</Title>
         </Row>
         <Row justify="flex-start">
-          <Title color="blue">strategic&nbsp;</Title>
-          <Title>development.</Title>
+          <Title color="blue">strategic&nbsp;<Title>solutions.</Title></Title>
+          
         </Row>
         <Subtitle>
-          Bring cutting edge technologies and strategies to your company. We can
-          help you build a robust and scalable infrastructure that will help
-          your company grow and scale to meet the demands of your customers.
+          In a world of ever-changing technology, we&apos;re here to design, develop and offer long-term support for your business. Your success is our success. 
         </Subtitle>
         <NextLink href="/devops">
           <BlockLink color="blue">Learn more</BlockLink>

@@ -1,6 +1,8 @@
 import { CtxContainer } from './styles';
 import { Row, Text, Col, Grid } from '@nextui-org/react';
-import { Section } from '@primitives';
+import { Section, Box } from '@primitives';
+import { ShowcaseItem } from '@components';
+import { darkTheme } from '@theme/shared';
 
 const StuffWeDesign: React.FC = () => {
   return (
@@ -12,8 +14,56 @@ const StuffWeDesign: React.FC = () => {
       </Row>
       <Section>
         <Grid.Container gap={2}>
-          <Grid xs={12} sm={6} lg={6}>
-            <img src="/customization-gradient.svg" alt="theming background" />
+        <Grid
+            xs={12}
+            sm={6}
+            css={{
+              pl: 0,
+              '@xsMax': {
+                pr: '0',
+              },
+            }}
+          >
+            <Box
+          css={{
+            position: 'fixed',
+            top: '-25%',
+            left: '-20%',
+            zIndex: '-$1',
+            [`.${darkTheme} &`]: {
+              left: '30%',
+              right: '-30%',
+              '@xsMax': {
+                right: '-50%',
+              },
+            },
+            '@xsMax': {
+              top: '10%',
+              right: '-50%',
+              left: '0',
+            },
+          }}
+        >
+          <img src="/customization-gradient.svg" alt="theming background" />
+        </Box>
+            <Col
+              css={{
+                dflex: 'center',
+                fd: 'column',
+                ai: 'flex-start',
+                h: '100%',
+              }}
+            >
+              
+              <ShowcaseItem
+                title={'Leafly'}
+                description={
+                  'Leafly is the leading destination to learn about, find, and order cannabis. Learn more about types of weed strains and discover marijuana dispensaries near you.'
+                }
+                image="/showcase/port-5.png"
+                link="https://www.leafly.com"
+              />
+            </Col>
           </Grid>
           <Grid xs={12} sm={6} lg={6}>
             <Text h3>
