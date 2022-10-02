@@ -33,10 +33,10 @@ const ShowcasePortfolio: NextPage = () => {
               }}
             >
               <ShowcaseItem
-                title={'Jet Commerce'}
+                title={'Backtrace'}
                 description={''}
-                image="/showcase/jet-showcase-item.jpg"
-                link="https://www.jet.com"
+                image="/showcase/port-4.png"
+                link="https://backtrace.io/"
               />
             </Col>
           </Grid>
@@ -63,7 +63,7 @@ const ShowcasePortfolio: NextPage = () => {
                 description={
                   'Leafly is the leading destination to learn about, find, and order cannabis. Learn more about types of weed strains and discover marijuana dispensaries near you.'
                 }
-                image="/showcase/leafly-showcase-item.jpg"
+                image="/showcase/port-5.png"
                 link="https://www.leafly.com"
               />
             </Col>
@@ -89,7 +89,7 @@ const ShowcasePortfolio: NextPage = () => {
               <ShowcaseItem
                 title={'Inflect'}
                 description={''}
-                image="/showcase/inflect-showcase-item.jpg"
+                image="/showcase/port-8.png"
                 link="https://www.inflect.com"
               />
             </Col>
@@ -113,10 +113,10 @@ const ShowcasePortfolio: NextPage = () => {
               }}
             >
               <ShowcaseItem
-                title={'Jet Commerce'}
+                title={'Purina'}
                 description={''}
-                image="/showcase/jet-showcase-item.jpg"
-                link="https://www.jet.com"
+                image="/showcase/port-6.png"
+                link="https://www.purina.com/"
               />
             </Col>
           </Grid>
@@ -139,12 +139,12 @@ const ShowcasePortfolio: NextPage = () => {
               }}
             >
               <ShowcaseItem
-                title={'Leafly'}
+                title={'Wired'}
                 description={
-                  'Leafly is the leading destination to learn about, find, and order cannabis. Learn more about types of weed strains and discover marijuana dispensaries near you.'
+                  'WIRED - The Latest in Technology, Science, Culture and Business | WIRED'
                 }
-                image="/showcase/leafly-showcase-item.jpg"
-                link="https://www.leafly.com"
+                image="/showcase/port-7.png"
+                link="https://www.wired.com/"
               />
             </Col>
           </Grid>
