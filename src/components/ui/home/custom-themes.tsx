@@ -92,9 +92,6 @@ const CustomThemesSection = () => {
           >
             <Col
               css={{
-                '@mdMax': {
-                  display: 'none',
-                },
               }}
             >
               <Image

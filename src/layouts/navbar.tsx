@@ -389,7 +389,7 @@ const Navbar: React.FC<Props> = ({ isHome, hasNotify }) => {
           >
             <ThemeToggle
               className="navbar__social-icon-mobile"
-              css={{ m: '0' }}
+              css={{ m: '0', paddingRight: '10px' }}
             />
             <Box
               className="navbar__menu-arrow noselect"
@@ -403,7 +403,102 @@ const Navbar: React.FC<Props> = ({ isHome, hasNotify }) => {
               }}
               onClick={onToggleNavigation}
             >
-              <MenuToggle expanded={expanded} />
+              <Dropdown isBordered>
+                <Dropdown.Button
+                  auto
+                  light
+                  className={cn('navbar__link', {
+                    active:
+                      isActive(router.pathname, '/devops') &&
+                      !includes(router.asPath, 'devops'),
+                  })}
+                  css={{
+                    color: '$text',
+                    px: 0,
+                    fontSize: '16px',
+                    fontWeight: 500,
+                    dflex: 'center',
+                    '&.active': {
+                      fontWeight: '600',
+                      color: '$primary',
+                    },
+                  }}
+                  ripple={false}
+                  icon={<MenuToggle expanded={expanded} />}
+                />
+                <Dropdown.Menu
+                  onAction={(actionKey) => {
+                    router.push(`${actionKey}`);
+                  }}
+                  aria-label="DevOps Services"
+                  css={{
+                    $$dropdownMenuWidth: '340px',
+                    $$dropdownItemHeight: '70px',
+                    '& .nextui-dropdown-item': {
+                      py: '$4',
+                      // dropdown item left icon
+                      svg: {
+                        color: '$secondary',
+                        mr: '$4',
+                      },
+                      // dropdown item title
+                      '& .nextui-dropdown-item-content': {
+                        w: '100%',
+                        fontWeight: '$semibold',
+                      },
+                    },
+                  }}
+                >
+                  <Dropdown.Item
+                    key="devops"
+                    showFullDescription
+                    description="What's DevOps and how it can streamline your businesses digital needs?"
+                    icon={icons.scale}
+                  >
+                    Introduction
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    key="ui-ux-frontend-design"
+                    showFullDescription
+                    description="UI/UX, fancy term for web design and user expierence methodology."
+                    icon={icons.activity}
+                  >
+                    UI/UX - Frontend Design
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    key="full-stack-development"
+                    showFullDescription
+                    description="Execute your UI/UX vision with a custom developed web application."
+                    icon={icons.server}
+                  >
+                    Full-Stack Development
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    key="dapps"
+                    showFullDescription
+                    description="Off the grid decentralized apps (Dapps) built with blockchain services."
+                    icon={icons.flash}
+                  >
+                    Dapp Development
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    key="search-engine-optimization"
+                    showFullDescription
+                    description="Introduce semancitc markup and schemas increasing engagement."
+                    icon={icons.seoicon}
+                  >
+                    Search Engine Optimization
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    key="long-term-support"
+                    showFullDescription
+                    description="Overcome any challenge with our supporting team ready to respond."
+                    icon={icons.user}
+                  >
+                    +Supreme Support
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
             </Box>
           </Col>
           <MobileNavigation

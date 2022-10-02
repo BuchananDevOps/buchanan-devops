@@ -171,9 +171,8 @@ const DarkModeSection = () => {
           <Title>Marketing shouldn&apos;t </Title>
         </Row>
         <Row justify="flex-start">
-          <Title>comsume your</Title>
-          <Spacer x={0.5} />
-          <Title color="violet">budget.</Title>
+          <Title>comsume your <Title color="violet">budget.</Title></Title>
+          
         </Row>
         <Subtitle>
           By using organic SEO and tried social media marketing, we can help you
