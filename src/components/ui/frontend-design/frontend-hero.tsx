@@ -1,13 +1,18 @@
 import { Row, Spacer, Text } from '@nextui-org/react';
-import { Section, HeroImgBackground } from '@primitives';
+import { Section, HeroImgBackground, Subtitle } from '@primitives';
+import { HeroTitle, TitleDesign } from './styles';
 
 const FrontendHero: React.FC = () => {
   return (
     <Section css={{}}>
       <Spacer y={7} />
       <Row justify="center">
-        <Text h1 css={{ fontSize: '4rem' }}>
-          UI/UX - Frontend Design
+        <HeroTitle>
+          <TitleDesign>UI / UX - Frontend Design</TitleDesign>
+        </HeroTitle>
+      </Row>
+      <Row>
+        <Subtitle>
           <Text>
             Our first step, developing the user interface (UI) and user
             experience (UX) of your web app. The preliminary design gives us a
@@ -17,11 +22,11 @@ const FrontendHero: React.FC = () => {
             user experience. We then iterate and improve the design and
             functionality based on the feedback we receive from your company on
             the MVP. To address the content below, understand, there are two
-            types of &quot;packages&quot;. Either your providing information about your
-            business and services, or you have a tangible product that you want
-            to sell. It&apos;s that simple.
+            types of &quot;packages&quot;. Either your providing information
+            about your business and services, or you have a tangible product
+            that you want to sell. It&apos;s that simple.
           </Text>
-        </Text>
+        </Subtitle>
       </Row>
     </Section>
   );

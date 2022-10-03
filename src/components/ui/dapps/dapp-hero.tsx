@@ -107,7 +107,7 @@ const DappHero: React.FC = () => {
             <Grid.Container gap={2}>
               <Grid>
                 <Button
-                onClick={handleDappTechnology}
+                  onClick={handleDappTechnology}
                   auto
                   className="hero__get-started-button"
                   icon={<Bug size={20} fill="var(--nextui-colors-green800)" />}

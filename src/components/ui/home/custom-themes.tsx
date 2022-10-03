@@ -68,11 +68,14 @@ const CustomThemesSection = () => {
           <Title>We develop</Title>
         </Row>
         <Row justify="flex-start">
-          <Title color="blue">strategic&nbsp;<Title>solutions.</Title></Title>
-          
+          <Title color="blue">
+            strategic&nbsp;<Title>solutions.</Title>
+          </Title>
         </Row>
         <Subtitle>
-          In a world of ever-changing technology, we&apos;re here to design, develop and offer long-term support for your business. Your success is our success. 
+          In a world of ever-changing technology, we&apos;re here to design,
+          develop and offer long-term support for your business. Your success is
+          our success.
         </Subtitle>
         <NextLink href="/devops">
           <BlockLink color="blue">Learn more</BlockLink>
@@ -88,10 +91,7 @@ const CustomThemesSection = () => {
               },
             }}
           >
-            <Col
-              css={{
-              }}
-            >
+            <Col css={{}}>
               <Image
                 src="/images/commerce.avif"
                 alt="theming"

@@ -29,7 +29,7 @@ const FloatingLogos = () => {
 
   const handleBluePill = () => {
     router.push('/full-stack-development');
-  }
+  };
 
   useEffect(() => {
     if (isMobile) {
@@ -43,7 +43,7 @@ const FloatingLogos = () => {
   return (
     <StyledContainer>
       <StyledImg
-      onClick={handleDappTechnology}
+        onClick={handleDappTechnology}
         css={{
           position: 'relative',
           cursor: 'pointer',
@@ -67,12 +67,13 @@ const FloatingLogos = () => {
           animation: `${levitating} 14s ease infinite`,
         }}
       >
-        THE <br/>CHOICE
-
-      <br/>IS <StyledGradientTitle>YOURS</StyledGradientTitle>
+        THE <br />
+        CHOICE
+        <br />
+        IS <StyledGradientTitle>YOURS</StyledGradientTitle>
       </StyledTitle>
       <StyledImg
-      onClick={handleBluePill}
+        onClick={handleBluePill}
         css={{
           position: 'relative',
           cursor: 'pointer',
@@ -85,7 +86,6 @@ const FloatingLogos = () => {
         src="/content/blue-pill-trace.svg"
         alt="floating logos"
       />
-      
     </StyledContainer>
   );
 };

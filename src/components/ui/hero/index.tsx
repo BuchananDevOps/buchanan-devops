@@ -75,10 +75,7 @@ const Hero: React.FC = () => {
           }}
         >
           <StyledTitle css={{ mb: 0 }}>Infinite forms of&nbsp;</StyledTitle>
-          <StyledGradientTitle css={{ mb: 0 }}>
-            creation.
-          </StyledGradientTitle>
-
+          <StyledGradientTitle css={{ mb: 0 }}>creation.</StyledGradientTitle>
 
           <StyledSubtitle className="hero__text-subtitle">
             We are a digital design, development and marketing agency that works

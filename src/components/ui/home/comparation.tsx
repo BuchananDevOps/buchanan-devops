@@ -21,9 +21,10 @@ const ComparationSection = () => {
           <Title color="warning">more.</Title>
         </Row>
         <Subtitle>
-          The numbers don&apos;t lie, with our strategy for development and digital
-          marketing we&apos;ve seen our clients achieve astounding results. Using our
-          proven process, we can help you achieve the same results.
+          The numbers don&apos;t lie, with our strategy for development and
+          digital marketing we&apos;ve seen our clients achieve astounding
+          results. Using our proven process, we can help you achieve the same
+          results.
         </Subtitle>
         <Grid.Container css={{ marginTop: '40px' }} gap={1.5}>
           <Grid

@@ -18,7 +18,6 @@ export type TitleProps = Props & typeof defaultProps;
 const Title: React.FC<TitleProps> = ({ title, desc }) => {
   return (
     <>
-
       {desc && <ReactMarkdown className="react-markdown">{desc}</ReactMarkdown>}
       <style jsx>{`
         h3 {

@@ -11,8 +11,9 @@ const FrontendDesign: NextPage = () => {
     <>
       <FrontendHero />
       <WhatsAWebApp />
-      <Technology />
+
       <StuffWeDesign />
+      <Technology />
     </>
   );
 };

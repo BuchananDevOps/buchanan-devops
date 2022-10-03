@@ -21,8 +21,6 @@ const DynamicLive = dynamic(() => import('./dynamic-live'), {
   ),
 });
 
-
-
 interface Props {
   title?: React.ReactNode | string;
   desc?: React.ReactNode | string;
@@ -154,9 +152,7 @@ const Playground: React.FC<PlaygroundProps> = ({
           mb: '$xl',
           ov: 'auto',
         }}
-      >
-
-      </Box>
+      ></Box>
     </>
   );
 };

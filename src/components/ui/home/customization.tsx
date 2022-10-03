@@ -17,7 +17,6 @@ const CustomizationSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   return (
     <InView as="section" className="inview-section" onChange={setIsVisible}>
-
       <Section css={{ position: 'relative' }}>
         <Box
           css={{
@@ -48,7 +47,9 @@ const CustomizationSection = () => {
           company in the right direction based on our past experience.
         </Subtitle>
         <NextLink href="/showcase-portfolio">
-          <BlockLink css={{ mb: '25px' }} color="green">Showcase Portfolio</BlockLink>
+          <BlockLink css={{ mb: '25px' }} color="green">
+            Showcase Portfolio
+          </BlockLink>
         </NextLink>
         <Grid.Container gap={2}>
           <Grid

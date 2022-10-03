@@ -10,7 +10,7 @@ const StyledContainer = styled('div', {
 
   zIndex: '$max',
   '@xsMax': {
-    mt: '$50px'
+    mt: '$50px',
   },
 });
 

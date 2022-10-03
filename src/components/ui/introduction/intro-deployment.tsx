@@ -66,10 +66,10 @@ const IntroDeploymentSection = () => {
               <a style={{ color: '#FF5B4F' }} href="">
                 Search Engine Optimization
               </a>
-              , better known as &quot;seo&quot; is the process of incorporating metadata,
-              schema&apos;s and certain straitegies to ensure your company is found
-              under the proper context and specific searches which as
-              advantageous to your company.{' '}
+              , better known as &quot;seo&quot; is the process of incorporating
+              metadata, schema&apos;s and certain straitegies to ensure your
+              company is found under the proper context and specific searches
+              which as advantageous to your company.{' '}
             </Text>
           </Grid>
           <Grid css={{ '@mdMax': { marginTop: '$5' } }} xs={12} md={6}>

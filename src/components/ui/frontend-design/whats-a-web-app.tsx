@@ -33,9 +33,9 @@ const WhatsAWebApp: React.FC = () => {
               is interactive. It allows you to do things like create an account,
               log in, and interact with other users. A web app is a website that
               has a backend. The backend is the part of the website that you
-              don&apos;t see. It&apos;s the part that stores your information and allows
-              you to interact with other users. The backend is what makes a
-              website a web app.
+              don&apos;t see. It&apos;s the part that stores your information
+              and allows you to interact with other users. The backend is what
+              makes a website a web app.
             </Text>
             <Text></Text>
           </Text>

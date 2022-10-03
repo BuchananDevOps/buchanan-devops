@@ -9,11 +9,15 @@ const ShowcasePortfolio: NextPage = () => {
       <Section>
         <Spacer y={7} />
         <Row justify="center">
-          <Text h1 css={{ fontSize: '6rem', 
-          '@xsMax': { fontSize: '4rem', lineHeight:'3.5rem' },
-          '@mdMax': { fontSize: '4rem', lineHeight:'3.5rem' },
-          "@lgMax": { fontSize: '5rem', lineHeight:'4rem' },  
-          }}>
+          <Text
+            h1
+            css={{
+              fontSize: '6rem',
+              '@xsMax': { fontSize: '4rem', lineHeight: '3.5rem' },
+              '@mdMax': { fontSize: '4rem', lineHeight: '3.5rem' },
+              '@lgMax': { fontSize: '5rem', lineHeight: '4rem' },
+            }}
+          >
             Showcase Portfolio
           </Text>
         </Row>

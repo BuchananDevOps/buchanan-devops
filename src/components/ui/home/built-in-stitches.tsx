@@ -92,8 +92,8 @@ const BuiltInStitchesSection = () => {
           scehma integration for search engine indexing.
         </Subtitle>
         <NextLink href="/devops/search-engine-optimization">
-                <BlockLink color="violet">Search Engine Optimization</BlockLink>
-              </NextLink>
+          <BlockLink color="violet">Search Engine Optimization</BlockLink>
+        </NextLink>
         <Grid.Container gap={2} css={{ '@mdMax': { display: 'none' } }}>
           <Grid
             xs={12}
@@ -156,7 +156,6 @@ const BuiltInStitchesSection = () => {
                   </Collapse>
                 ))}
               </Collapse.Group>
-             
             </Col>
           </Grid>
           <Grid

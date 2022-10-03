@@ -1,20 +1,25 @@
 import { CtxContainer } from './styles';
-import { Row, Text, Col, Grid } from '@nextui-org/react';
+import { Row, Text, Col, Grid, Spacer } from '@nextui-org/react';
 import { Section, Box } from '@primitives';
 import { ShowcaseItem } from '@components';
 import { darkTheme } from '@theme/shared';
+import { useRouter } from 'next/router';
+import { useMediaQuery } from '@hooks/use-media-query';
 
 const StuffWeDesign: React.FC = () => {
+  const router = useRouter();
+  const isMobile = useMediaQuery(960);
+
   return (
     <CtxContainer>
       <Row align="center">
-        <Text h2 css={{ justifyItems: 'center' }}>
+        <Text h2 css={{ justifyItems: 'center', fontSize: '3rem' }}>
           Stuff We Design
         </Text>
       </Row>
       <Section>
         <Grid.Container gap={2}>
-        <Grid
+          <Grid
             xs={12}
             sm={6}
             css={{
@@ -24,28 +29,6 @@ const StuffWeDesign: React.FC = () => {
               },
             }}
           >
-            <Box
-          css={{
-            position: 'fixed',
-            top: '-25%',
-            left: '-20%',
-            zIndex: '-$1',
-            [`.${darkTheme} &`]: {
-              left: '30%',
-              right: '-30%',
-              '@xsMax': {
-                right: '-50%',
-              },
-            },
-            '@xsMax': {
-              top: '10%',
-              right: '-50%',
-              left: '0',
-            },
-          }}
-        >
-          <img src="/customization-gradient.svg" alt="theming background" />
-        </Box>
             <Col
               css={{
                 dflex: 'center',
@@ -54,7 +37,6 @@ const StuffWeDesign: React.FC = () => {
                 h: '100%',
               }}
             >
-              
               <ShowcaseItem
                 title={'Leafly'}
                 description={
@@ -68,6 +50,7 @@ const StuffWeDesign: React.FC = () => {
           <Grid xs={12} sm={6} lg={6}>
             <Text h3>
               Retail | E-Commerce | Marketplace
+              <Spacer y={0.5} />
               <Text>
                 E-Business is the activity of buying or selling of products over
                 the Internet. Electronic business draws on technologies such as
@@ -81,29 +64,133 @@ const StuffWeDesign: React.FC = () => {
           </Grid>
         </Grid.Container>
       </Section>
-      <Section>
-        <Grid.Container gap={2}>
-          <Grid css={{ '@xsMax': { display: 'hidden' } }} sm={6} lg={6}>
-            <Text h3>
-              Professional Service
-              <Text>
-                To keep it brief, if your a lawyer, plumber, general contractor
-                or offering professional services. Common sense dictates that a
-                website can open up the entire world to your business.
-                Generating leads 24/7 and allowing you to scale your business to
-                new heights.
+      {isMobile ? (
+        <Section css={{ my: '50px' }}>
+          <Grid.Container gap={2}>
+            <Grid
+              xs={12}
+              sm={6}
+              css={{
+                pl: 0,
+                '@xsMax': {
+                  pr: '0',
+                },
+              }}
+            >
+              <Col
+                css={{
+                  dflex: 'center',
+                  fd: 'column',
+                  ai: 'flex-start',
+                  h: '100%',
+                }}
+              >
+                <ShowcaseItem
+                  title={'The Service King'}
+                  description={
+                    'Leafly is the leading destination to learn about, find, and order cannabis. Learn more about types of weed strains and discover marijuana dispensaries near you.'
+                  }
+                  image="/showcase/port-10.png"
+                  link="https://www.serviceking.com/"
+                />
+              </Col>
+            </Grid>
+            <Grid sm={6} lg={6}>
+              <Text h3>
+                Professional Service
+                <Spacer y={0.5} />
+                <Text>
+                  To keep it brief, if your a lawyer, plumber, general
+                  contractor or offering professional services. Common sense
+                  dictates that a website can open up the entire world to your
+                  business. Generating leads 24/7 and allowing you to scale your
+                  business to new heights.
+                </Text>
               </Text>
-            </Text>
-          </Grid>
-          <Grid xs={12} sm={6} lg={6}>
-            <img src="/customization-gradient.svg" alt="theming background" />
-          </Grid>
-        </Grid.Container>
-      </Section>
+            </Grid>
+          </Grid.Container>
+        </Section>
+      ) : (
+        <Section
+          css={{
+            my: '50px',
+          }}
+        >
+          <Grid.Container gap={2}>
+            <Grid sm={6} lg={6}>
+              <Text h3>
+                Professional Service
+                <Spacer y={0.5} />
+                <Text>
+                  To keep it brief, if your a lawyer, plumber, general
+                  contractor or offering professional services. Common sense
+                  dictates that a website can open up the entire world to your
+                  business. Generating leads 24/7 and allowing you to scale your
+                  business to new heights.
+                </Text>
+              </Text>
+            </Grid>
+            <Grid
+              xs={12}
+              sm={6}
+              css={{
+                pl: 0,
+                '@xsMax': {
+                  pr: '0',
+                },
+              }}
+            >
+              <Col
+                css={{
+                  dflex: 'center',
+                  fd: 'column',
+                  ai: 'flex-start',
+                  h: '100%',
+                }}
+              >
+                <ShowcaseItem
+                  title={'The Service King'}
+                  description={
+                    'Leafly is the leading destination to learn about, find, and order cannabis. Learn more about types of weed strains and discover marijuana dispensaries near you.'
+                  }
+                  image="/showcase/port-10.png"
+                  link="https://www.serviceking.com/"
+                />
+              </Col>
+            </Grid>
+          </Grid.Container>
+        </Section>
+      )}
+
       <Section>
         <Grid.Container gap={2}>
-          <Grid xs={12} sm={6} lg={6}>
-            <img src="/customization-gradient.svg" alt="theming background" />
+        <Grid
+            xs={12}
+            sm={6}
+            css={{
+              pl: 0,
+              '@xsMax': {
+                pr: '0',
+              },
+            }}
+          >
+            <Col
+              css={{
+                dflex: 'center',
+                fd: 'column',
+                ai: 'flex-start',
+                h: '100%',
+              }}
+            >
+              <ShowcaseItem
+                title={'Backtrace'}
+                description={
+                  'Leafly is the leading destination to learn about, find, and order cannabis. Learn more about types of weed strains and discover marijuana dispensaries near you.'
+                }
+                image="/showcase/port-4.png"
+                link="https://backtrace.io/"
+              />
+            </Col>
           </Grid>
           <Grid xs={12} sm={6} lg={6}>
             <Text h3>
@@ -118,24 +205,105 @@ const StuffWeDesign: React.FC = () => {
           </Grid>
         </Grid.Container>
       </Section>
-      <Section>
-        <Grid.Container gap={2}>
-          <Grid css={{ '@xsMax': { display: 'hidden' } }} sm={6} lg={6}>
-            <Text h3>
-              Just about anything
-              <Text>
-                If you build it, they will come. We encourage you to reach out
-                whether your a small business or an enterprise client. We have
-                diverse network of developers and engineers that can construct
-                just about anything you can imagine.
+      {isMobile ? (
+        <Section css={{ my: '50px' }}>
+          <Grid.Container gap={2}>
+            <Grid
+              xs={12}
+              sm={6}
+              css={{
+                pl: 0,
+                '@xsMax': {
+                  pr: '0',
+                },
+              }}
+            >
+              <Col
+                css={{
+                  dflex: 'center',
+                  fd: 'column',
+                  ai: 'flex-start',
+                  h: '100%',
+                }}
+              >
+                <ShowcaseItem
+                  title={'Unreal Estate'}
+                  description={
+                    'Leafly is the leading destination to learn about, find, and order cannabis. Learn more about types of weed strains and discover marijuana dispensaries near you.'
+                  }
+                  image="/showcase/port-2.png"
+                  link="https://www.unrealestate.com/"
+                />
+              </Col>
+            </Grid>
+            <Grid sm={6} lg={6}>
+              <Text h3>
+                Just about anything
+                <Spacer y={0.5} />
+                <Text>
+                  Unless you are selling illegal drugs or weapons, we can build
+                  you a website or web app. If you are, we'd recommend using a 
+                  decentralized blockchain platform for annonymity. All jokes aside, 
+                  we develop high quality projects, built to perform and scale. For us, 
+                  it's less about what the project is and more about if we believe in the 
+                  people behind it. Your success is our success! 
+                </Text>
               </Text>
-            </Text>
-          </Grid>
-          <Grid xs={12} sm={6} lg={6}>
-            <img src="/customization-gradient.svg" alt="theming background" />
-          </Grid>
-        </Grid.Container>
-      </Section>
+            </Grid>
+          </Grid.Container>
+        </Section>
+      ) : (
+        <Section
+          css={{
+            my: '50px',
+          }}
+        >
+          <Grid.Container gap={2}>
+          <Grid sm={6} lg={6}>
+              <Text h3>
+                Just about anything
+                <Spacer y={0.5} />
+                <Text>
+                  Unless you are selling illegal drugs or weapons, we can build
+                  you a website or web app. If you are, we'd recommend using a 
+                  decentralized blockchain platform for annonymity. All jokes aside, 
+                  we develop high quality projects, built to perform and scale. For us, 
+                  it's less about what the project is and more about if we believe in the 
+                  people behind it. Your success is our success! 
+                </Text>
+              </Text>
+            </Grid>
+            <Grid
+              xs={12}
+              sm={6}
+              css={{
+                pl: 0,
+                '@xsMax': {
+                  pr: '0',
+                },
+              }}
+            >
+              <Col
+                css={{
+                  dflex: 'center',
+                  fd: 'column',
+                  ai: 'flex-start',
+                  h: '100%',
+                }}
+              >
+                 <ShowcaseItem
+                  title={'Unreal Estate'}
+                  description={
+                    'Leafly is the leading destination to learn about, find, and order cannabis. Learn more about types of weed strains and discover marijuana dispensaries near you.'
+                  }
+                  image="/showcase/port-2.png"
+                  link="https://www.unrealestate.com/"
+                />
+              </Col>
+            </Grid>
+          </Grid.Container>
+        </Section>
+      )}
     </CtxContainer>
   );
 };

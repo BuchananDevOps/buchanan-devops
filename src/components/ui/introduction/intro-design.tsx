@@ -96,8 +96,8 @@ const IntroDesignSection = () => {
             </Grid>
             <Grid css={{ '@mdMax': { marginTop: '$5' } }} xs={12} md={6}>
               <Text css={{ color: '#888' }}>
-                After doing our initial research into your industry, we&apos;ll put
-                together a preliminary wireframe to define the components
+                After doing our initial research into your industry, we&apos;ll
+                put together a preliminary wireframe to define the components
                 required for the development stage. Once the project is outlined
                 we&apos;ll begin designing the components required.
               </Text>
@@ -135,9 +135,9 @@ const IntroDesignSection = () => {
                 <Grid xs={12}>
                   <Text css={{ color: '#888', marginBottom: '$10' }}>
                     Make your site mobile-responsive with our mobile-first
-                    approach to design. For 13 years, we&apos;ve been designing and
-                    developing mobile-first websites and applications ensuring
-                    the integrity of the product on every device.
+                    approach to design. For 13 years, we&apos;ve been designing
+                    and developing mobile-first websites and applications
+                    ensuring the integrity of the product on every device.
                   </Text>
                 </Grid>
                 <Grid xs={12}>

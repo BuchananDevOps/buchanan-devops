@@ -171,14 +171,15 @@ const DarkModeSection = () => {
           <Title>Marketing shouldn&apos;t </Title>
         </Row>
         <Row justify="flex-start">
-          <Title>comsume your <Title color="violet">budget.</Title></Title>
-          
+          <Title>
+            comsume your <Title color="violet">budget.</Title>
+          </Title>
         </Row>
         <Subtitle>
           By using organic SEO and tried social media marketing, we can help you
-          reach your target audience without breaking the bank. Overtime we&apos;ll
-          be able to hone in on what really makes your customers bite,
-          consistently improving your ROI.
+          reach your target audience without breaking the bank. Overtime
+          we&apos;ll be able to hone in on what really makes your customers
+          bite, consistently improving your ROI.
         </Subtitle>
         <Grid.Container css={{ marginTop: '40px' }} gap={1.5}>
           <Grid

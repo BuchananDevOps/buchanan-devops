@@ -74,14 +74,15 @@ const IntroDevelopSection = () => {
         >
           <Col>
             <Text css={{ color: '#888', marginTop: '-40px' }}>
-              Development Operations, &quot;DevOps&quot; for short requires strategy and
-              intent for your companies technical challenges. Under our DevOps
-              model, development professionals are merged into single team where
-              the engineers work across the entire application lifecycle while
-              supporting and maintaining the project after production
-              deployment. By sticking with your initial DevOps professionals,
-              your long term support costs are significantly lower than
-              onboarding new developers for each issue that may arise.{' '}
+              Development Operations, &quot;DevOps&quot; for short requires
+              strategy and intent for your companies technical challenges. Under
+              our DevOps model, development professionals are merged into single
+              team where the engineers work across the entire application
+              lifecycle while supporting and maintaining the project after
+              production deployment. By sticking with your initial DevOps
+              professionals, your long term support costs are significantly
+              lower than onboarding new developers for each issue that may
+              arise.{' '}
             </Text>
           </Col>
         </Row>
