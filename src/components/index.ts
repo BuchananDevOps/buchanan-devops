@@ -15,6 +15,7 @@ export * from './ui/frontend-design';
 export { default as ContactModal } from './modals/contact-modal';
 export { default as ContactIcon } from './modals/contact-modal-icon';
 export { default as ShowcaseItem } from './modals/showcase-item';
+export { default as DappFeaturesModal } from './modals/dapp-features-modal';
 
 export { default as Head } from './common/head';
 export { default as SEO } from './common/seo';

@@ -164,7 +164,7 @@ const StuffWeDesign: React.FC = () => {
 
       <Section>
         <Grid.Container gap={2}>
-        <Grid
+          <Grid
             xs={12}
             sm={6}
             css={{
@@ -242,11 +242,12 @@ const StuffWeDesign: React.FC = () => {
                 <Spacer y={0.5} />
                 <Text>
                   Unless you are selling illegal drugs or weapons, we can build
-                  you a website or web app. If you are, we'd recommend using a 
-                  decentralized blockchain platform for annonymity. All jokes aside, 
-                  we develop high quality projects, built to perform and scale. For us, 
-                  it's less about what the project is and more about if we believe in the 
-                  people behind it. Your success is our success! 
+                  you a website or web app. If you are, we'd recommend using a
+                  decentralized blockchain platform for annonymity. All jokes
+                  aside, we develop high quality projects, built to perform and
+                  scale. For us, it's less about what the project is and more
+                  about if we believe in the people behind it. Your success is
+                  our success!
                 </Text>
               </Text>
             </Grid>
@@ -259,17 +260,18 @@ const StuffWeDesign: React.FC = () => {
           }}
         >
           <Grid.Container gap={2}>
-          <Grid sm={6} lg={6}>
+            <Grid sm={6} lg={6}>
               <Text h3>
                 Just about anything
                 <Spacer y={0.5} />
                 <Text>
                   Unless you are selling illegal drugs or weapons, we can build
-                  you a website or web app. If you are, we'd recommend using a 
-                  decentralized blockchain platform for annonymity. All jokes aside, 
-                  we develop high quality projects, built to perform and scale. For us, 
-                  it's less about what the project is and more about if we believe in the 
-                  people behind it. Your success is our success! 
+                  you a website or web app. If you are, we'd recommend using a
+                  decentralized blockchain platform for annonymity. All jokes
+                  aside, we develop high quality projects, built to perform and
+                  scale. For us, it's less about what the project is and more
+                  about if we believe in the people behind it. Your success is
+                  our success!
                 </Text>
               </Text>
             </Grid>
@@ -291,7 +293,7 @@ const StuffWeDesign: React.FC = () => {
                   h: '100%',
                 }}
               >
-                 <ShowcaseItem
+                <ShowcaseItem
                   title={'Unreal Estate'}
                   description={
                     'Leafly is the leading destination to learn about, find, and order cannabis. Learn more about types of weed strains and discover marijuana dispensaries near you.'

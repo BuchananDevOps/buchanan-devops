@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
 import { Section } from '@primitives';
-import { DappHero, TheChoice, WhyDapps } from '@components';
+import { DappHero, TheChoice, WhyDapps, DappPossibilities } from '@components';
 
 const ProductionApps: NextPage = () => {
   return (
@@ -8,6 +8,7 @@ const ProductionApps: NextPage = () => {
       <DappHero />
       <TheChoice />
       <WhyDapps />
+      <DappPossibilities />
     </>
   );
 };
