@@ -11,9 +11,7 @@ import { StyledImg } from '@primitives';
 import { darkTheme, lightTheme } from '@theme/shared';
 import { pulse } from '@utils/animations';
 
-interface DappButtonProps {
-
-}
+interface DappButtonProps {}
 
 interface DappPossibilitiesProps {
   title: string;
@@ -35,40 +33,39 @@ export default function DappFeaturesModal({
   return (
     <>
       <Button
-
         auto
         css={{
-            bg: '$gray50',
-            color: '$text',
-            maxH: '45px',
-            px: '$6',
-            '@mdMax': {},
-            '& .nextui-button-icon': {
-              mr: '$2',
+          bg: '$gray50',
+          color: '$text',
+          maxH: '45px',
+          px: '$6',
+          '@mdMax': {},
+          '& .nextui-button-icon': {
+            mr: '$2',
+          },
+          '& .nextui-button-icon svg': {
+            transition: '$default',
+          },
+          '&:hover': {
+            '& .nextui-button-icon img': {
+              animation: `${pulse} 1s infinite`,
             },
-            '& .nextui-button-icon svg': {
-              transition: '$default',
-            },
-            '&:hover': {
-              '& .nextui-button-icon img': {
-                animation: `${pulse} 1s infinite`,
+          },
+          [`.${lightTheme} &`]: {
+            bg: 'rgba(51, 51,51,0.12)',
+            '@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))':
+              {
+                bf: 'saturate(180%) blur(14px)',
               },
-            },
-            [`.${lightTheme} &`]: {
-                bg: 'rgba(51, 51,51,0.12)',
-                '@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))':
-                  {
-                    bf: 'saturate(180%) blur(14px)',
-                  },
+          },
+          [`.${darkTheme} &`]: {
+            bg: 'rgba(51, 51,51,0.7)',
+            '@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))':
+              {
+                bf: 'saturate(180%) blur(14px)',
               },
-            [`.${darkTheme} &`]: {
-              bg: 'rgba(51, 51,51,0.7)',
-              '@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))':
-                {
-                  bf: 'saturate(180%) blur(14px)',
-                },
-            },
-          }}
+          },
+        }}
         onClick={() => setVisible(true)}
         icon={<StyledImg width={20} src={icon} alt={title} />}
       >
@@ -89,7 +86,18 @@ export default function DappFeaturesModal({
           <Spacer y={1} />
           <Grid.Container gap={2}>
             {benefits.map((benefit) => (
-              <Grid>
+              <Grid
+                css={{
+                  [`.${lightTheme} &`]: {
+                    bg: '$gray500',
+                    color: '$text',
+                    padding: '10px',
+                    borderRadius: '10px',
+                    boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+                    margin: '5px',
+                  },
+                }}
+              >
                 <Text>{benefit}</Text>
               </Grid>
             ))}

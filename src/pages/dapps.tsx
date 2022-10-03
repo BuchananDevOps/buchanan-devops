@@ -8,7 +8,6 @@ const ProductionApps: NextPage = () => {
       <DappHero />
       <TheChoice />
       <WhyDapps />
-      <DappPossibilities />
     </>
   );
 };
