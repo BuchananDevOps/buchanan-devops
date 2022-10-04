@@ -204,7 +204,59 @@ const ShowcasePortfolio: NextPage = () => {
                 title={'Midrive'}
                 description={''}
                 image="/showcase/port-12.png"
-                link="https://www.midrive.com/"
+                link="https://www.producthunt.com/"
+              />
+            </Col>
+          </Grid>
+          <Grid
+            xs={12}
+            sm={4}
+            css={{
+              pl: 0,
+              '@xsMax': {
+                pr: '0',
+              },
+            }}
+          >
+            <Col
+              css={{
+                dflex: 'center',
+                fd: 'column',
+                ai: 'flex-start',
+                h: '100%',
+              }}
+            >
+              <ShowcaseItem
+                title={'Product Hunt'}
+                description={''}
+                image="/showcase/port-13.png"
+                link="https://www.producthunt.com/"
+              />
+            </Col>
+          </Grid>
+          <Grid
+            xs={12}
+            sm={4}
+            css={{
+              pl: 0,
+              '@xsMax': {
+                pr: '0',
+              },
+            }}
+          >
+            <Col
+              css={{
+                dflex: 'center',
+                fd: 'column',
+                ai: 'flex-start',
+                h: '100%',
+              }}
+            >
+              <ShowcaseItem
+                title={'Ticket Swap'}
+                description={''}
+                image="/showcase/port-14.png"
+                link="https://www.ticketswap.com/"
               />
             </Col>
           </Grid>
@@ -278,6 +330,33 @@ const ShowcasePortfolio: NextPage = () => {
                 image="/showcase/port-15.png"
                 github="https://github.com/ceramicstudio/js-composedb"
                 link="https://composedb.js.org/docs/0.3.x/introduction"
+              />
+            </Col>
+          </Grid>
+          <Grid
+            xs={12}
+            sm={4}
+            css={{
+              pl: 0,
+              '@xsMax': {
+                pr: '0',
+              },
+            }}
+          >
+            <Col
+              css={{
+                dflex: 'center',
+                fd: 'column',
+                ai: 'flex-start',
+                h: '100%',
+              }}
+            >
+              <ShowcaseItem
+                title={'Buchanan DevOps Portfolio'}
+                description={''}
+                image="/showcase/port-15.png"
+                github="https://github.com/BuchananDevOps/buchanan-devops"
+                link="https://buchanandevops.com/devops"
               />
             </Col>
           </Grid>
