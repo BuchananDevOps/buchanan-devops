@@ -1,13 +1,35 @@
-import { Grid, Spacer, Text } from '@nextui-org/react';
-import { Section, StyledImg } from '@primitives';
+import { WindowActions }from '@components';
+import { Grid, Row, Spacer, Text } from '@nextui-org/react';
+import { Box, Section, StyledImg } from '@primitives';
 
 const WhatsAWebApp: React.FC = () => {
   return (
     <Section>
       <Spacer y={7} />
       <Grid.Container gap={2}>
+        <Grid xs={12} sm={6}>
+          <Box
+              css={{
+                marginTop: '$5',
+                mr: '$2',
+                backgroundColor: '$codeBackground',
+                px: '$10',
+                boxShadow: '0 0 0 1px $colors$border, 0 4px 16px $colors$shadow',
+                borderRadius: '$sm',
+                textAlign: 'center',
+              }}
+            >
+              <WindowActions />
+              <StyledImg
+                src="/content/product-cartoon.svg"
+                alt="Static Site Generation Svg Product Image"
+              />
+              <Text css={{ color: '#fff' }} h6>Analytics Dashboard</Text>
+            </Box>
+        </Grid>
         <Grid xs={12} sm={6} lg={6}>
-          <Text h3>
+      
+<Text h3>
             Static Sites (SSG)
             <Text>
               Static sites are blazing fast, require no server maintenance, and
@@ -18,8 +40,8 @@ const WhatsAWebApp: React.FC = () => {
               want to get their product or service out there and gain traction
               in the search engines.
             </Text>
-            <Text></Text>
           </Text>
+          
         </Grid>
         <Grid xs={12} sm={6} lg={6}>
           <StyledImg

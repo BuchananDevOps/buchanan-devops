@@ -17,6 +17,9 @@ export const HeroTitle = styled('h1', {
   '@xsMax': {
     fontSize: '3rem',
   },
+  '@smMax': {
+    fontSize: '4rem',
+  },
 });
 
 export const TitleDesign = styled('span', {

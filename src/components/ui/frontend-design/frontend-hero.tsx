@@ -1,34 +1,59 @@
-import { Row, Spacer, Text } from '@nextui-org/react';
-import { Section, HeroImgBackground, Subtitle } from '@primitives';
+import { Container, Row, Spacer, Text } from '@nextui-org/react';
+import { Section, HeroImgBackground, Subtitle, StyledCardBlur } from '@primitives';
+import { darkTheme, lightTheme } from '@theme/shared';
 import { HeroTitle, TitleDesign } from './styles';
 
 const FrontendHero: React.FC = () => {
   return (
-    <Section css={{}}>
-      <Spacer y={7} />
-      <Row justify="center">
+    <>
+  <StyledCardBlur
+          css={{
+            br: 0,
+            p: 0,
+            dflex: 'center',
+            width: '100vw',
+            position: 'relative',
+            left: '50%',
+            right: '50%',
+            ml: '-50vw',
+            mr: '-50vw',
+            pt: '$20',
+            pb: '$20',
+            border: '0px solid $border',
+            borderLeftColor: 'transparent',
+            borderRightColor: 'transparent',
+            bgBlur: '$background',
+            backgroundSize: 'cover',
+            [`.${lightTheme} &`]: {
+              backgroundImage: 'url(/images/aztec-background-light.svg)',
+            },
+            [`.${darkTheme} &`]: {
+              backgroundImage: 'url(/images/aztec-background-green.svg)',
+            },
+          }}
+        >
+          <Container
+        lg
+        css={{
+          ml: 0,
+          mr: 0,
+          py: '$8',
+          '@xsMax': {
+            px: '$4',
+          },
+        }}
+      >
+        <Row justify="center">
+        
         <HeroTitle>
           <TitleDesign>UI / UX - Frontend Design</TitleDesign>
         </HeroTitle>
       </Row>
-      <Row>
-        <Subtitle>
-          <Text>
-            Our first step, developing the user interface (UI) and user
-            experience (UX) of your web app. The preliminary design gives us a
-            clear idea of what your web app will look like along with what
-            functionality will be required. We then create a minimal viable
-            product (MVP) to test the design and functionality along with the
-            user experience. We then iterate and improve the design and
-            functionality based on the feedback we receive from your company on
-            the MVP. To address the content below, understand, there are two
-            types of &quot;packages&quot;. Either your providing information
-            about your business and services, or you have a tangible product
-            that you want to sell. It&apos;s that simple.
-          </Text>
-        </Subtitle>
-      </Row>
-    </Section>
+      </Container>
+          
+        </StyledCardBlur>
+
+    </>
   );
 };
 

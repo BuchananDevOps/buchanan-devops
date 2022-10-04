@@ -354,7 +354,7 @@ const ShowcasePortfolio: NextPage = () => {
               <ShowcaseItem
                 title={'Buchanan DevOps Portfolio'}
                 description={''}
-                image="/showcase/port-15.png"
+                image="/showcase/port-17.png"
                 github="https://github.com/BuchananDevOps/buchanan-devops"
                 link="https://buchanandevops.com/devops"
               />
