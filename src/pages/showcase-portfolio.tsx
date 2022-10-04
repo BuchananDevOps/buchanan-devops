@@ -262,9 +262,9 @@ const ShowcasePortfolio: NextPage = () => {
           </Grid>
         </Grid.Container>
       </Section>
-      
+
       <Section>
-<Spacer y={7} />
+        <Spacer y={7} />
         <Row justify="center">
           <Text
             h1
@@ -279,7 +279,7 @@ const ShowcasePortfolio: NextPage = () => {
           </Text>
         </Row>
         <Grid.Container gap={2}>
-        <Grid
+          <Grid
             xs={12}
             sm={4}
             css={{

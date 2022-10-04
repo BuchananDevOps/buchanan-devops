@@ -119,41 +119,39 @@ export default function ShowcaseItem({
           </NextLink>
           {github && (
             <NextLink href={github} title={title} target="_blank" passHref>
-            <Button
-              auto
-              onClick={viewGithub}
-              icon={
-                <Github size={20} fill="var(--nextui-colors-cyan300)" />
-              }
-              css={{
-                bg: '$gray50',
-                color: '$text',
-                maxH: '38px',
-                px: '$6',
-                '@mdMax': {},
-                '& .nextui-button-icon': {
-                  mr: '$2',
-                },
-                '& .nextui-button-icon svg': {
-                  transition: '$default',
-                },
-                '&:hover': {
-                  '& .nextui-button-icon svg': {
-                    animation: `${pulse} 1s infinite`,
+              <Button
+                auto
+                onClick={viewGithub}
+                icon={<Github size={20} fill="var(--nextui-colors-cyan300)" />}
+                css={{
+                  bg: '$gray50',
+                  color: '$text',
+                  maxH: '38px',
+                  px: '$6',
+                  '@mdMax': {},
+                  '& .nextui-button-icon': {
+                    mr: '$2',
                   },
-                },
-                [`.${darkTheme} &`]: {
-                  bg: 'rgba(51, 51,51,0.7)',
-                  '@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))':
-                    {
-                      bf: 'saturate(180%) blur(14px)',
+                  '& .nextui-button-icon svg': {
+                    transition: '$default',
+                  },
+                  '&:hover': {
+                    '& .nextui-button-icon svg': {
+                      animation: `${pulse} 1s infinite`,
                     },
-                },
-              }}
-            >
-              Github Repo
-            </Button>
-          </NextLink>
+                  },
+                  [`.${darkTheme} &`]: {
+                    bg: 'rgba(51, 51,51,0.7)',
+                    '@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))':
+                      {
+                        bf: 'saturate(180%) blur(14px)',
+                      },
+                  },
+                }}
+              >
+                Github Repo
+              </Button>
+            </NextLink>
           )}
           <Button auto flat color="error" onClick={() => setVisible(false)}>
             Close

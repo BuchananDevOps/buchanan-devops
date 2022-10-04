@@ -58,7 +58,7 @@ const DappHero: React.FC = () => {
           height: 'calc(100vh - 76px)',
           '@xsMax': {
             height: 'calc(100vh - 64px)',
-            mt: '85px'
+            mt: '85px',
           },
         }}
         display="flex"

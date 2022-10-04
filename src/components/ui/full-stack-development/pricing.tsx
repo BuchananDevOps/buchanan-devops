@@ -18,14 +18,15 @@ const Pricing: React.FC = () => {
         <Col>
           <Text h1>
             Full-Stack Development
-            <Text h6>Most popular option for companies looking to develop a frontend and backend solution. </Text>
+            <Text h6>
+              Most popular option for companies looking to develop a frontend
+              and backend solution.{' '}
+            </Text>
           </Text>
         </Col>
-        <Col>
-          
-        </Col>
+        <Col></Col>
       </Row>
-      
+
       <DynamicLooperBGDev
         css={{
           zIndex: '0',

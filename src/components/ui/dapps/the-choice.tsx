@@ -51,9 +51,7 @@ const TheChoice: React.FC = () => {
           </Row>
         </Grid>
         <Grid xs={12} md={6}>
-          <Text>
-            
-          </Text>
+          <Text></Text>
           <DappPossibilities />
         </Grid>
       </Grid.Container>

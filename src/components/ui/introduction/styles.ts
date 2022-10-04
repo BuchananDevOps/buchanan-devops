@@ -85,15 +85,15 @@ export const DesignSectionLabel = styled('span', {
   justifyContent: 'center',
   fontWeight: '700',
   mb: '24px',
-  pt: "8px",
+  pt: '8px',
   background: 'linear-gradient(90deg, #007cf0, #00dfd8)',
-})
+});
 
 export const DesignPathLine = styled('span', {
   height: '100px',
   width: '1px',
   background: 'linear-gradient($background, #019ae9)',
-})
+});
 
 export const DevelopSectionLabel = styled('span', {
   display: 'inline-block',
@@ -105,15 +105,15 @@ export const DevelopSectionLabel = styled('span', {
   justifyContent: 'center',
   fontWeight: '700',
   mb: '24px',
-  pt: "8px",
+  pt: '8px',
   background: 'linear-gradient(90deg, #9a1fb8, #ff0080)',
-})
+});
 
 export const DevelopPathLine = styled('span', {
   height: '100px',
   width: '1px',
   background: 'linear-gradient($background, #9a1fb8)',
-})
+});
 
 export const DeploySectionLabel = styled('span', {
   display: 'inline-block',
@@ -125,13 +125,12 @@ export const DeploySectionLabel = styled('span', {
   justifyContent: 'center',
   fontWeight: '700',
   mb: '24px',
-  pt: "8px",
+  pt: '8px',
   background: 'linear-gradient(90deg, #ff4d4d, #f9cb28)',
-})
+});
 
 export const DeployPathLine = styled('span', {
   height: '100px',
   width: '1px',
   background: 'linear-gradient($background, #f9cb28)',
-})
-
+});

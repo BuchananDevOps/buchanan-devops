@@ -37,9 +37,7 @@ const IntroDesignSection = () => {
             textAlign: 'center',
           }}
         >
-          <DesignSectionLabel>
-            1
-          </DesignSectionLabel>
+          <DesignSectionLabel>1</DesignSectionLabel>
         </Row>
         <Row
           css={{
@@ -67,12 +65,14 @@ const IntroDesignSection = () => {
             marginBottom: '3rem',
           }}
         >
-          <Text css={{ 
-            fontSize: '3.75rem', 
-            letterSpacing: '-.05em',
-            '@xsMax': { fontSize: '2.5rem' },
-             }} 
-             h1>
+          <Text
+            css={{
+              fontSize: '3.75rem',
+              letterSpacing: '-.05em',
+              '@xsMax': { fontSize: '2.5rem' },
+            }}
+            h1
+          >
             Frontend Design
           </Text>
         </Row>
