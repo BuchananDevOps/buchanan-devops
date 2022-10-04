@@ -108,7 +108,7 @@ export default {
       ],
     },
     {
-      title: 'Zero downtime',
+      title: 'No Downtime',
       icon: '/dapp/you-talkin-to-me.svg',
       description:
         'Dapps are and will always be available, regardless of whether or not the server is up. This is in contrast to centralized applications, where the application can be taken down at any time by centralized authorities. Only if the entire network is taken down will the Dapp be unavailable.',
@@ -122,7 +122,7 @@ export default {
       ],
     },
     {
-      title: 'Trustless computation',
+      title: 'Trustless',
       icon: '/dapp/open-lock.svg',
       description:
         'Computations are performed by the network of users, rather than a centralized server. Each user is incentivized to perform the computation, and is rewarded for doing so. This is in contrast to centralized applications, where the computation is performed by a centralized server.',
@@ -136,7 +136,7 @@ export default {
       ],
     },
     {
-      title: 'Decentralized Storage',
+      title: 'DeFi Storage',
       icon: '/dapp/inter-chains.svg',
       description:
         'Data is stored on a decentralized network of computers, rather than a centralized server. The latest option is IPFS (Inter Planetary File System), which is a peer-to-peer network for storing and sharing data in a distributed file system. Enabling users to store data in a blockchain envirorment without the absorbent cost, this is a key feature of Dapps.',
@@ -149,7 +149,7 @@ export default {
       ],
     },
     {
-      title: 'Decentralized Identity',
+      title: 'DID Identity',
       icon: '/dapp/digital-id.svg',
       description:
         'Users can create a decentralized identity, which is a unique identifier that can be used to interact with the Dapp. This is in contrast to centralized applications, where users must create an account with the application. This is a key feature of Dapps, as it allows users to interact with the application without having to create an account.',

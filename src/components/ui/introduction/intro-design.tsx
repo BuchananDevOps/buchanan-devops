@@ -1,6 +1,7 @@
 import { Col, Container, Grid, Row, Text } from '@nextui-org/react';
 import { Section } from '@primitives';
 import Image from 'next/image';
+import { DesignPathLine, DesignSectionLabel } from './styles';
 
 const IntroDesignSection = () => {
   return (
@@ -28,7 +29,7 @@ const IntroDesignSection = () => {
             textAlign: 'center',
           }}
         >
-          <span className="path-line"></span>
+          <DesignPathLine />
         </Row>
         <Row
           css={{
@@ -36,9 +37,9 @@ const IntroDesignSection = () => {
             textAlign: 'center',
           }}
         >
-          <span color="$text" className="section-label-number">
+          <DesignSectionLabel>
             1
-          </span>
+          </DesignSectionLabel>
         </Row>
         <Row
           css={{
@@ -66,7 +67,12 @@ const IntroDesignSection = () => {
             marginBottom: '3rem',
           }}
         >
-          <Text css={{ fontSize: '3.75rem', letterSpacing: '-.05em' }} h1>
+          <Text css={{ 
+            fontSize: '3.75rem', 
+            letterSpacing: '-.05em',
+            '@xsMax': { fontSize: '2.5rem' },
+             }} 
+             h1>
             Frontend Design
           </Text>
         </Row>
@@ -157,26 +163,6 @@ const IntroDesignSection = () => {
           </Grid.Container>
         </Row>
       </Col>
-      <style jsx>{`
-        .path-line {
-          height: 100px;
-          width: 1px;
-          background: linear-gradient(#000, #019ae9);
-        }
-        .section-label-number {
-          display: inline-felx;
-          border-radius: 100%;
-          color: #000;
-          width: 40px;
-          height: 40px;
-          align-items: center;
-          justify-content: center;
-          font-weight: 700;
-          margin-bottom: 24px;
-          padding-top: 8px;
-          background: linear-gradient(90deg, #007cf0, #00dfd8);
-        }
-      `}</style>
     </Container>
   );
 };

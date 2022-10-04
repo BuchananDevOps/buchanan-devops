@@ -34,6 +34,7 @@ export { default as Logo } from './ui/logo';
 export { default as ThemeToggle } from './ui/theme-toggle';
 export { default as ThemeSwitch } from './ui/theme-switch';
 export { default as LooperBG } from './ui/looper-bg';
+export { default as LooperBGDev } from './ui/looper-bg-dev';
 export { default as WindowActions } from './ui/window-actions';
 export { default as PageHeader } from './ui/page-header';
 export { default as InstallBanner } from './ui/install-banner';

@@ -13,13 +13,14 @@ import { pulse } from '@utils/animations';
 import Image from 'next/image';
 import NextLink from 'next/link';
 import Router, { useRouter } from 'next/router';
-import { View } from '@components';
+import { Github, View } from '@components';
 
 interface ShowcaseItemProps {
   title: string;
   description: string;
   image: string;
   link: string;
+  github?: string;
 }
 
 export default function ShowcaseItem({
@@ -27,11 +28,15 @@ export default function ShowcaseItem({
   description,
   image,
   link,
+  github,
 }: ShowcaseItemProps) {
   const { setVisible, bindings } = useModal();
   const router = useRouter();
   const viewItem = () => {
     window.open(link, '_blank');
+  };
+  const viewGithub = () => {
+    window.open(github, '_blank');
   };
   return (
     <>
@@ -112,6 +117,44 @@ export default function ShowcaseItem({
               {link}
             </Button>
           </NextLink>
+          {github && (
+            <NextLink href={github} title={title} target="_blank" passHref>
+            <Button
+              auto
+              onClick={viewGithub}
+              icon={
+                <Github size={20} fill="var(--nextui-colors-cyan300)" />
+              }
+              css={{
+                bg: '$gray50',
+                color: '$text',
+                maxH: '38px',
+                px: '$6',
+                '@mdMax': {},
+                '& .nextui-button-icon': {
+                  mr: '$2',
+                },
+                '& .nextui-button-icon svg': {
+                  transition: '$default',
+                },
+                '&:hover': {
+                  '& .nextui-button-icon svg': {
+                    animation: `${pulse} 1s infinite`,
+                  },
+                },
+                [`.${darkTheme} &`]: {
+                  bg: 'rgba(51, 51,51,0.7)',
+                  '@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))':
+                    {
+                      bf: 'saturate(180%) blur(14px)',
+                    },
+                },
+              }}
+            >
+              Github Repo
+            </Button>
+          </NextLink>
+          )}
           <Button auto flat color="error" onClick={() => setVisible(false)}>
             Close
           </Button>

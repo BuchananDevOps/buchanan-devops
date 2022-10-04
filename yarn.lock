@@ -7204,6 +7204,11 @@ property-information@^6.0.0:
   resolved "https://registry.yarnpkg.com/property-information/-/property-information-6.1.1.tgz#5ca85510a3019726cb9afed4197b7b8ac5926a22"
   integrity sha512-hrzC564QIl0r0vy4l6MvRLhafmUowhO/O3KgVSoXIbbA2Sz4j8HGpJc6T2cubRVwMwpdiG/vKGfhT4IixmKN9w==
 
+proxy-compare@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/proxy-compare/-/proxy-compare-2.3.0.tgz#ac9633ae52918ff9c9fcc54dfe6316c7a02d20ee"
+  integrity sha512-c3L2CcAi7f7pvlD0D7xsF+2CQIW8C3HaYx2Pfgq8eA4HAl3GAH6/dVYsyBbYF/0XJs2ziGLrzmz5fmzPm6A0pQ==
+
 pseudomap@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
@@ -8758,6 +8763,14 @@ validate-npm-package-name@^3.0.0:
   integrity sha512-M6w37eVCMMouJ9V/sdPGnC5H4uDr73/+xdq0FBLO3TFFX1+7wiUY6Es328NN+y43tmY+doUdN9g9J21vqB7iLw==
   dependencies:
     builtins "^1.0.3"
+
+valtio@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/valtio/-/valtio-1.7.0.tgz#2105716db440402f7d0402073f938bdda7207acd"
+  integrity sha512-3Tnix66EERwMcrl1rfB3ylcewOcL5L/GiPmC3FlVNreQzqf2jufEeqlNmgnLgSGchkEmH3WYVtS+x6Qw4r+yzQ==
+  dependencies:
+    proxy-compare "2.3.0"
+    use-sync-external-store "1.2.0"
 
 vfile-location@^3.2.0:
   version "3.2.0"

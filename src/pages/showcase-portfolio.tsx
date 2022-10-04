@@ -182,6 +182,105 @@ const ShowcasePortfolio: NextPage = () => {
               />
             </Col>
           </Grid>
+          <Grid
+            xs={12}
+            sm={4}
+            css={{
+              pl: 0,
+              '@xsMax': {
+                pr: '0',
+              },
+            }}
+          >
+            <Col
+              css={{
+                dflex: 'center',
+                fd: 'column',
+                ai: 'flex-start',
+                h: '100%',
+              }}
+            >
+              <ShowcaseItem
+                title={'Midrive'}
+                description={''}
+                image="/showcase/port-12.png"
+                link="https://www.midrive.com/"
+              />
+            </Col>
+          </Grid>
+        </Grid.Container>
+      </Section>
+      
+      <Section>
+<Spacer y={7} />
+        <Row justify="center">
+          <Text
+            h1
+            css={{
+              fontSize: '6rem',
+              '@xsMax': { fontSize: '4rem', lineHeight: '3.5rem' },
+              '@mdMax': { fontSize: '4rem', lineHeight: '3.5rem' },
+              '@lgMax': { fontSize: '5rem', lineHeight: '4rem' },
+            }}
+          >
+            Public Github Repositories
+          </Text>
+        </Row>
+        <Grid.Container gap={2}>
+        <Grid
+            xs={12}
+            sm={4}
+            css={{
+              pl: 0,
+              '@xsMax': {
+                pr: '0',
+              },
+            }}
+          >
+            <Col
+              css={{
+                dflex: 'center',
+                fd: 'column',
+                ai: 'flex-start',
+                h: '100%',
+              }}
+            >
+              <ShowcaseItem
+                title={'Apollo Typescript '}
+                description={''}
+                image="/showcase/port-11.png"
+                github="https://github.com/EnterpriseIonic/qrcql"
+                link="https://qrcql.herokuapp.com/"
+              />
+            </Col>
+          </Grid>
+          <Grid
+            xs={12}
+            sm={4}
+            css={{
+              pl: 0,
+              '@xsMax': {
+                pr: '0',
+              },
+            }}
+          >
+            <Col
+              css={{
+                dflex: 'center',
+                fd: 'column',
+                ai: 'flex-start',
+                h: '100%',
+              }}
+            >
+              <ShowcaseItem
+                title={'ComposeDB - Contributor'}
+                description={''}
+                image="/showcase/port-15.png"
+                github="https://github.com/ceramicstudio/js-composedb"
+                link="https://composedb.js.org/docs/0.3.x/introduction"
+              />
+            </Col>
+          </Grid>
         </Grid.Container>
       </Section>
     </>

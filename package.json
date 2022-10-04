@@ -51,6 +51,7 @@
     "unified": "9.2.1",
     "unist-util-visit": "2.0.3",
     "util.promisify": "^1.1.1",
+    "valtio": "^1.7.0",
     "wagmi": "^0.6.7"
   },
   "devDependencies": {

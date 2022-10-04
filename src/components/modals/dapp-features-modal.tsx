@@ -89,7 +89,15 @@ export default function DappFeaturesModal({
               <Grid
                 css={{
                   [`.${lightTheme} &`]: {
-                    bg: '$gray500',
+                    bg: '#68707614',
+                    color: '$text',
+                    padding: '10px',
+                    borderRadius: '10px',
+                    boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+                    margin: '5px',
+                  },
+                  [`.${darkTheme} &`]: {
+                    bg: '#232c3a',
                     color: '$text',
                     padding: '10px',
                     borderRadius: '10px',
@@ -103,13 +111,6 @@ export default function DappFeaturesModal({
             ))}
           </Grid.Container>
         </Modal.Body>
-        <Modal.Footer>
-          <Row justify="flex-end">
-            <Button auto onClick={() => setVisible(false)}>
-              Close
-            </Button>
-          </Row>
-        </Modal.Footer>
       </Modal>
     </>
   );

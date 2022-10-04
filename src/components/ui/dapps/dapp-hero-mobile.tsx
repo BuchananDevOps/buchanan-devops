@@ -1,31 +1,11 @@
-import {
-  Password,
-  StyledCardBlur,
-  Section,
-  Box,
-  StyledImg,
-  Devices,
-  Bug,
-  FloatingPills,
-} from '@components';
-import {
-  Container,
-  Row,
-  Col,
-  Spacer,
-  Grid,
-  Button,
-  Card,
-} from '@nextui-org/react';
+import { Bug, Devices, FloatingPills } from '@components';
+import { Button, Col, Container, Grid, Row, Spacer } from '@nextui-org/react';
+import { Box, Section, StyledImg } from '@primitives';
 import { darkTheme } from '@theme/shared';
 import { appears, pulse } from '@utils/animations';
-import FloatingLogos from './floating-logos';
 import { StyledGradientTitle, StyledSubtitle, StyledTitle } from './styles';
-import { useMediaQuery } from '@hooks/use-media-query';
 
-const DappHero: React.FC = () => {
-  const isMobile = useMediaQuery(960);
-
+const DappHeroMobile: React.FC = () => {
   const handleDappTechnology = () => {
     const dappTechnology = document.getElementById('dapp-technology');
     if (dappTechnology) {
@@ -58,7 +38,6 @@ const DappHero: React.FC = () => {
           height: 'calc(100vh - 76px)',
           '@xsMax': {
             height: 'calc(100vh - 64px)',
-            mt: '85px'
           },
         }}
         display="flex"
@@ -77,11 +56,22 @@ const DappHero: React.FC = () => {
               p: '0 8px',
             },
             '@xsMax': {
-              mt: '0px',
+              mt: '85px',
             },
           }}
           wrap="wrap"
         >
+          <Col
+            className="hero__right-container"
+            css={{
+              position: 'relative',
+              height: '100%',
+              '@mdMax': {},
+            }}
+            span={6}
+          >
+            <FloatingPills />
+          </Col>
           <Col
             className="hero__left-container"
             css={{
@@ -182,19 +172,7 @@ const DappHero: React.FC = () => {
               </Grid>
             </Grid.Container>
           </Col>
-          <Col
-            className="hero__right-container"
-            css={{
-              position: 'relative',
-              height: '100%',
-              '@mdMax': {
-                display: 'none',
-              },
-            }}
-            span={6}
-          >
-            <FloatingPills />
-          </Col>
+
           <StyledImg
             alt="gradient blue background"
             className="docs__gradient-blue"
@@ -242,4 +220,4 @@ const DappHero: React.FC = () => {
   );
 };
 
-export default DappHero;
+export default DappHeroMobile;
