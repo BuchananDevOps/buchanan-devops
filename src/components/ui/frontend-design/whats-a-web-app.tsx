@@ -123,13 +123,14 @@ const WhatsAWebApp: React.FC = () => {
           xs={12}
           sm={6}
         >
-          <BgGradient 
+          <BgGradient
             css={{
               width: '500px',
               height: '550px',
               right: '10%',
-            }} 
-            color="purple" />
+            }}
+            color="purple"
+          />
           <StyledImg
             css={{
               px: '$20',

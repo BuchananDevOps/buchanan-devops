@@ -1,12 +1,11 @@
-import { FullStackHero, Pricing, DemoCanvas, Process } from '@components';
+import { FullStackHero, DemoCanvas, Process, ServiceProviders } from '@components';
 import { NextPage } from 'next';
 
 const FullStackDevelopment: NextPage = () => {
   return (
     <>
       <FullStackHero />
-      <Pricing />
-      
+      <ServiceProviders />
       <Process />
     </>
   );

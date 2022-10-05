@@ -13,7 +13,16 @@ const StuffWeDesign: React.FC = () => {
   return (
     <CtxContainer>
       <Row align="center">
-        <Text h2 css={{ justifyItems: 'center', fontSize: '3rem' }}>
+        <Text
+          h3
+          css={{
+            fontWeight: 700,
+            fontSize: '2.5rem',
+            letterSpacing: '-0.058125em',
+            marginBlockStart: '1em',
+            marginBlockEnd: '.5em',
+          }}
+        >
           Stuff We Design
         </Text>
       </Row>
@@ -48,17 +57,28 @@ const StuffWeDesign: React.FC = () => {
             </Col>
           </Grid>
           <Grid xs={12} sm={6} lg={6}>
-            <Text h3>
+            <Text
+              h3
+              css={{
+                fontWeight: 700,
+                fontSize: '1.5rem',
+              }}
+            >
               Retail | E-Commerce | Marketplace
-              <Spacer y={0.5} />
-              <Text>
+              <Text
+                css={{
+                  lineHeight: '1.3',
+                  color: '#888888',
+                  fontWeight: 400,
+                  fontSize: '1.25rem',
+                }}
+              >
                 E-Business is the activity of buying or selling of products over
                 the Internet. Electronic business draws on technologies such as
                 mobile commerce, electronic funds transfer, supply chain
                 management, Internet marketing, online transaction processing,
                 electronic data interchange (EDI), and inventory management
-                systems. E-Business is also known as electronic business,
-                e-business, e-commerce, or e-tailing.
+                systems.
               </Text>
             </Text>
           </Grid>
@@ -96,10 +116,22 @@ const StuffWeDesign: React.FC = () => {
               </Col>
             </Grid>
             <Grid sm={6} lg={6}>
-              <Text h3>
+              <Text
+                h3
+                css={{
+                  fontWeight: 700,
+                  fontSize: '1.5rem',
+                }}
+              >
                 Professional Service
-                <Spacer y={0.5} />
-                <Text>
+                <Text
+                  css={{
+                    lineHeight: '1.3',
+                    color: '#888888',
+                    fontWeight: 400,
+                    fontSize: '1.25rem',
+                  }}
+                >
                   To keep it brief, if your a lawyer, plumber, general
                   contractor or offering professional services. Common sense
                   dictates that a website can open up the entire world to your
@@ -118,10 +150,23 @@ const StuffWeDesign: React.FC = () => {
         >
           <Grid.Container gap={2}>
             <Grid sm={6} lg={6}>
-              <Text h3>
+              <Text
+                h3
+                css={{
+                  fontWeight: 700,
+                  fontSize: '1.5rem',
+                }}
+              >
                 Professional Service
                 <Spacer y={0.5} />
-                <Text>
+                <Text
+                  css={{
+                    lineHeight: '1.3',
+                    color: '#888888',
+                    fontWeight: 400,
+                    fontSize: '1.25rem',
+                  }}
+                >
                   To keep it brief, if your a lawyer, plumber, general
                   contractor or offering professional services. Common sense
                   dictates that a website can open up the entire world to your
@@ -193,9 +238,22 @@ const StuffWeDesign: React.FC = () => {
             </Col>
           </Grid>
           <Grid xs={12} sm={6} lg={6}>
-            <Text h3>
+            <Text
+              h3
+              css={{
+                fontWeight: 700,
+                fontSize: '1.5rem',
+              }}
+            >
               Redesign &amp; Rebrand Old Apps
-              <Text>
+              <Text
+                css={{
+                  lineHeight: '1.3',
+                  color: '#888888',
+                  fontWeight: 400,
+                  fontSize: '1.25rem',
+                }}
+              >
                 Already have a website or web app? We can redesign and rebrand
                 your existing website or web app. We can also add new features
                 and functionality while increasing your exposure in the search
@@ -237,10 +295,23 @@ const StuffWeDesign: React.FC = () => {
               </Col>
             </Grid>
             <Grid sm={6} lg={6}>
-              <Text h3>
+              <Text
+                h3
+                css={{
+                  fontWeight: 700,
+                  fontSize: '1.5rem',
+                }}
+              >
                 Just about anything
                 <Spacer y={0.5} />
-                <Text>
+                <Text
+                  css={{
+                    lineHeight: '1.3',
+                    color: '#888888',
+                    fontWeight: 400,
+                    fontSize: '1.25rem',
+                  }}
+                >
                   Unless you are selling illegal drugs or weapons, we can build
                   you a website or web app. If you are, we'd recommend using a
                   decentralized blockchain platform for annonymity. All jokes
@@ -261,10 +332,23 @@ const StuffWeDesign: React.FC = () => {
         >
           <Grid.Container gap={2}>
             <Grid sm={6} lg={6}>
-              <Text h3>
+              <Text
+                h3
+                css={{
+                  fontWeight: 700,
+                  fontSize: '1.5rem',
+                }}
+              >
                 Just about anything
                 <Spacer y={0.5} />
-                <Text>
+                <Text
+                  css={{
+                    lineHeight: '1.3',
+                    color: '#888888',
+                    fontWeight: 400,
+                    fontSize: '1.25rem',
+                  }}
+                >
                   Unless you are selling illegal drugs or weapons, we can build
                   you a website or web app. If you are, we'd recommend using a
                   decentralized blockchain platform for annonymity. All jokes

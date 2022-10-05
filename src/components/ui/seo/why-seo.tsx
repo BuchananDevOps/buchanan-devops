@@ -253,10 +253,7 @@ const WhySeo: React.FC = () => {
                         onClick={handlePrev}
                         selector="left"
                       >
-                        <ChevronLeft
-                          size={24}
-                          fill="#16181A"
-                        />
+                        <ChevronLeft size={24} fill="#16181A" />
                       </PageNav>
                       <StyledImg
                         onClick={() => setVisible(false)}
@@ -275,10 +272,7 @@ const WhySeo: React.FC = () => {
                         onClick={handleNext}
                         selector="right"
                       >
-                        <ChevronRight
-                          size={24}
-                          fill="#16181A"
-                        />
+                        <ChevronRight size={24} fill="#16181A" />
                       </PageNav>
                     </Modal.Body>
                   </Modal>

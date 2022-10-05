@@ -277,7 +277,6 @@ export const PageNav = styled(StyledButton, {
         right: '0%',
         bottom: '5%',
         minHeight: '25%',
-
       },
     },
   },
@@ -287,7 +286,7 @@ export const PageNav = styled(StyledButton, {
   },
   '& .nextui-button-icon svg': {
     transition: '$default',
-    fill: '#13181A'
+    fill: '#13181A',
   },
   '&:hover': {
     '& .nextui-button-icon svg': {
@@ -299,14 +298,12 @@ export const PageNav = styled(StyledButton, {
     '@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))': {
       bf: 'saturate(180%) blur(1px)',
     },
-
   },
   [`.${lightTheme} &`]: {
     bg: 'rgba(51, 51,51,0.1)',
     '@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))': {
       bf: 'saturate(180%) blur(14px)',
     },
-
   },
 });
 
@@ -318,7 +315,10 @@ export const HeroButtonWrapper = styled('div', {
   lgDirection: 'row',
   align: 'stretch',
   justify: 'flex-start',
-})
+  '@xsMax': {
+    mb: '40px',
+  },
+});
 
 export const HeroButton = styled('button', {
   position: 'relative',
@@ -335,7 +335,8 @@ export const HeroButton = styled('button', {
   padding: '0 $8',
   maxWidth: '100%',
   textDecoration: 'none',
-  transitionProperty: 'background, border-color, color, opacity, box-shadow, transform',
+  transitionProperty:
+    'background, border-color, color, opacity, box-shadow, transform',
   transitionDuration: '0.15s',
   transitionTimingFunction: 'ease-in-out',
   cursor: 'pointer',
@@ -346,9 +347,9 @@ export const HeroButton = styled('button', {
         background: '$foreground',
         border: '1px solid $foreground',
         '&:hover': {
-        color: '$text',
-        background: '$background',
-        border: '1px solid $foreground',
+          color: '$text',
+          background: '$background',
+          border: '1px solid $foreground',
         },
       },
       black: {
@@ -357,11 +358,48 @@ export const HeroButton = styled('button', {
         border: '1px solid $backgroundContrast',
         ml: '16px',
         '&:hover': {
-        color: '$text',
-        background: '$background',
-        border: '1px solid $foreground',
+          color: '$text',
+          background: '$background',
+          border: '1px solid $foreground',
         },
       },
-    }
-  }
-})
+    },
+  },
+});
+
+{
+  /* //Below GradientBackground a link reference then a component but feel free to use this for a quick background or such  */
+}
+
+export const SupportCard = styled(Box, {
+  opacity: 1,
+  backgroundPosition: '50px -330px',
+  content: '',
+  position: 'absolute',
+  width: '100%',
+  height: '100%',
+  top: 0,
+  left: 0,
+  zIndex: -1,
+  variants: {
+    cards: {
+      security: {
+        backgroundImage: 'url(/gradients/enterprise-security-bg-dark.svg)',
+      },
+      support: {
+        backgroundImage: 'url(/gradients/enterprise-suppurt-bg-dark.svg)',
+      },
+      blue: {
+        backgroundImage: 'url(/gradients/insights-bg.svg)',
+      },
+      mixed: {
+        backgroundImage: 'url(/gradients/artifacts-bg.svg)',
+      },
+      red: {
+        backgroundImage: 'url(gradients/cicd-bg.svg)',
+      },
+    },
+  },
+});
+
+

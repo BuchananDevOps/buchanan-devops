@@ -44,5 +44,3 @@ export const GradientHero = styled('h1', {
     fontSize: '4rem',
   },
 });
-
-

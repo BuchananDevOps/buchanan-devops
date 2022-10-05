@@ -1,7 +1,8 @@
-import { GradientHero } from "./styles";
-import { Container, Grid, Row, Spacer, Text } from "@nextui-org/react";
-import { HeroButton, HeroButtonWrapper, Section, StyledImg } from "@primitives";
-import { lightTheme } from "@theme/shared";
+import { GradientHero } from './styles';
+import { Container, Grid, Row, Spacer, Text } from '@nextui-org/react';
+import { HeroButton, HeroButtonWrapper, Section, StyledImg } from '@primitives';
+import { lightTheme } from '@theme/shared';
+import { useMediaQuery } from '@hooks/use-media-query';
 
 const items = [
   {
@@ -43,8 +44,9 @@ const items = [
 ];
 
 const FullStackHero: React.FC = () => {
+  const isMobile = useMediaQuery(960);
   return (
-    <Container 
+    <Container
       alignItems="center"
       as="section"
       className="hero__container"
@@ -62,23 +64,24 @@ const FullStackHero: React.FC = () => {
       wrap="nowrap"
     >
       <Section css={{ position: 'relative' }}>
-        <Container>
+
           <Row justify="center">
-
-              <StyledImg 
-                height={70} 
-                src="/full/sp-hero.svg"
-                alt="Full Stack App Development Hero image with GraphQL and NextJS"
-                css={{
-                  height: '70px;',
-                  '@xsMax': {
-                    height: '50px;',
-                  },
-                }}
-                />
-
+            <StyledImg
+              height={70}
+              src="/full/sp-hero.svg"
+              alt="Full Stack App Development Hero image with GraphQL and NextJS"
+              css={{
+                height: '70px;',
+                '@xsMax': {
+                  height: '50px;',
+                },
+                [`.${lightTheme} &`]: {
+                  filter: 'invert(1)',
+                },
+              }}
+            />
           </Row>
-          <Spacer y={2} />
+
           <Row justify="center">
             <Text
               css={{
@@ -86,7 +89,7 @@ const FullStackHero: React.FC = () => {
                 textAlign: 'center',
                 '@xsMax': {
                   fontSize: '3rem',
-                },  
+                },
               }}
               h1
             >
@@ -94,7 +97,7 @@ const FullStackHero: React.FC = () => {
               <GradientHero>Development.</GradientHero>
             </Text>
           </Row>
-          <Row justify="center" >
+          <Row justify="center">
             <Text
               css={{
                 fs: '24px',
@@ -104,18 +107,20 @@ const FullStackHero: React.FC = () => {
                 textAlign: 'center',
                 maxWidth: '790px',
                 textRendering: 'optimizeLegibility',
+                '@smMax': {
+                  fontSize: '20px',
+                },
               }}
             >
               We build full stack applications with incredible performance and
-              love for the craft. If you&apos;ve made it this far, you&apos;re 
+              love for the craft. If you&apos;ve made it this far, you&apos;re
               ready to unlock your full potential.
-
             </Text>
           </Row>
           <Row justify="center">
             <HeroButtonWrapper>
-                <HeroButton color="white">Start Dreaming</HeroButton>
-                <HeroButton color="black">Request Estimate</HeroButton>
+              <HeroButton color="white">Start Dreaming</HeroButton>
+              <HeroButton color="black">Request Estimate</HeroButton>
             </HeroButtonWrapper>
           </Row>
           <Row justify="center">
@@ -133,35 +138,11 @@ const FullStackHero: React.FC = () => {
               }}
             >
               We prefer to work with people who are passionate and kind
-              </Text>
+            </Text>
           </Row>
-          <Row justify="center">
-            <Grid.Container  justify="center" css={{ marginTop: '40px' }}>
-              {items.map((item) => (
-                <Grid xs={6} sm={4} md={3} lg={1.5} key={item.title}>
-                  <a href={item.href} target="_blank" rel="noopener noreferrer">
-                    <StyledImg
-                      src={item.src}
-                      alt={item.title}
-                      css={{
-                        height: '40px',
-                        '@xsMax': {
-                          height: '30px',
-                        },
-                          [`.${lightTheme} &`]: {
-                            filter: 'invert(1)',
-                          },
-                      }}
-                    />
-                  </a>
-                </Grid>
-              ))}
-            </Grid.Container>
-          </Row>
-        </Container>
       </Section>
     </Container>
-  )
+  );
 };
 
 export default FullStackHero;

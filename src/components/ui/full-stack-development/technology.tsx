@@ -44,7 +44,7 @@ const items = [
 const Technology: React.FC = () => {
   return (
     <Section css={{ textJustify: 'inter-character' }}>
-      <Spacer y={1} />
+      <Spacer y={3} />
       <Text h4 css={{ fontSize: '3rem' }}>
         Some technologies we use
       </Text>
