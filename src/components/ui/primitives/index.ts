@@ -251,17 +251,8 @@ export const BgGradient = styled('div', {
         $$gradient: 'linear-gradient( $$colorA 25%, $$colorB 100%)',
         background: '$$gradient',
         opacity: 0.1,
-        width: '550px',
-        height: '550px',
+
         zIndex: -10,
-      },
-    },
-    position: {
-      rightTop: {
-        top: '10%',
-        left: 0,
-        right: '10%',
-        bottom: 0,
       },
     },
   },
@@ -318,3 +309,59 @@ export const PageNav = styled(StyledButton, {
 
   },
 });
+
+export const HeroButtonWrapper = styled('div', {
+  mb: '80px',
+
+  smDirection: 'column',
+  mdDirection: 'row',
+  lgDirection: 'row',
+  align: 'stretch',
+  justify: 'flex-start',
+})
+
+export const HeroButton = styled('button', {
+  position: 'relative',
+  display: 'inline-flex',
+  height: '48px',
+  fs: '1rem',
+  lh: '1.5rem',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  borderRadius: '5px',
+
+  fontWeight: '500',
+  padding: '0 $8',
+  maxWidth: '100%',
+  textDecoration: 'none',
+  transitionProperty: 'background, border-color, color, opacity, box-shadow, transform',
+  transitionDuration: '0.15s',
+  transitionTimingFunction: 'ease-in-out',
+  cursor: 'pointer',
+  variants: {
+    color: {
+      white: {
+        color: '$background',
+        background: '$foreground',
+        border: '1px solid $foreground',
+        '&:hover': {
+        color: '$text',
+        background: '$background',
+        border: '1px solid $foreground',
+        },
+      },
+      black: {
+        color: '$text',
+        background: '$background',
+        border: '1px solid $backgroundContrast',
+        ml: '16px',
+        '&:hover': {
+        color: '$text',
+        background: '$background',
+        border: '1px solid $foreground',
+        },
+      },
+    }
+  }
+})

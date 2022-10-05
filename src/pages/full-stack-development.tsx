@@ -4,8 +4,9 @@ import { NextPage } from 'next';
 const FullStackDevelopment: NextPage = () => {
   return (
     <>
-      <Pricing />
       <FullStackHero />
+      <Pricing />
+      
       <Process />
     </>
   );

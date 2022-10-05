@@ -27,3 +27,22 @@ export const ProcessItem = styled(Grid, StyledCardBlur, {
     },
   },
 });
+
+export const GradientHero = styled('h1', {
+  mt: '-50px',
+  fontSize: '7rem',
+  fontWeight: '$extrabold',
+  letterSpacing: '-0.05em',
+  $$colorA: '#9A1FB8',
+  $$colorB: '#FF0080',
+  $$gradient: 'linear-gradient(90deg, $$colorA 0%, $$colorB 100%)',
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  backgroundImage: '$$gradient',
+  '@xsMax': {
+    mt: '-30px',
+    fontSize: '4rem',
+  },
+});
+
+

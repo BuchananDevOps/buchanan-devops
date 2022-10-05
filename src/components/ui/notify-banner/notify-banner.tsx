@@ -43,7 +43,7 @@ const NotifyBanner: React.FC<Props> = (props) => {
           <span aria-label="notify" role="img">
             🎉
           </span>
-          &nbsp;ENTERPRISE
+          &nbsp;OPEN FOR BUSINESS
         </Badge>
       )}
       <NextLink href={href}>

@@ -4,12 +4,7 @@ import { lightTheme } from '@theme/shared';
 
 const items = [
   {
-    title: 'Next.js',
-    href: 'https://nextjs.org',
-    src: '/tools/nextlogo.svg',
-  },
-  {
-    title: 'Tailwind CSS',
+    title: 'Tailwinds CSS',
     href: 'https://tailwindcss.com',
     src: '/tools/tailwindscss.svg',
   },

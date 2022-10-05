@@ -91,7 +91,7 @@ const Navbar: React.FC<Props> = ({ isHome, hasNotify }) => {
 
   return (
     <StyledNavMainContainer id="navbar-container">
-      <NotifyBanner text="Full-Stack DevOps" href="/full-stack-applications" />
+      <NotifyBanner text="Service Offering Introduction" href="/devops" />
       <StyledNavContainer isDetached={isDetached} showBlur={showBlur}>
         <Container
           alignItems="center"

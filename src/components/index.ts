@@ -47,3 +47,4 @@ export { default as DevOpsHero } from './ui/hero-devops';
 export { default as Playground } from './ui/playground';
 export { default as Palette } from './ui/palette';
 export { default as AngledGradientHeading } from './ui/angled-gradient-heading';
+export { default as GradientGrid } from './ui/gradient-grid';
