@@ -1,11 +1,31 @@
-import { Col, Collapse, Grid, Spacer, Text } from '@nextui-org/react';
-import { Title, Subtitle, Box, Section, BlockLink } from '@primitives';
+import {
+  Button,
+  Col,
+  Collapse,
+  Grid,
+  Modal,
+  Spacer,
+  StyledButton,
+  Text,
+  useModal,
+} from '@nextui-org/react';
+import {
+  Title,
+  Subtitle,
+  Box,
+  Section,
+  BlockLink,
+  StyledImg,
+  BgGradient,
+  PageNav,
+} from '@primitives';
 import { darkTheme } from '@theme/shared';
 import { useState } from 'react';
 import { InView } from 'react-intersection-observer';
 import cn from 'classnames';
 import NextLink from 'next/link';
-import { Blockholder } from '@components';
+import { Blockholder, CodeDemo, ChevronLeft, ChevronRight } from '@components';
+
 const items = [
   {
     id: 'seo-audit',
@@ -13,6 +33,8 @@ const items = [
     description:
       'Analysis of your target market and business to determine the best keywords to target and develop a strategy to rank higher in search engines.',
     lines: '2-21',
+    prev: 'search-monitoring',
+    next: 'deep-learning',
   },
   {
     id: 'deep-learning',
@@ -20,6 +42,8 @@ const items = [
     description:
       'Through deep learning, we will research the optimal keywords for your industry which see the highest Clickthrough rates (CTR).',
     lines: '23-73',
+    prev: 'seo-audit',
+    next: 'listings-integrations',
   },
   {
     id: 'listings-integrations',
@@ -27,6 +51,8 @@ const items = [
     description:
       'Well integrate schema markup to your content, which enable rich snippets to be displayed in search results and highlight your business offerings.',
     lines: '69-85',
+    prev: 'deep-learning',
+    next: 'serp-indexing',
   },
   {
     id: 'serp-indexing',
@@ -34,6 +60,8 @@ const items = [
     description:
       'Optimizing your content will the above references methods offers a better understanding of your content to search engines and users.',
     lines: '85-118',
+    prev: 'listings-integrations',
+    next: 'seo-audit',
   },
   {
     id: 'search-monitoring',
@@ -48,9 +76,22 @@ const WhySeo: React.FC = () => {
   const [activeItem, setActiveItem] = useState(items[0]);
   const [isVisible, setIsVisible] = useState(false);
 
+  const { setVisible, bindings } = useModal();
+
   const handleChange = (value: any) => {
     setActiveItem(items[value - 1]);
   };
+
+  const handleNext = () => {
+    setActiveItem(items.find((item) => item.id === activeItem.next));
+    setVisible(true);
+  };
+
+  const handlePrev = () => {
+    setActiveItem(items.find((item) => item.id === activeItem.prev));
+    setVisible(true);
+  };
+
   return (
     <InView as="section" className="inview-section" onChange={setIsVisible}>
       <Spacer y={10} css={{ '@xsMax': { mt: '$14' } }} />
@@ -175,7 +216,76 @@ const WhySeo: React.FC = () => {
                 mt: '-10%',
               }}
             >
-              <Blockholder height="420px" />
+              {isVisible ? (
+                <>
+                  <BgGradient color="matrixGreen" />
+                  <StyledButton
+                    onClick={() => setVisible(true)}
+                    color="success"
+                    css={{ height: 'fit-content', px: '0px' }}
+                  >
+                    <StyledImg
+                      src={`/images/${activeItem.id}.png`}
+                      alt={activeItem.title}
+                    />
+                  </StyledButton>
+                  <Modal
+                    scroll
+                    width="100%"
+                    blur
+                    aria-labelledby={`${activeItem.id}-title`}
+                    {...bindings}
+                    css={{
+                      padding: '0px',
+                      borderRadius: '0px',
+                      boxShadow: 'none',
+                    }}
+                  >
+                    <Modal.Body
+                      css={{
+                        padding: '0px',
+                        borderRadius: '11px',
+                      }}
+                    >
+                      <PageNav
+                        auto
+                        title={activeItem.prev}
+                        onClick={handlePrev}
+                        selector="left"
+                      >
+                        <ChevronLeft
+                          size={24}
+                          fill="#16181A"
+                        />
+                      </PageNav>
+                      <StyledImg
+                        onClick={() => setVisible(false)}
+                        src={`/images/${activeItem.id}.png`}
+                        alt={activeItem.title}
+                        className={cn({
+                          active: activeItem.id === activeItem.id,
+                        })}
+                        css={{
+                          mb: '0px',
+                        }}
+                      />
+                      <PageNav
+                        auto
+                        title={activeItem.next}
+                        onClick={handleNext}
+                        selector="right"
+                      >
+                        <ChevronRight
+                          size={24}
+                          fill="#16181A"
+                        />
+                      </PageNav>
+                    </Modal.Body>
+                  </Modal>
+                </>
+              ) : (
+                <Blockholder height="420px" />
+              )}
             </Col>
           </Grid>
         </Grid.Container>

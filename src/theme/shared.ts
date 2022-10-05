@@ -22,10 +22,12 @@ export const lightTheme = createTheme({
       modalBackground: '$white',
       codeHighlight: 'hsl(243, 16%, 30%)',
       backgroundBlur: 'rgba(255, 255, 255, 0.3)',
+      borderBlur: 'rgba(255, 255, 255, 0.05)',
       blockLinkColor: '#FF1CF7',
       blockLinkBackground: '$accents1',
       blockLinkHoverBackground: '#FFD1ED',
       violet: '#7928ca',
+
       radialGradient:
         'radial-gradient(circle, #c42d01 0%,#c42d01 10%,#fcf26e 40%,#00e754 60%,#00eef4 70%,#0070f3 100%)',
     },
@@ -49,6 +51,7 @@ export const darkTheme = createTheme({
       logoBackground: 'rgba(0,0,0,0.1)',
       modalBackground: '#0a0a0a9e',
       backgroundBlur: 'rgba(255, 255, 255, 0.1)',
+      borderBlur: 'rgba(255, 255, 255, 0.05)',
       blockLinkColor: '#FFA4E3',
       blockLinkBackground: '$accents1',
       blockLinkHoverBackground: '#55057A',

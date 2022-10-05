@@ -21,13 +21,6 @@ export const TitleDesign = styled('span', {
   backgroundClip: 'text',
   zIndex: '1',
   backgroundImage: 'linear-gradient(90deg, #007CF0 0%, #00DFD8 100%)',
-  animationDuration: '3s',
-  animationTimingFunction: 'ease-in-out',
-  animationIterationCount: 'infinite',
-  animationDelay: '0s',
-  animationDirection: 'normal',
-  animationFillMode: 'both',
-  animationPlayState: 'running',
 });
 
 export const TitleDevelop = styled('span', {
@@ -36,13 +29,6 @@ export const TitleDevelop = styled('span', {
   backgroundClip: 'text',
   zIndex: '1',
   backgroundImage: 'linear-gradient(90deg, #7928CA 0%, #ff0080 100%)',
-  animationDuration: '3s',
-  animationTimingFunction: 'ease-in-out',
-  animationIterationCount: 'infinite',
-  animationDelay: '0s',
-  animationDirection: 'normal',
-  animationFillMode: 'both',
-  animationPlayState: 'running',
 });
 
 export const TitleOptimize = styled('span', {
@@ -51,13 +37,6 @@ export const TitleOptimize = styled('span', {
   backgroundClip: 'text',
   zIndex: '1',
   backgroundImage: 'linear-gradient(90deg, #FF4D4D 0%, #F9CB28 100%)',
-  animationDuration: '3s',
-  animationTimingFunction: 'ease-in-out',
-  animationIterationCount: 'infinite',
-  animationDelay: '0s',
-  animationDirection: 'normal',
-  animationFillMode: 'both',
-  animationPlayState: 'running',
 });
 
 export const StyledGradientButton = styled('button', {
@@ -65,14 +44,6 @@ export const StyledGradientButton = styled('button', {
   background: '$transparent',
   backgroundImage: 'linear-gradient(to right, #000000bf, #000000bf)',
   color: '$foreground',
-  borderColor: '$transparent',
-  borderRadius: '0.2rem',
-  borderWidth: '1px',
-  backgroundClip: 'padding-box',
-  boxShadow: '0 4px 4px 0 #00000040',
-  transitionProperty: 'color, backgroundColor boxShadow, ',
-  transitionDuration: '0.15s',
-  transitionTimingFunction: 'ease-in-out',
 });
 
 export const DesignSectionLabel = styled('span', {

@@ -1,5 +1,13 @@
-import { styled, Link, Text, keyframes } from '@nextui-org/react';
-import { darkTheme } from '@theme/shared';
+import {
+  styled,
+  Link,
+  Text,
+  keyframes,
+  Button,
+  StyledButton,
+} from '@nextui-org/react';
+import { darkTheme, lightTheme } from '@theme/shared';
+import { pulse } from '@utils/animations';
 
 const animatedText = keyframes({
   '100%': {
@@ -166,6 +174,37 @@ export const AnimatedText = styled(Text, {
   },
 });
 
+export const AnimatedTitle = styled(Text, {
+  cursor: 'default',
+  position: 'relative',
+  fontWeight: '$bold',
+  backgroundOrigin: 'padding-box',
+  backgroundSize: '200%',
+  WebkitBoxDecorationBreak: 'clone',
+  backgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  color: 'unset',
+  overflow: 'visible',
+  animation: `3s linear 0s infinite normal forwards running ${animatedText}`,
+  variants: {
+    type: {
+      seo: {
+        $$colorA: '#FF4D4D',
+        $$colorB: '#F9CB28',
+        backgroundImage:
+          'linear-gradient(90deg, $$colorA 0%, $$colorB 50%, $$colorA 100%)',
+      },
+    },
+    size: {
+      header: {
+        fontSize: '5.5rem',
+        lineHeight: '1.2',
+        marginBlockStart: '-.55em',
+      },
+    },
+  },
+});
+
 export const HeroImgBackground = styled('div', {
   background: '$accents1',
   boxShadow: '$sm',
@@ -177,5 +216,105 @@ export const HeroImgBackground = styled('div', {
   '@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))': {
     bf: 'saturate(180%) blur(14px)',
     bg: 'rgba(255, 255, 255, 0.05)',
+  },
+});
+
+export const BgGradient = styled('div', {
+  position: 'absolute',
+
+  height: '100vh',
+  overflow: 'hidden',
+  filter: 'blur(70px)',
+  userSelect: 'none',
+  pointerEvents: 'none',
+  variants: {
+    color: {
+      purple: {
+        background: '#ff0080',
+        opacity: 0.3,
+        width: '600px',
+        height: '400px',
+        zIndex: -1,
+      },
+      lightBlue: {
+        background: '#0070f3',
+        opacity: 0.3,
+        width: '600px',
+        height: '400px',
+        zIndex: -2,
+      },
+      matrixGreen: {
+        $$colorA: '#6fee8d',
+        $$colorB: '#17c964',
+        top: '10%',
+        left: '55%',
+        $$gradient: 'linear-gradient( $$colorA 25%, $$colorB 100%)',
+        background: '$$gradient',
+        opacity: 0.1,
+        width: '550px',
+        height: '550px',
+        zIndex: -10,
+      },
+    },
+    position: {
+      rightTop: {
+        top: '10%',
+        left: 0,
+        right: '10%',
+        bottom: 0,
+      },
+    },
+  },
+});
+
+export const PageNav = styled(StyledButton, {
+  display: 'flex',
+  background: 'none',
+  position: 'absolute',
+  verticalAlign: 'middle',
+  variants: {
+    selector: {
+      left: {
+        justifyContent: 'flex-start',
+        top: '35%',
+        left: '0%',
+        minHeight: '25%',
+      },
+      right: {
+        justifyContent: 'flex-end',
+        top: '35%',
+        right: '0%',
+        bottom: '5%',
+        minHeight: '25%',
+
+      },
+    },
+  },
+  '@mdMax': {},
+  '& .nextui-button-icon': {
+    mr: '$2',
+  },
+  '& .nextui-button-icon svg': {
+    transition: '$default',
+    fill: '#13181A'
+  },
+  '&:hover': {
+    '& .nextui-button-icon svg': {
+      animation: `${pulse} 1s infinite`,
+    },
+  },
+  [`.${darkTheme} &`]: {
+    bg: 'rgba(51, 51,51,0.1)',
+    '@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))': {
+      bf: 'saturate(180%) blur(1px)',
+    },
+
+  },
+  [`.${lightTheme} &`]: {
+    bg: 'rgba(51, 51,51,0.1)',
+    '@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))': {
+      bf: 'saturate(180%) blur(14px)',
+    },
+
   },
 });

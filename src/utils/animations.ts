@@ -54,24 +54,39 @@ export const growAndShrink = keyframes({
 export const spin = keyframes({
   from: {
     top: '50%',
+    left: '5%',
     transform: 'rotate(0deg)',
   },
 
   to: {
-    top: '10%',
+    top: '50%',
+    left: '70%',
     transform: 'rotate(360deg)',
   },
 });
 
 export const spin2 = keyframes({
   from: {
-    top: '20%',
-    left: '30%',
+    top: '50%',
+    left: '70%',
     transform: 'rotate(0deg)',
   },
   to: {
-    top: '35%',
-    left: '65%',
+    top: '55%',
+    left: '0%',
+    transform: 'rotate(360deg)',
+  },
+});
+
+export const spin3 = keyframes({
+  from: {
+    top: '50%',
+    left: '25%',
+    transform: 'rotate(0deg)',
+  },
+  to: {
+    top: '50%',
+    left: '25%',
     transform: 'rotate(360deg)',
   },
 });

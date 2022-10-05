@@ -15,7 +15,6 @@ const ShowcasePortfolio: NextPage = () => {
               fontSize: '6rem',
               '@xsMax': { fontSize: '4rem', lineHeight: '3.5rem' },
               '@mdMax': { fontSize: '4rem', lineHeight: '3.5rem' },
-              '@lgMax': { fontSize: '5rem', lineHeight: '4rem' },
             }}
           >
             Showcase Portfolio
@@ -270,9 +269,8 @@ const ShowcasePortfolio: NextPage = () => {
             h1
             css={{
               fontSize: '6rem',
-              '@xsMax': { fontSize: '4rem', lineHeight: '3.5rem' },
-              '@mdMax': { fontSize: '4rem', lineHeight: '3.5rem' },
-              '@lgMax': { fontSize: '5rem', lineHeight: '4rem' },
+              '@xsMax': { fontSize: '3.5rem', lineHeight: '3.5rem' },
+              '@smMax': { fontSize: '4rem', lineHeight: '4rem' },
             }}
           >
             Public Github Repositories

@@ -1,7 +1,33 @@
-import { styled, keyframes, VariantProps, Grid } from '@nextui-org/react';
+import { styled, keyframes, VariantProps, Grid, Text } from '@nextui-org/react';
 import { lightTheme } from '@theme/shared';
-import { spin, growAndShrink } from '@utils/animations';
+import { spin, growAndShrink, spin2, spin3 } from '@utils/animations';
 import { StyledCardBlur } from '@components';
+
+export const StyledTitle = styled(Text, {
+  marginTop: '-30px',
+  fontSize: '100px',
+  fontWeight: '700',
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  backgroundImage: 'linear-gradient(90deg, #FF4D4D 0%, #F9CB28 100%)',
+});
+
+export const GradientHero = styled('h1', {
+  mt: '-50px',
+  fontSize: '7rem',
+  fontWeight: '$extrabold',
+  letterSpacing: '-0.05em',
+  $$colorA: '#FF4D4D',
+  $$colorB: '#F9CB28',
+  $$gradient: 'linear-gradient(90deg, $$colorA 0%, $$colorB 100%)',
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  backgroundImage: '$$gradient',
+  '@xsMax': {
+    mt: '-30px',
+    fontSize: '4rem',
+  },
+});
 
 export const StyledGradientWrapper = styled('div', {
   position: 'absolute',
@@ -17,40 +43,38 @@ export const StyledGradientWrapper = styled('div', {
   pointerEvents: 'none',
 });
 
-export const FeatureGradientOrange = styled('div', {
+export const FeatureGradient = styled('div', {
   position: 'absolute',
   borderRadius: '100%',
-  top: '10%',
-  left: '40%',
-  background: '#29bc9b',
-  opacity: 0.5,
-  width: '700px',
-  height: '700px',
-  zIndex: -2,
-});
-
-export const FeatureGradientPurple = styled('div', {
-  position: 'absolute',
-  borderRadius: '100%',
-  top: '30%',
-  left: '10%',
-  background: '#7928ca',
-  opacity: 0.4,
-  width: '600px',
-  height: '600px',
-  zIndex: -1,
-});
-
-export const FeatureGradientLight = styled('div', {
-  position: 'absolute',
-
-  top: '50%',
-  left: '50%',
-  background: '#137dc0',
-  opacity: 0.4,
-  width: '500px',
-  height: '500px',
-  zIndex: -3,
+  variants: {
+    color: {
+      purple: {
+        background: '#ff0080',
+        opacity: 0.3,
+        width: '600px',
+        height: '600px',
+        zIndex: -1,
+        animation: `${spin} 13s infinite alternate`,
+      },
+      lightBlue: {
+        background: '#0070f3',
+        opacity: 0.3,
+        width: '500px',
+        height: '500px',
+        zIndex: -3,
+        animation: `${spin2} 13s infinite alternate`,
+      },
+      green: {
+        zIndex: -2,
+        background: '#7928ca',
+        opacity: 0.2,
+        width: '800px',
+        height: '800px',
+        borderRadius: '30%',
+        animation: `${spin3} 15s infinite alternate`,
+      },
+    },
+  },
 });
 
 export const SeoFeatureItem = styled(Grid, StyledCardBlur, {

@@ -4,16 +4,16 @@ import {
   WhySeo,
   SeoMetrics,
   AngledGradientHeading,
+  SeoFeatures,
 } from '@components';
 import { Section } from '@primitives';
 import { NextPage } from 'next';
-import seoContent from '../../content/seo';
 
 const SearchEngineOptimization: NextPage = () => {
   return (
     <>
       <SeoHero />
-      <FeaturesGrid features={seoContent.seoFeatures} />
+      <SeoFeatures />
       <WhySeo />
       <AngledGradientHeading />
       <SeoMetrics />
