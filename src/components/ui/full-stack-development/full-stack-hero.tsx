@@ -3,6 +3,7 @@ import { Container, Grid, Row, Spacer, Text } from '@nextui-org/react';
 import { HeroButton, HeroButtonWrapper, Section, StyledImg } from '@primitives';
 import { lightTheme } from '@theme/shared';
 import { useMediaQuery } from '@hooks/use-media-query';
+import { ServiceProviders } from '@components';
 
 const items = [
   {
@@ -140,6 +141,7 @@ const FullStackHero: React.FC = () => {
               We prefer to work with people who are passionate and kind
             </Text>
           </Row>
+          <ServiceProviders />
       </Section>
     </Container>
   );

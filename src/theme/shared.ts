@@ -27,6 +27,8 @@ export const lightTheme = createTheme({
       blockLinkBackground: '$accents1',
       blockLinkHoverBackground: '#FFD1ED',
       violet: '#7928ca',
+      featureP: '#888888',
+      artifactBorder: '#faeeff',
 
       radialGradient:
         'radial-gradient(circle, #c42d01 0%,#c42d01 10%,#fcf26e 40%,#00e754 60%,#00eef4 70%,#0070f3 100%)',
@@ -56,6 +58,8 @@ export const darkTheme = createTheme({
       blockLinkBackground: '$accents1',
       blockLinkHoverBackground: '#55057A',
       violet: '#7928ca',
+      featureP: '#888888',
+      artifactBorder: 'rgba(228,202,255,.25)',
       radialGradient:
         'radial-gradient(circle, #c42d01 0%,#c42d01 10%,#fcf26e 40%,#00e754 60%,#00eef4 70%,#0070f3 100%)',
     },

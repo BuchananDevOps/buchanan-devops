@@ -15,6 +15,12 @@ const animatedText = keyframes({
   },
 });
 
+export const AnimationHelper = styled('div', {
+  animationDuration: '.5s',
+  easing: 'cubic-bezier(0.4,0.01,0.165,0.99)',
+  animationDelay: '0s',
+});
+
 export const Title = styled('h1', {
   display: 'inline',
   fontWeight: '$bold',
@@ -371,11 +377,12 @@ export const HeroButton = styled('button', {
   /* //Below GradientBackground a link reference then a component but feel free to use this for a quick background or such  */
 }
 
-export const SupportCard = styled(Box, {
+export const DelamureCard = styled(Box, {
   opacity: 1,
   backgroundPosition: '50px -330px',
   content: '',
   position: 'absolute',
+  padding: '56px',
   width: '100%',
   height: '100%',
   top: 0,
@@ -384,22 +391,146 @@ export const SupportCard = styled(Box, {
   variants: {
     cards: {
       security: {
-        backgroundImage: 'url(/gradients/enterprise-security-bg-dark.svg)',
+        [`.${darkTheme} &`]: {
+          backgroundImage: 'url(/delamure/enterprise-security-bg-dark-v1.svg)',
+        },
+        [`.${lightTheme} &`]: {
+          backgroundImage: 'url(/delamure/enterprise-security-bg-light-v1.svg)',
+        },
       },
       support: {
-        backgroundImage: 'url(/gradients/enterprise-suppurt-bg-dark.svg)',
+        [`.${darkTheme} &`]: {
+          backgroundImage: 'url(/delamure/enterprise-support-bg-dark-v1.svg)',
+        },
+        [`.${lightTheme} &`]: {
+          backgroundImage: 'url(/delamure/enterprise-support-bg-light-v1.svg)',
+        },
       },
-      blue: {
-        backgroundImage: 'url(/gradients/insights-bg.svg)',
+      insights: {
+        backgroundImage: 'url(/delamure/insights-bg-v1.svg)',
       },
-      mixed: {
-        backgroundImage: 'url(/gradients/artifacts-bg.svg)',
+      artifacts: {
+        backgroundImage: 'url(/delamure/artifacts-bg-v1.svg)',
       },
-      red: {
-        backgroundImage: 'url(gradients/cicd-bg.svg)',
+      cicd: {
+        backgroundImage: 'url(/delamure/cicd-bg-v1.svg)',
       },
     },
   },
 });
 
+export const SummaryBannerWrapper = styled('section', {
+  $$height: '240px',
+  $$gradientOffset: '-200px',
+  $$opacity: '0.15',
+  $$borderRadius: '20px',
+  $$borderColorA: '211deg 95% 57% / 15%',
+  $$borderColorB: '227,44,107,.15',
+  borderStyle: 'solid',
+  borderWidth: '1px 0 0',
+  borderImage: 'linear-gradient(90deg, $$borderColorA, $$borderColorB)',
+  borderImageSlice: '1',
+  pt: '115px',
+  position: 'relative',
+  overflow: 'hidden',
+
+  [`.${darkTheme} &`]: {
+    $$opacity: '0.35',
+    $$borderColorA: '40,140,249,.25',
+    $$borderColorB: '227,44,107,.25',
+    borderImage: 'linear-gradient(90deg, $$borderColorA, $$borderColorB)',
+  },
+
+'&::before': {
+    content: '""',
+    position: 'absolute',
+    height: '$$height',
+    width: '45vw',
+    left: '0',
+    top: '-250px',
+    mixBlendMode: 'normal',
+    opacity: '$$opacity',
+    boxSizing: 'border-box',
+    background: 'linear-gradient(180deg,#bebebe,#4b4b4b)'
+
+},
+
+'&::after': {
+  content: '""',
+  position: 'absolute',
+  height: '$$height',
+  width: '45vw',
+  right: '0',
+  top: '-250px',
+  mixBlendMode: 'normal',
+  opacity: '$$opacity',
+  filter: 'blur(150px)',
+  boxSizing: 'border-box',
+  background: 'linear-gradient(180deg,#b8b8b8,#373737',
+  bottomBorderLeftRadius: '$$borderRadius',
+},
+});
+
+export const GradientCard = styled('div', {
+  border: '1px solid',
+  borderRadius: '12px',
+  padding: '56px',
+  position: 'relative',
+  flex: '1 1',
+  backgroundPositionX: '50%',
+  backgroundPositionY: '-330px',
+  variants: {
+      type: {
+          artifact: {
+              borderColor: '$$artifactBorder',
+              '&::after': {
+                  
+                  content: '""',
+                  position: 'absolute',
+                  width: '100%',
+                  height: '100%',
+                  top: 0,
+                  left: 0,
+                  opacity: 0.25,
+                  zIndex: -1,
+                  backgroundImage: 'url(/delamure/artifacts-bg-v1.svg)',
+                  '& .artifact-card': {
+                      backgroundImage: 'url(/delamure/artifacts-bg-v1.svg)',
+                  },
+              },
+          },
+          support: {
+              borderColor: '$$serviceBorder',
+              backgroundColor: '$$serviceBg',
+              color: '$$serviceText',
+          },
+      },
+  },
+  '& .feature-icon': {
+      mb: '20px',
+  },
+  '& .feature-icon img': {
+      maxWidth: '100%',
+      height: 'auto',
+  },
+  '& .feature-title': {
+      fs: '1.25rem',
+      letterSpacing: '-.020625rem',
+      fontWeight: '700',
+      lineHeight: '1.5rem',
+      mb: '8px'
+  },
+  '& .feature-description': {
+      display: 'block',
+      margin: '0px',
+      color: '$featureP',
+      fs: '1rem',
+      fontWeight: '400',
+      lineHeight: '1.5rem',
+      marginBlockStart: '1em',
+      marginBlockEnd: '1em',
+      marginInlineStart: '0px',
+      marginInlineEnd: '0px',
+  },
+});
 
