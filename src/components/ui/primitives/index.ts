@@ -139,7 +139,7 @@ export const BlockLink = styled(Link, {
   },
   defaultVariants: {
     color: 'default',
-  },
+  }, 
 });
 
 export const StyledCardBlur = styled('div', {
@@ -373,59 +373,14 @@ export const HeroButton = styled('button', {
   },
 });
 
-{
-  /* //Below GradientBackground a link reference then a component but feel free to use this for a quick background or such  */
-}
-
-export const DelamureCard = styled(Box, {
-  opacity: 1,
-  backgroundPosition: '50px -330px',
-  content: '',
-  position: 'absolute',
-  padding: '56px',
-  width: '100%',
-  height: '100%',
-  top: 0,
-  left: 0,
-  zIndex: -1,
-  variants: {
-    cards: {
-      security: {
-        [`.${darkTheme} &`]: {
-          backgroundImage: 'url(/delamure/enterprise-security-bg-dark-v1.svg)',
-        },
-        [`.${lightTheme} &`]: {
-          backgroundImage: 'url(/delamure/enterprise-security-bg-light-v1.svg)',
-        },
-      },
-      support: {
-        [`.${darkTheme} &`]: {
-          backgroundImage: 'url(/delamure/enterprise-support-bg-dark-v1.svg)',
-        },
-        [`.${lightTheme} &`]: {
-          backgroundImage: 'url(/delamure/enterprise-support-bg-light-v1.svg)',
-        },
-      },
-      insights: {
-        backgroundImage: 'url(/delamure/insights-bg-v1.svg)',
-      },
-      artifacts: {
-        backgroundImage: 'url(/delamure/artifacts-bg-v1.svg)',
-      },
-      cicd: {
-        backgroundImage: 'url(/delamure/cicd-bg-v1.svg)',
-      },
-    },
-  },
-});
 
 export const SummaryBannerWrapper = styled('section', {
   $$height: '240px',
   $$gradientOffset: '-200px',
   $$opacity: '0.15',
   $$borderRadius: '20px',
-  $$borderColorA: '211deg 95% 57% / 15%',
-  $$borderColorB: '227,44,107,.15',
+  $$borderColorA: 'rgba(211deg 95% 57% / 15%)',
+  $$borderColorB: 'rgba(227,44,107,.15)',
   borderStyle: 'solid',
   borderWidth: '1px 0 0',
   borderImage: 'linear-gradient(90deg, $$borderColorA, $$borderColorB)',
@@ -436,8 +391,8 @@ export const SummaryBannerWrapper = styled('section', {
 
   [`.${darkTheme} &`]: {
     $$opacity: '0.35',
-    $$borderColorA: '40,140,249,.25',
-    $$borderColorB: '227,44,107,.25',
+    $$borderColorA: 'rgba(40,140,249,.25)',
+    $$borderColorB: 'rgba(227,44,107,.25)',
     borderImage: 'linear-gradient(90deg, $$borderColorA, $$borderColorB)',
   },
 
@@ -493,9 +448,9 @@ export const GradientCard = styled('div', {
                   left: 0,
                   opacity: 0.25,
                   zIndex: -1,
-                  backgroundImage: 'url(/delamure/artifacts-bg-v1.svg)',
+                  backgroundImage: 'url(${url})',
                   '& .artifact-card': {
-                      backgroundImage: 'url(/delamure/artifacts-bg-v1.svg)',
+                      backgroundImage: 'url(${url})',
                   },
               },
           },

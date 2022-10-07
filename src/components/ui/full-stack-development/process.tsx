@@ -1,29 +1,5 @@
-import { Feature }from '@components';
-import { Grid, Text, Row, Card, Container, styled } from '@nextui-org/react';
-import { GradientCard } from '@primitives';
-
-
-const featureItem = [
-  {
-    id: 1,
-    title: 'Principal Engineering',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    icon: '/delamure/icons/bar-chart-icon-dark-v3.svg',
-    href: '/services/principal-engineering',
-  },
-  { 
-    title: 'Realistic Roadmap',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    icon: '/delamure/icons/checkbox-icon-dark-v3.svg',
-    href: '/services/realistic-roadmap',
-  },
-  {
-    title: 'Exceptional Experiences',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    icon: '/delamure/icons/boost-icon-dark-v3.svg',
-    href: '/full-stack-development',
-  },
-];
+import { Feature, SummaryBannerWrapper, StyledCardBlur, Section }from '@components';
+import { Grid, Text, Row, Card, Container, styled, Spacer } from '@nextui-org/react';
 
 
 
@@ -31,32 +7,23 @@ const Process: React.FC = () => {
 
   
   return (
+    <Section css={{ zIndex: '$10' }}>
+      <Spacer y={6} css={{ '@xsMax': { mt: '$16' } }} />
+
     <Container
-      as="section"
-      className="process__container"
+      lg
       css={{
-        position: 'relative',
-        height: 'calc(100vh - 76px)',
+        ml: 0,
+        mr: 0,
+        py: '$8',
         '@xsMax': {
-          height: 'calc(100vh - 64px)',
+          px: '$4',
         },
       }}
     >
-          <Grid.Container gap={2} justify="center" alignItems="center">
-            {featureItem.map((item) => (
-              <Grid xs={12} sm={12} md={4} lg={4} xl={4} key={item.id}>
-                <Feature
-                 title={item.title}
-                 type="artifact"
-                  description={item.description}
-                  icon={item.icon}
-                  href={item.href}
-                 />
-              </Grid>
-            ))}
-            </Grid.Container>
+     </Container>
+     </Section>
       
-    </Container>
   );
 };
 

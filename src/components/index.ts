@@ -49,3 +49,5 @@ export { default as Palette } from './ui/palette';
 export { default as AngledGradientHeading } from './ui/angled-gradient-heading';
 export { default as GradientGrid } from './ui/gradient-grid';
 export { default as Feature } from './ui/feature-card';
+
+export { Header } from './ui/header';

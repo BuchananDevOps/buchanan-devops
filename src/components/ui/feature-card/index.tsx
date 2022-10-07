@@ -1,8 +1,9 @@
 import { Card, Grid, styled, Text, VariantProps } from '@nextui-org/react';
-import { Box, DelamureCard } from '@primitives';
+import { Box, StyledImg } from '@primitives';
 import { useRouter } from 'next/router';
 import { CSSProperties } from 'react';
 import NextLink from 'next/link';
+import cn from 'classnames'
 
  const FeatureCard = styled('div', {
     border: '1px solid',
@@ -10,33 +11,8 @@ import NextLink from 'next/link';
     padding: '56px',
     position: 'relative',
     flex: '1 1',
-    variants: {
-        type: {
-            artifact: {
-                borderColor: '$$artifactBorder',
-                '&::after': {
-                    backgroundPositionX: '50%',
-                    backgroundPositionY: '-330px',
-                    content: '',
-                    position: 'absolute',
-                    width: '100%',
-                    height: '100%',
-                    top: 0,
-                    left: 0,
-                    opacity: 0.25,
-                    zIndex: -1,
-                    '& .artifact-card': {
-                        backgroundImage: '/delamure/artifacts-bg-v1.svg',
-                    },
-                },
-            },
-            support: {
-                borderColor: '$$serviceBorder',
-                backgroundColor: '$$serviceBg',
-                color: '$$serviceText',
-            },
-        },
-    },
+    borderColor: '$$artifactBorder',
+                
     '& .feature-icon': {
         mb: '20px',
     },
@@ -96,7 +72,19 @@ const Feature: React.FC<FeatureProps> = ({
     return (
 
 
-            <FeatureCard>
+            <FeatureCard
+                css={{
+                    bg: 'transparent'
+                }}
+            >
+                <StyledImg css={{
+                    position: 'absolute',
+                    left: 0,
+                    overflow: 'hidden',
+                    opacity: 0.25,
+                    width: '100%',
+                    height: '100%'
+                }} src='/delamure/artifacts-bg-v1.svg' />
                 {icon ? (
                     <div className="feature-icon">
                         <img width="48px" height="48px" src={icon} alt={title} />

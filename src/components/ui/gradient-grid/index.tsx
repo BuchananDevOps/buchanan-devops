@@ -26,11 +26,13 @@ const GradientGrid: React.FC<GradientGridProps> = ({
 
   return (
     <Grid.Container gap={2} justify="center">
-        <Grid xs={12} md={6} lg={4}>
+        <Grid xs={12} md={12} lg={4}>
+          <Card className="gradient__card" onClick={handleClick}>
+            <StyledImg src={src} alt={title} />
+            <Text h3>{title}</Text>
+            <Text >{description}</Text>
+          </Card>
 
-        </Grid>
-        <Grid>
-            <StyledImg width={1500} src="/gradients/cicd-bg.svg" />
         </Grid>
     </Grid.Container>
 
