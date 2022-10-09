@@ -8,6 +8,7 @@ import {
   StyledButton,
   Text,
   useModal,
+  Row,
 } from '@nextui-org/react';
 import {
   Title,
@@ -25,6 +26,7 @@ import { InView } from 'react-intersection-observer';
 import cn from 'classnames';
 import NextLink from 'next/link';
 import { Blockholder, CodeDemo, ChevronLeft, ChevronRight } from '@components';
+import { useMediaQuery } from '@hooks/use-media-query';
 
 const items = [
   {
@@ -75,7 +77,7 @@ const items = [
 const WhySeo: React.FC = () => {
   const [activeItem, setActiveItem] = useState(items[0]);
   const [isVisible, setIsVisible] = useState(false);
-
+  const isMobile = useMediaQuery(960);
   const { setVisible, bindings } = useModal();
 
   const handleChange = (value: any) => {
@@ -185,6 +187,71 @@ const WhySeo: React.FC = () => {
                     >
                       {description}
                     </Text>
+                    {isMobile ? (
+                <>
+                <Row css={{ mt: '$10' }}>
+                
+                  <BgGradient color="matrixGreen" />
+                  <StyledButton
+                    onClick={() => setVisible(true)}
+                    color="success"
+                    css={{ height: 'fit-content', px: '0px' }}
+                  >
+                    <StyledImg
+                      src={`/images/${activeItem.id}.png`}
+                      alt={activeItem.title}
+                    />
+                  </StyledButton>
+                  <Modal
+                    scroll
+                    width="100%"
+                    blur
+                    aria-labelledby={`${activeItem.id}-title`}
+                    {...bindings}
+                    css={{
+                      padding: '0px',
+                      borderRadius: '0px',
+                      boxShadow: 'none',
+                    }}
+                  >
+                    <Modal.Body
+                      css={{
+                        padding: '0px',
+                        borderRadius: '11px',
+                      }}
+                    >
+                      <PageNav
+                        auto
+                        title={activeItem.prev}
+                        onClick={handlePrev}
+                        selector="left"
+                      >
+                        <ChevronLeft size={24} fill="#16181A" />
+                      </PageNav>
+                      <StyledImg
+                        onClick={() => setVisible(false)}
+                        src={`/images/${activeItem.id}.png`}
+                        alt={activeItem.title}
+                        className={cn({
+                          active: activeItem.id === activeItem.id,
+                        })}
+                        css={{
+                          mb: '0px',
+                        }}
+                      />
+                      <PageNav
+                        auto
+                        title={activeItem.next}
+                        onClick={handleNext}
+                        selector="right"
+                      >
+                        <ChevronRight size={24} fill="#16181A" />
+                      </PageNav>
+                    </Modal.Body>
+                  </Modal>
+                  </Row>
+                </>
+              ) :  null}
                   </Collapse>
                 ))}
               </Collapse.Group>

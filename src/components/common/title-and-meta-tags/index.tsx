@@ -35,7 +35,7 @@ export function TitleAndMetaTags({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
 
-      <meta name="twitter:site" content="@stitchesjs" />
+      <meta name="twitter:site" content="@buchanandevops" />
       <meta name="twitter:card" content="summary_large_image" />
     </Head>
   );

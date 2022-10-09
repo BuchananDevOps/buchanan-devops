@@ -42,6 +42,7 @@ export default function ShowcaseItem({
     <>
       <Button
         ghost
+        shadow
         color="success"
         css={{
           width: 'auto',

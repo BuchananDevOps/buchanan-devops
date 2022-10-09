@@ -4,7 +4,9 @@ import {
   WhySeo,
   SeoMetrics,
   AngledGradientHeading,
-  SeoFeatures,
+  SeoSummary,
+  SeoPartners,
+  SeoRightLeft
 } from '@components';
 import { Section } from '@primitives';
 import { NextPage } from 'next';
@@ -13,7 +15,9 @@ const SearchEngineOptimization: NextPage = () => {
   return (
     <>
       <SeoHero />
-      <SeoFeatures />
+      <SeoSummary />
+      <SeoPartners />
+      <SeoRightLeft />
       <WhySeo />
       <AngledGradientHeading />
       <SeoMetrics />
@@ -22,3 +26,5 @@ const SearchEngineOptimization: NextPage = () => {
 };
 
 export default SearchEngineOptimization;
+
+

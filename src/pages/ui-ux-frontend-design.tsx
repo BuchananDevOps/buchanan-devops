@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import {
+  CtaGrow,
   FrontendHero,
   StuffWeDesign,
   Technology,
@@ -13,8 +14,11 @@ const FrontendDesign: NextPage = () => {
       <FrontendHero />
       <Spacer y={7} />
       <WhatsAWebApp />
-
       <StuffWeDesign />
+      <CtaGrow
+        href="/showcase-portfolio"
+        description={'Would you like to grow your business with Buchanan DevOps?'}
+      />
     </>
   );
 };

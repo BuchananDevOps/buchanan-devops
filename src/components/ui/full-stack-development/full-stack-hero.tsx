@@ -65,83 +65,82 @@ const FullStackHero: React.FC = () => {
       wrap="nowrap"
     >
       <Section css={{ position: 'relative' }}>
+        <Row justify="center">
+          <StyledImg
+            height={70}
+            src="/full/sp-hero.svg"
+            alt="Full Stack App Development Hero image with GraphQL and NextJS"
+            css={{
+              height: '70px;',
+              '@xsMax': {
+                height: '50px;',
+              },
+              [`.${lightTheme} &`]: {
+                filter: 'invert(1)',
+              },
+            }}
+          />
+        </Row>
 
-          <Row justify="center">
-            <StyledImg
-              height={70}
-              src="/full/sp-hero.svg"
-              alt="Full Stack App Development Hero image with GraphQL and NextJS"
-              css={{
-                height: '70px;',
-                '@xsMax': {
-                  height: '50px;',
-                },
-                [`.${lightTheme} &`]: {
-                  filter: 'invert(1)',
-                },
-              }}
-            />
-          </Row>
-
-          <Row justify="center">
-            <Text
-              css={{
-                fontSize: '5rem',
-                textAlign: 'center',
-                '@xsMax': {
-                  fontSize: '3rem',
-                },
-              }}
-              h1
-            >
-              Full Stack App
-              <GradientHero>Development.</GradientHero>
-            </Text>
-          </Row>
-          <Row justify="center">
-            <Text
-              css={{
-                fs: '24px',
-                lh: '32px',
-                fontWeight: '400',
-                margin: '0 0 40px',
-                textAlign: 'center',
-                maxWidth: '790px',
-                textRendering: 'optimizeLegibility',
-                '@smMax': {
-                  fontSize: '20px',
-                },
-              }}
-            >
-              We build full stack applications with incredible performance and
-              love for the craft. If you&apos;ve made it this far, you&apos;re
-              ready to unlock your full potential.
-            </Text>
-          </Row>
-          <Row justify="center">
-            <HeroButtonWrapper>
-              <HeroButton color="white">Start Dreaming</HeroButton>
-              <HeroButton color="black">Request Estimate</HeroButton>
-            </HeroButtonWrapper>
-          </Row>
-          <Row justify="center">
-            <Text
-              css={{
-                color: '$gray700',
+        <Row justify="center">
+          <Text
+            css={{
+              fontSize: '5rem',
+              textAlign: 'center',
+              '@xsMax': {
+                fontSize: '3rem',
+              },
+            }}
+            h1
+          >
+            Full Stack App
+            <GradientHero>Development.</GradientHero>
+          </Text>
+        </Row>
+        <Row justify="center">
+          <Text
+            css={{
+              fs: '24px',
+              lh: '32px',
+              fontWeight: '400',
+              margin: '0 0 40px',
+              textAlign: 'center',
+              maxWidth: '790px',
+              textRendering: 'optimizeLegibility',
+              '@smMax': {
+                fontSize: '20px',
+              },
+            }}
+          >
+            We build full stack applications with incredible performance and
+            love for the craft. If you&apos;ve made it this far, you&apos;re
+            ready to unlock your full potential.
+          </Text>
+        </Row>
+        <Row justify="center">
+          <HeroButtonWrapper>
+            <HeroButton color="white">Start Dreaming</HeroButton>
+            <HeroButton color="black">Request Estimate</HeroButton>
+          </HeroButtonWrapper>
+        </Row>
+        <Row justify="center">
+          <Text
+            css={{
+              color: '$gray700',
+              fontSize: '.75rem',
+              fontWeight: '600',
+              letterSpacing: '.02rem',
+              textAlign: 'center',
+              textTransform: 'uppercase',
+              '@xsMax': {
                 fontSize: '.75rem',
-                fontWeight: '600',
-                letterSpacing: '.02rem',
-                textAlign: 'center',
-                textTransform: 'uppercase',
-                '@xsMax': {
-                  fontSize: '.75rem',
-                },
-              }}
-            >
-              We prefer to work with people who are passionate and kind
-            </Text>
-          </Row>
-          <ServiceProviders />
+              },
+            }}
+          >
+            We prefer to work with people who are passionate and kind
+          </Text>
+        </Row>
+        <ServiceProviders />
       </Section>
     </Container>
   );

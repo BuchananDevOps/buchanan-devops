@@ -11,6 +11,8 @@ export * from './ui/dapps';
 export * from './ui/full-stack-development';
 export * from './ui/canvas';
 export * from './ui/frontend-design';
+export * from './ui/call-to-actions';
+export * from './ui/summary';
 
 export { default as ContactModal } from './modals/contact-modal';
 export { default as ContactIcon } from './modals/contact-modal-icon';

@@ -29,6 +29,7 @@ export const lightTheme = createTheme({
       violet: '#7928ca',
       artifactBorder: '#faeeff',
       featureP: '#888888',
+      ctabgk: '#ffffff5c',
 
       radialGradient:
         'radial-gradient(circle, #c42d01 0%,#c42d01 10%,#fcf26e 40%,#00e754 60%,#00eef4 70%,#0070f3 100%)',
@@ -60,6 +61,7 @@ export const darkTheme = createTheme({
       violet: '#7928ca',
       artifactBorder: 'rgba(228,202,255,.25)',
       featureP: '#888888',
+      ctabgk: '#1111117a',
       radialGradient:
         'radial-gradient(circle, #c42d01 0%,#c42d01 10%,#fcf26e 40%,#00e754 60%,#00eef4 70%,#0070f3 100%)',
     },

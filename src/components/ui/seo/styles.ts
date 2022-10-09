@@ -102,3 +102,24 @@ export const SeoFeatureItem = styled(Grid, StyledCardBlur, {
     },
   },
 });
+
+export const StyledContent = styled('a', {
+  display: 'flex',
+  position: 'relative',
+  zIndex: '$10',
+  fd: 'row',
+  alignItems: 'center',
+  textDecoration: 'none',
+  color: '$text',
+  cursor: 'pointer',
+  transition: '$default',
+  '& .chevron-right-icon': {
+    transition: 'transform cubic-bezier(0.4, 0, 0.2, 1) 0.2s',
+  },
+  '&:hover': {
+    opacity: 0.8,
+    '& .chevron-right-icon': {
+      transform: 'translateX(2px)',
+    },
+  },
+});

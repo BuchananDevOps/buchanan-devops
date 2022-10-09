@@ -15,10 +15,20 @@ const animatedText = keyframes({
   },
 });
 
+const animatedBorder = keyframes({
+  '100%': {
+    transform: 'rotate(360deg)',
+  },
+});
+
 export const AnimationHelper = styled('div', {
   animationDuration: '.5s',
   easing: 'cubic-bezier(0.4,0.01,0.165,0.99)',
   animationDelay: '0s',
+});
+
+export const GradientBorder = styled('div', {
+  position: 'relative',
 });
 
 export const Title = styled('h1', {
@@ -139,7 +149,7 @@ export const BlockLink = styled(Link, {
   },
   defaultVariants: {
     color: 'default',
-  }, 
+  },
 });
 
 export const StyledCardBlur = styled('div', {
@@ -336,7 +346,6 @@ export const HeroButton = styled('button', {
   alignItems: 'center',
   justifyContent: 'center',
   borderRadius: '5px',
-
   fontWeight: '500',
   padding: '0 $8',
   maxWidth: '100%',
@@ -362,7 +371,6 @@ export const HeroButton = styled('button', {
         color: '$text',
         background: '$background',
         border: '1px solid $backgroundContrast',
-        ml: '16px',
         '&:hover': {
           color: '$text',
           background: '$background',
@@ -372,7 +380,6 @@ export const HeroButton = styled('button', {
     },
   },
 });
-
 
 export const SummaryBannerWrapper = styled('section', {
   $$height: '240px',
@@ -396,7 +403,7 @@ export const SummaryBannerWrapper = styled('section', {
     borderImage: 'linear-gradient(90deg, $$borderColorA, $$borderColorB)',
   },
 
-'&::before': {
+  '&::before': {
     content: '""',
     position: 'absolute',
     height: '$$height',
@@ -406,24 +413,23 @@ export const SummaryBannerWrapper = styled('section', {
     mixBlendMode: 'normal',
     opacity: '$$opacity',
     boxSizing: 'border-box',
-    background: 'linear-gradient(180deg,#bebebe,#4b4b4b)'
+    background: 'linear-gradient(180deg,#bebebe,#4b4b4b)',
+  },
 
-},
-
-'&::after': {
-  content: '""',
-  position: 'absolute',
-  height: '$$height',
-  width: '45vw',
-  right: '0',
-  top: '-250px',
-  mixBlendMode: 'normal',
-  opacity: '$$opacity',
-  filter: 'blur(150px)',
-  boxSizing: 'border-box',
-  background: 'linear-gradient(180deg,#b8b8b8,#373737',
-  bottomBorderLeftRadius: '$$borderRadius',
-},
+  '&::after': {
+    content: '""',
+    position: 'absolute',
+    height: '$$height',
+    width: '45vw',
+    right: '0',
+    top: '-250px',
+    mixBlendMode: 'normal',
+    opacity: '$$opacity',
+    filter: 'blur(150px)',
+    boxSizing: 'border-box',
+    background: 'linear-gradient(180deg,#b8b8b8,#373737',
+    bottomBorderLeftRadius: '$$borderRadius',
+  },
 });
 
 export const GradientCard = styled('div', {
@@ -435,57 +441,65 @@ export const GradientCard = styled('div', {
   backgroundPositionX: '50%',
   backgroundPositionY: '-330px',
   variants: {
-      type: {
-          artifact: {
-              borderColor: '$$artifactBorder',
-              '&::after': {
-                  
-                  content: '""',
-                  position: 'absolute',
-                  width: '100%',
-                  height: '100%',
-                  top: 0,
-                  left: 0,
-                  opacity: 0.25,
-                  zIndex: -1,
-                  backgroundImage: 'url(${url})',
-                  '& .artifact-card': {
-                      backgroundImage: 'url(${url})',
-                  },
-              },
+    type: {
+      artifact: {
+        borderColor: '$$artifactBorder',
+        '&::after': {
+          content: '""',
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          top: 0,
+          left: 0,
+          opacity: 0.25,
+          zIndex: -1,
+          backgroundImage: 'url(${url})',
+          '& .artifact-card': {
+            backgroundImage: 'url(${url})',
           },
-          support: {
-              borderColor: '$$serviceBorder',
-              backgroundColor: '$$serviceBg',
-              color: '$$serviceText',
-          },
+        },
       },
+      support: {
+        borderColor: '$$serviceBorder',
+        backgroundColor: '$$serviceBg',
+        color: '$$serviceText',
+      },
+    },
   },
   '& .feature-icon': {
-      mb: '20px',
+    mb: '20px',
   },
   '& .feature-icon img': {
-      maxWidth: '100%',
-      height: 'auto',
+    maxWidth: '100%',
+    height: 'auto',
   },
   '& .feature-title': {
-      fs: '1.25rem',
-      letterSpacing: '-.020625rem',
-      fontWeight: '700',
-      lineHeight: '1.5rem',
-      mb: '8px'
+    fs: '1.25rem',
+    letterSpacing: '-.020625rem',
+    fontWeight: '700',
+    lineHeight: '1.5rem',
+    mb: '8px',
   },
   '& .feature-description': {
-      display: 'block',
-      margin: '0px',
-      color: '$featureP',
-      fs: '1rem',
-      fontWeight: '400',
-      lineHeight: '1.5rem',
-      marginBlockStart: '1em',
-      marginBlockEnd: '1em',
-      marginInlineStart: '0px',
-      marginInlineEnd: '0px',
+    display: 'block',
+    margin: '0px',
+    color: '$featureP',
+    fs: '1rem',
+    fontWeight: '400',
+    lineHeight: '1.5rem',
+    marginBlockStart: '1em',
+    marginBlockEnd: '1em',
+    marginInlineStart: '0px',
+    marginInlineEnd: '0px',
   },
 });
 
+export const SmallSubTitle = styled(Text, {
+  fs: '.75rem',
+  fontWeight: '500',
+  lineHeight: '1.5rem',
+  letterSpacing: '-.020625rem',
+  mt: '$0',
+  color: '$text',
+  textTransform: 'uppercase',
+})
