@@ -54,7 +54,7 @@ const Landing: React.FC = () => {
           position: 'relative',
           height: 'calc(100vh - 76px)',
           '@xsMax': {
-            height: 'calc(100vh - 64px)',
+            height: 'calc(100vh)',
           },
         }}
         display="flex"
@@ -64,9 +64,6 @@ const Landing: React.FC = () => {
         wrap="nowrap"
       >
         <Section css={{ position: 'relative' }}>
-          <Row justify="center">
-            <Infinity size={56} />
-          </Row>
           
           <Row justify="center">
             <Text
@@ -75,19 +72,16 @@ const Landing: React.FC = () => {
                 textAlign: 'center',
                 
                 '@xsMax': {
-                  fontSize: '3rem',
+                  fontSize: '2.7rem',
                 },
               }}
               h1
             ><GradientBorder
             css={{
-                fontSize: '5rem',
-                textAlign: 'center',
-                fontWeight: 700,
                 position: 'absolute',
                 zIndex: -10,
                 '@xsMax': {
-                  fontSize: '3rem',
+                  fontSize: '2.7rem',
                 },
             }}
           >

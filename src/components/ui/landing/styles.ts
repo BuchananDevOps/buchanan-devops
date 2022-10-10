@@ -7,14 +7,6 @@ const animatedText = keyframes({
 
 });
 
-const opacityChange = keyframes({
-  '50%': {
-    opacity: 1,
-  },
-  '100%': {
-    opacity: .5,
-  }
-});
 
 const animatedBorder = keyframes({
   '100%': {
@@ -23,7 +15,6 @@ const animatedBorder = keyframes({
   },
   '50%': {
     transform: 'scaleX(1.05)',
-
   },
   '0%': {
     transform: 'scaleX(.95)',
@@ -71,7 +62,7 @@ export const GradientHero = styled('h1', {
     backgroundClip: 'text',
     '@xsMax': {
       mt: '-30px',
-      fontSize: '4rem',
+      fontSize: '3.7rem',
     },
   });
 
@@ -110,7 +101,6 @@ export const GradientHero = styled('h1', {
       height: 'calc(100% - 12px)',
       backgroundColor: '#white',
       borderRadius: '5px',
-      animation: `${opacityChange} 3s infinite alternate`,
     }
 
   });
