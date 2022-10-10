@@ -1,10 +1,6 @@
-import { Text, styled, Container, Row, Spacer, Grid } from '@nextui-org/react';
-import { Section, AnimatedText, AnimatedTitle, Title, Box, HeroButton } from '@primitives';
-import { GradientHero, StyledTitle, StyledContent } from './styles';
-import { spin, spin2 } from '@utils/animations';
-import { Badge, ChevronRight, Sparkles } from '@components';
-import { darkTheme } from '@theme/shared';
-import NextLink from 'next/link';
+import { Text, Container, Row,  Grid } from '@nextui-org/react';
+import { Section,  HeroButton } from '@primitives';
+import { GradientHero, } from './styles';
 
 export default function SeoHero() {
   return (
@@ -14,9 +10,9 @@ export default function SeoHero() {
       className="hero__container"
       css={{
         position: 'relative',
-        height: 'calc(100vh - 76px)',
+        minHeight: 'calc(100vh - 76px)',
         '@xsMax': {
-          height: 'calc(60vh - 64px)',
+          minHeight: 'calc(100vh - 64px)',
         },
       }}
       display="flex"
@@ -25,7 +21,7 @@ export default function SeoHero() {
       lg={true}
       wrap="nowrap"
     >
-      <Section css={{ position: 'relative' }}>
+      <Section >
         <Container>
           {/*
           </Row>

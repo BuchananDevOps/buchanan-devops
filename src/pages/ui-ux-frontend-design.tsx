@@ -17,7 +17,7 @@ const FrontendDesign: NextPage = () => {
       <StuffWeDesign />
       <CtaGrow
         href="/showcase-portfolio"
-        description={'Would you like to grow your business with Buchanan DevOps?'}
+        description={'Would you like to grow your business?'}
       />
     </>
   );

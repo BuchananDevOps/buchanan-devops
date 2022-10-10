@@ -5,45 +5,6 @@ import { lightTheme } from "@theme/shared";
 import { GradientBorder, GradientHero, Rainbow } from "./styles";
 import Infinity from '@geist-ui/icons/infinity'
 
-const items = [
-    {
-      title: 'Tailwinds CSS',
-      href: 'https://tailwindcss.com',
-      src: '/tools/tailwindscss.svg',
-    },
-    {
-      title: 'Svelte',
-      href: 'https://svelte.dev/',
-      src: '/tools/svelte.svg',
-    },
-    {
-      title: 'Algolia',
-      href: 'https://www.algolia.com',
-      src: '/tools/algolia.svg',
-    },
-    {
-      title: 'Stripe',
-      href: 'https://stripe.com',
-      src: '/tools/stripe.svg',
-    },
-  
-    {
-      title: 'Shopify',
-      href: 'https://www.shopify.com',
-      src: '/tools/shopify-other.svg',
-    },
-    {
-      title: 'Auth0',
-      href: 'https://auth0.com',
-      src: '/tools/auth0.svg',
-    },
-    {
-      title: 'Prismic',
-      href: 'https://prismic.io',
-      src: '/tools/prismic.svg',
-    },
-  ];
-
 const Landing: React.FC = () => {
     return (
         <Container
@@ -52,9 +13,9 @@ const Landing: React.FC = () => {
         className="hero__container"
         css={{
           position: 'relative',
-          height: 'calc(100vh - 76px)',
+          minHeight: 'calc(100vh)',
           '@xsMax': {
-            height: 'calc(100vh)',
+            minHeight: 'calc(100vh)',
           },
         }}
         display="flex"
@@ -63,7 +24,10 @@ const Landing: React.FC = () => {
         lg={true}
         wrap="nowrap"
       >
-        <Section css={{ position: 'relative' }}>
+        <Section>
+          <Row justify="center">
+            <Infinity size={56} />
+          </Row>
           
           <Row justify="center">
             <Text
@@ -138,7 +102,6 @@ const Landing: React.FC = () => {
               We prefer to work with people who are passionate and kind
             </Text>
           </Row>
-          <ServiceProviders />
         </Section>
       </Container>
     )

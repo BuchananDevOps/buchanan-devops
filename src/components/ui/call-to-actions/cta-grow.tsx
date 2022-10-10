@@ -1,4 +1,4 @@
-import { Container, Spacer, styled, Text } from '@nextui-org/react';
+import { Container, keyframes, Spacer, styled, Text } from '@nextui-org/react';
 import { HeroButton, Section, StyledImg } from '@primitives';
 import NextLink from 'next/link';
 
@@ -7,13 +7,12 @@ interface CtaGrowProps {
   href?: string;
 }
 
+
 const StyledCtaSection = styled('div', {
-    $$borderColorA: 'rgba(40,140,249,0.7)',
-    $$borderColorB: 'rgba(227,44,107,.50)',
-    borderImage: 'linear-gradient(90deg, $$borderColorA, $$borderColorB)',
-    borderStyle: 'solid',
-    borderWidth: '1px',
-    borderImageSlice: '1',
+  borderImage: 'linear-gradient(90deg,#c42d01 0%,#d4542c 10%,#f2f240 20%,#67e217 30%,#00e754 40%,#4dba8b 50%,#00b4dc 60%,#00eef4 70%,#b100f2 80%,#c82f92 90%,#ed2290 95%,#c33126 100%)',
+  borderStyle: 'solid',
+  borderWidth: '1px',
+  borderImageSlice: '1',
   display: 'flex',
   color: '$background',
   flexDirection: 'column',
@@ -23,14 +22,6 @@ const StyledCtaSection = styled('div', {
   backgroundColor: '$ctabgk',
   transition: 'all 0.2s ease-in-out',
     
-  '&:hover': {
-    $$borderColorA: 'rgba(40,140,249,0.7)',
-    $$borderColorB: 'rgba(227,44,107,.50)',
-    borderImage: 'linear-gradient(90deg, $$borderColorB, $$borderColorA)',
-    borderStyle: 'solid',
-    borderWidth: '1px',
-    borderImageSlice: '1'
-  },
   '@md': {
     flexDirection: 'row',
     justifyContent: 'space-between',

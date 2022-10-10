@@ -6,6 +6,7 @@ import {
   Spacer,
   Row,
   Grid,
+  keyframes,
 } from '@nextui-org/react';
 import { StyledImg } from '@primitives';
 import { darkTheme } from '@theme/shared';
@@ -22,6 +23,12 @@ interface ShowcaseItemProps {
   link: string;
   github?: string;
 }
+
+const linearGradientMove = keyframes( {
+  '100%': {
+      backgroundPosition: '4px 0, -4px 100%, 0 -4px, 100% 4px',
+  }
+})
 
 export default function ShowcaseItem({
   title,
@@ -41,14 +48,25 @@ export default function ShowcaseItem({
   return (
     <>
       <Button
-        ghost
-        shadow
         color="success"
         css={{
           width: 'auto',
           height: 'fit-content',
           paddingLeft: '0px',
           paddingRight: '0px',
+          borderImage: 'linear-gradient(90deg,#c42d01 0%,#d4542c 10%,#f2f240 20%,#67e217 30%,#00e754 40%,#4dba8b 50%,#00b4dc 60%,#00eef4 70%,#b100f2 80%,#c82f92 90%,#ed2290 95%,#c33126 100%)',
+          borderStyle: 'solid',
+          borderWidth: '1px',
+          borderRadius: '0px',
+          borderImageSlice: '1',
+          '& .nextui-button': {
+            borderRadius: '5px',
+          },
+          '&:hover': {
+            '& .nextui-button-text img': {
+              cursor: 'pointer',
+            },
+          },
         }}
         onClick={() => setVisible(true)}
       >
@@ -57,7 +75,6 @@ export default function ShowcaseItem({
           alt={title}
           className="showcase-item-`${title}`"
           css={{
-            borderRadius: '10px',
             shadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
           }}
         />
