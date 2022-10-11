@@ -20,7 +20,7 @@ const Component = styled('div', {
   $$supportBorder: '#eff5ff',
   width: '100%',
   height: '100%',
-  backgroundPosition: '50% -330px',
+  backgroundPosition: '50% -250px',
   border: '1px solid',
   borderRadius: '12px',
   padding: '56px',

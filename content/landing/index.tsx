@@ -18,28 +18,28 @@ export default {
       title: 'Search Engine Optimization',
       description:
         'Our search engine optimization strategy is battle-tested with proven techniques, focused on organic seo. ',
-      icon: <Magic fill="#FF4ECD" />,
+      icon: <Magic fill='#06B7DB' />,
       href: '/search-engine-optimization',
     },
     {
       title: 'UI/UX - Frontend Developer',
       description:
         'Bring your business the exposure you deserve with an elegant, simplified user experience.',
-      icon: <Flash fill="#FF4ECD" />,
+      icon: <Flash fill=" #06B7DB" />,
       href: '/ui-ux-frontend-design',
     },
     {
       title: 'Full-Stack Development',
       description:
         'Web App (PWA) Development, Mobile App Development, and anything else related to React.',
-      icon: <Moon fill="#FF4ECD" />,
+      icon: <Moon fill=" #06B7DB" />,
       href: '/full-stack-development',
     },
     {
       title: 'Dapp Development',
       description:
         'Decentralized applications (Dapps) are the future of the internet. Blockchains are more then currencies...',
-      icon: <Devices fill="#FF4ECD" />,
+      icon: <Devices fill=" #06B7DB" />,
       href: '/dapps',
     },
   ],
@@ -48,49 +48,49 @@ export default {
       title: 'Search Marketing (SEM)',
       description:
         'SEM combined with SEO will drive traffic and increase brand awareness for your business.',
-      icon: <Server fill="#FF4ECD" />,
+      icon: <Server fill=" #06B7DB" />,
     },
     {
       title: 'Digital Marketing',
       description:
         'Branding, Social Media Marketing, Email Marketing, and more. Establishing your brand is key.',
-      icon: <TagUser fill="#FF4ECD" />,
+      icon: <TagUser fill=" #06B7DB" />,
     },
     {
       title: 'Business Development',
       description:
         'Focus of your journey while implementing our strategies and tactics for revenue growth.',
-      icon: <RoundPointer fill="#FF4ECD" />,
+      icon: <RoundPointer fill=" #06B7DB" />,
     },
     {
       title: 'Graphic Design',
       description:
         'We offer complete graphic design services for your business. From logo design to business cards.',
-      icon: <Maximize fill="#FF4ECD" />,
+      icon: <Maximize fill=" #06B7DB" />,
     },
     {
       title: 'GraphQL API Development',
       description:
         'GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data.',
-      icon: <CodeDocument filled={false} fill="#FF4ECD" />,
+      icon: <CodeDocument filled={false} fill=" #06B7DB" />,
     },
     {
       title: 'Static Site Generation',
       description:
         'The fastest websites are static sites. We use Next.js to generate static sites with React.',
-      icon: <HtmlLogo fill="#FF4ECD" />,
+      icon: <HtmlLogo fill=" #06B7DB" />,
     },
     {
       title: 'Decentralized Applications',
       description:
         "The future of the internet is decentralized. We'd love to incorporate blockchain technology into your business.",
-      icon: <Flash fill="#FF4ECD" />,
+      icon: <Flash fill=" #06B7DB" />,
     },
     {
       title: 'Project Management',
       description:
         'Managing digital projects is a complex process. We have a proven process to manage your project.',
-      icon: <Magic fill="#FF4ECD" />,
+      icon: <Magic fill=" #06B7DB" />,
     },
   ],
   seoUtilitiesCode: `

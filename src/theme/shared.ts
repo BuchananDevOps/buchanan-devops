@@ -30,7 +30,9 @@ export const lightTheme = createTheme({
       artifactBorder: '#faeeff',
       featureP: '#888888',
       ctabgk: '#ffffff5c',
-
+      iconBgk: 'linear-gradient(-90deg, rgba(50, 134, 241, .15) 0%, rgba(196, 58, 196, .15) 100%)',
+      iconColor: 'linear-gradient(116deg, rgba(243, 36, 95, 1) 0%, rgba(196, 60, 130, 1) 100%)',
+      rainbow: 'linear-gradient(90deg,#c42d01 0%,#d4542c 10%,#f2f240 20%,#67e217 30%,#00e754 40%,#4dba8b 50%,#00b4dc 60%,#00eef4 70%,#b100f2 80%,#c82f92 90%,#ed2290 95%,#c33126 100%)',
       radialGradient:
         'radial-gradient(circle, #c42d01 0%,#c42d01 10%,#fcf26e 40%,#00e754 60%,#00eef4 70%,#0070f3 100%)',
     },
@@ -62,6 +64,9 @@ export const darkTheme = createTheme({
       artifactBorder: 'rgba(228,202,255,.25)',
       featureP: '#888888',
       ctabgk: '#1111117a',
+      iconBgk: 'linear-gradient(-90deg, rgba(50, 134, 241, .15) 0%, rgba(196, 58, 196, .15) 100%)',
+      iconColor: 'linear-gradient(116deg, rgba(243, 36, 95, 1) 0%, rgba(196, 60, 130, 1) 100%)',
+      rainbow: 'linear-gradient(90deg,#c42d01 0%,#d4542c 10%,#f2f240 20%,#67e217 30%,#00e754 40%,#4dba8b 50%,#00b4dc 60%,#00eef4 70%,#b100f2 80%,#c82f92 90%,#ed2290 95%,#c33126 100%)',
       radialGradient:
         'radial-gradient(circle, #c42d01 0%,#c42d01 10%,#fcf26e 40%,#00e754 60%,#00eef4 70%,#0070f3 100%)',
     },

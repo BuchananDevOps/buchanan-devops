@@ -21,6 +21,20 @@ const animatedBorder = keyframes({
   },
 });
 
+const animatedGrowBorder = keyframes({
+  '100%': {
+    transform: 'scaleX(0.95)',
+    backgroundPosition: '-200% center',
+  },
+  '50%': {
+    transform: 'scaleX(1.05)',
+  },
+  '0%': {
+    transform: 'scaleX(.95)',
+
+  },
+});
+
 export const AnimationHelper = styled('div', {
   animationDuration: '.5s',
   easing: 'cubic-bezier(0.4,0.01,0.165,0.99)',
@@ -380,6 +394,7 @@ export const HeroButton = styled('button', {
     },
   },
 });
+
 
 export const SummaryBannerWrapper = styled('section', {
   $$height: '240px',

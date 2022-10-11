@@ -14,6 +14,7 @@ import {
   BuiltInStitchesSection,
   LastButNotLeastSection,
   Landing,
+  ServiceCards,
 } from '@components';
 import { Spacer } from '@nextui-org/react';
 
@@ -21,9 +22,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Landing />
-      <Section>
-        <FeaturesGrid features={landingContent.topFeatures} />
-      </Section>
+      <ServiceCards />
       <CustomThemesSection />
       <CustomizationSection />
       <ComparationSection />

@@ -2,8 +2,9 @@ import { Logo, ServiceProviders } from "@components";
 import { Container, Grid, Row, Spacer, Text } from "@nextui-org/react";
 import { HeroButton, HeroButtonWrapper, Section, StyledImg } from "@primitives";
 import { lightTheme } from "@theme/shared";
+import { InView } from "react-intersection-observer";
 import { GradientBorder, GradientHero, Rainbow } from "./styles";
-import Infinity from '@geist-ui/icons/infinity'
+import { PieChart } from '@geist-ui/icons'
 
 const Landing: React.FC = () => {
     return (
@@ -25,9 +26,6 @@ const Landing: React.FC = () => {
         wrap="nowrap"
       >
         <Section>
-          <Row justify="center">
-            <Infinity size={56} />
-          </Row>
           
           <Row justify="center">
             <Text
@@ -81,7 +79,7 @@ const Landing: React.FC = () => {
                     <HeroButton css={{ width: '100%' }} color="white">Start Dreaming</HeroButton>
                 </Grid>
                 <Grid xs={12} sm={6} md={4} lg={3}>
-                    <HeroButton css={{ width: '100%' }} color="black">Request Estimate</HeroButton>
+                  <HeroButton css={{ width: '100%' }} color="black">Request Estimate</HeroButton>
               </Grid>
             </Grid.Container>
           </Row>
@@ -100,6 +98,7 @@ const Landing: React.FC = () => {
               }}
             >
               We prefer to work with people who are passionate and kind
+              <ServiceProviders />
             </Text>
           </Row>
         </Section>

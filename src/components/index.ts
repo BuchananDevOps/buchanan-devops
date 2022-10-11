@@ -52,5 +52,6 @@ export { default as AngledGradientHeading } from './ui/angled-gradient-heading';
 export { default as GradientGrid } from './ui/gradient-grid';
 export { default as Feature } from './ui/feature-card';
 export { default as Landing } from './ui/landing';
-
+export { default as ServiceCards } from './ui/landing/service-cards';
 export { Header } from './ui/header';
+export { VercelCard } from './ui/vercel-card';

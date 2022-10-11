@@ -74,3 +74,4 @@ export { default as JavascriptLogo } from './javascript';
 export { default as Scale } from './scale';
 export { default as Sparkle } from './sparkle';
 export { default as View } from './view';
+export { default as Infinity } from './infinity';
