@@ -19,6 +19,9 @@ export { default as ContactIcon } from './modals/contact-modal-icon';
 export { default as ShowcaseItem } from './modals/showcase-item';
 export { default as DappFeaturesModal } from './modals/dapp-features-modal';
 
+export { default as RequestEstimate } from './modals/request-estimate';
+export { default as SeoAudit } from './modals/seo-audit';
+
 export { default as Head } from './common/head';
 export { default as SEO } from './common/seo';
 export { default as DevopsForm } from './common/devops-form';

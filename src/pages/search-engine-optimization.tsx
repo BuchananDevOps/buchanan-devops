@@ -19,8 +19,6 @@ const SearchEngineOptimization: NextPage = () => {
       <SeoPartners />
       <SeoRightLeft />
       <WhySeo />
-      <AngledGradientHeading />
-      <SeoMetrics />
     </>
   );
 };

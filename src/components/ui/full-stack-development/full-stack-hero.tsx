@@ -3,7 +3,8 @@ import { Container, Grid, Row, Spacer, Text } from '@nextui-org/react';
 import { HeroButton, HeroButtonWrapper, Section, StyledImg } from '@primitives';
 import { lightTheme } from '@theme/shared';
 import { useMediaQuery } from '@hooks/use-media-query';
-import { ServiceProviders } from '@components';
+import { RequestEstimate, ServiceProviders } from '@components';
+import { useRouter } from 'next/router';
 
 const items = [
   {
@@ -46,6 +47,10 @@ const items = [
 
 const FullStackHero: React.FC = () => {
   const isMobile = useMediaQuery(960);
+  const router = useRouter();
+  const handleLink = () => {
+    router.push('/devops');
+  };
   return (
     <Container
       alignItems="center"
@@ -117,12 +122,16 @@ const FullStackHero: React.FC = () => {
             ready to unlock your full potential.
           </Text>
         </Row>
-        <Row justify="center">
-          <HeroButtonWrapper>
-            <HeroButton color="white">Start Dreaming</HeroButton>
-            <HeroButton color="black">Request Estimate</HeroButton>
-          </HeroButtonWrapper>
-        </Row>
+        <Row justify="center" css={{ mb: '80px' }}>
+            <Grid.Container gap={2} justify="center">
+                <Grid xs={12} sm={6} md={4} lg={3}> 
+                    <HeroButton onClick={handleLink} css={{ width: '100%' }} color="white">The Process</HeroButton>
+                </Grid>
+                <Grid xs={12} sm={6} md={4} lg={3}>
+                 <RequestEstimate />
+              </Grid>
+            </Grid.Container>
+          </Row>
         <Row justify="center">
           <Text
             css={{

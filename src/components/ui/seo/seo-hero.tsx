@@ -1,8 +1,10 @@
+import { RequestEstimate, SeoAudit } from '@components';
 import { Text, Container, Row,  Grid } from '@nextui-org/react';
 import { Section,  HeroButton } from '@primitives';
 import { GradientHero, } from './styles';
 
 export default function SeoHero() {
+
   return (
     <Container
       alignItems="center"
@@ -93,21 +95,16 @@ export default function SeoHero() {
             The value of SEO is undeniable. Organic SEO is the most cost-effective way to increase your website traffic and grow your business.
           </Text>
         </Row>
-
-            <Grid.Container  alignContent='center' gap={2}>
-              <Grid xs={0} sm={0} md={3.5} />
-              <Grid xs={12} sm={4} md={2.5} lg={2.5}>
-                <HeroButton  css={{ width: '100%' }} color="white">
-                  SEO Audit
-                </HeroButton>
+        <Row justify="center" css={{ mb: '80px' }}>
+            <Grid.Container gap={2} justify="center">
+                <Grid xs={12} sm={6} md={4} lg={3}> 
+                   <SeoAudit />
+                </Grid>
+                <Grid xs={12} sm={6} md={4} lg={3}>
+                 <RequestEstimate />
               </Grid>
-              <Grid xs={12} sm={12} md={2.5} lg={2.5}>
-                <HeroButton css={{ width: '100%' }} color="black">
-                Talk to an Expert
-                </HeroButton>
-              </Grid>
-              <Grid xs={0} sm={0} md={3.5} />
             </Grid.Container>
+          </Row>
         </Container>
       </Section>
     </Container>

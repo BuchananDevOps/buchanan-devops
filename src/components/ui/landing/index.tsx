@@ -1,12 +1,17 @@
-import { Logo, ServiceProviders } from "@components";
-import { Container, Grid, Row, Spacer, Text } from "@nextui-org/react";
-import { HeroButton, HeroButtonWrapper, Section, StyledImg } from "@primitives";
-import { lightTheme } from "@theme/shared";
-import { InView } from "react-intersection-observer";
+import { Logo, RequestEstimate, ServiceProviders } from "@components";
+import { Container, Grid, Row, Text } from "@nextui-org/react";
+import { HeroButton, Section } from "@primitives";
+import { useRouter } from "next/router";
 import { GradientBorder, GradientHero, Rainbow } from "./styles";
-import { PieChart } from '@geist-ui/icons'
+
 
 const Landing: React.FC = () => {
+    const router = useRouter();
+
+    const handleLink = () => {
+        router.push('/devops');
+    };
+
     return (
         <Container
         alignItems="center"
@@ -76,10 +81,10 @@ const Landing: React.FC = () => {
           <Row justify="center" css={{ mb: '80px' }}>
             <Grid.Container gap={2} justify="center">
                 <Grid xs={12} sm={6} md={4} lg={3}> 
-                    <HeroButton css={{ width: '100%' }} color="white">Start Dreaming</HeroButton>
+                    <HeroButton onClick={handleLink} css={{ width: '100%' }} color="white">The Process</HeroButton>
                 </Grid>
                 <Grid xs={12} sm={6} md={4} lg={3}>
-                  <HeroButton css={{ width: '100%' }} color="black">Request Estimate</HeroButton>
+                 <RequestEstimate />
               </Grid>
             </Grid.Container>
           </Row>

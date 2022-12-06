@@ -1,15 +1,10 @@
-import { Hero } from '@components';
 import type { NextPage } from 'next';
-import dynamic from 'next/dynamic';
-import landingContent from '../../content/landing';
 import {
-  FeaturesGrid,
   Section,
   Community,
   InstallBanner,
   CustomThemesSection,
   ComparationSection,
-  DarkModeSection,
   CustomizationSection,
   BuiltInStitchesSection,
   LastButNotLeastSection,
@@ -27,9 +22,6 @@ const Home: NextPage = () => {
       <CustomizationSection />
       <ComparationSection />
       <BuiltInStitchesSection />
-      <Section css={{ '@mdMax': { display: 'none' } }}>
-        <DarkModeSection />
-      </Section>
       <LastButNotLeastSection />
       {/* Installation banner */}
       <Section css={{ zIndex: '$10' }}>
