@@ -1,0 +1,78 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is web design?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Web design refers to the design of a website or web application displayed within an internet browser. As a web designer, we work on a website’s appearance, layout, information structuring and categorization commonly referred to as the user interface (UI) and user experience (UX)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a web app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A web app, professionally called “Progressive Web Apps” (PWA), is a type of application that can be accessed on any device with an internet browser. When accessed in a browser on a mobile device, web apps look and behave like mobile apps – but they aren’t the same."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Whats the difference between a website and a web app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "User functionality is the biggest difference between a website and a web app. If a business wants their services and information online with a contact form, they’d require a website. They’d need a web app if they wanted to sell products or required users to make an account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does web development take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typical website development projects take between 4 and 6 weeks. A web app takes between 2-3 months depending on the complexity of the project. There are a lot of factors with contribute to the timeframe, mostly if our client has an existing website with their content online or if they’re just starting up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What will you need from me to work effectively?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the type of project you’re requesting but we’ll discuss the requirements during the project discovery stage. You’ll need some images of your team, a business logo, product images, descriptions and variables, services offered and workplace images. "
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the most important factors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Are you an existing business or a startup? That’s the primary factor we base our pricing and technology selection on. While we do work with startups, we prefer working with established businesses. If you’re a startup, we aren’t going to build your business and service offerings for you. "
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will my web development project include SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we include On-Page SEO. We integrate structured data relating to your business’s schema throughout the entire project along with meta title, descriptions, and keywords. "
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does it cost to develop a website or web app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We charge roughly $3,000 - $4,000 for a website. Web Apps are not billed on a flat rate basis like websites, typically the minimal investment is $8,000 for a 4 week project invoiced at $50/HR. "
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add additional pages and functionality after launch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we invoice at $50/HR for additional development and out of project scope additions. "
+      }
+    }
+  ]
+}

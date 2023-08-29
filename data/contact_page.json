@@ -1,0 +1,36 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact",
+  "brand": "Buchanan Compouter",
+  "employee": "John Buchanan",
+  "foundingDate": "2011-08-05",
+  "description": "We're the go-to web development company, specializing in website design and development with a strong emphasis on search engine optimization.",
+  "keywords": "web, app, seo, search, engine, optimization, buchanan, computer, design, designed, designer, company, development, develop, website, site, professional, experienced, best, create, business, goals  ",
+  "openingHours": "Mo, Tu, We, Th, Fr, Sa, Su",
+  "telephone": "+13024648832",
+  "email": "buchanancomp@gmail.com",
+  "naics": ["541511", "541430"],
+  "image": "https://buchanandevops.com/twitter-card.png",
+  "currenciesAccepted": "USD",
+  "paymentAccepted": "Cash, Credit Card, Cryptocurrency",
+  "priceRange": "$$$$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "8 Osprey Lane",
+    "addressLocality": "Middletown",
+    "addressRegion": "DE",
+    "postalCode": "19709",
+    "addressCountry": "US"
+  },
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.44238,
+      "longitude": -75.64644
+    },
+
+    "geoRadius": "5000 mi"
+  }
+}

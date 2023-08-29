@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Buchanan DevOps",
+    "location": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "8 Osprey Lane",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"
+      }
+    }
+  },
+  "name": "SEO",
+  "brand": "Buchanan DevOps",
+  "description": "More business, more conversions, more sales. We guarantee the positive impact on your business will propel you're business to the next level.",
+  "image": "https://buchanandevops.com/twitter-card.png",
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.44238,
+      "longitude": -75.64644
+    },
+
+    "geoRadius": "5000 mi"
+  }
+}

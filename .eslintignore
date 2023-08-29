@@ -1,0 +1,22 @@
+# don't lint build output (make sure it's set to your correct build folder name)
+dist
+out
+_document.tsx
+analytics.ts
+with-defaults.ts
+backdrop.tsx
+modal-wrapper.tsx
+container.tsx
+input.tsx
+textarea.tsx
+use-drip.ts
+image.tsx
+card.tsx
+button.tsx
+contact.ts
+seo-audit.ts
+text.tsx
+collapse-context.ts
+collapse.tsx
+input.tsx
+features.ts

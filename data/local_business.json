@@ -1,0 +1,58 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Buchanan DevOps",
+  "description": "We're the go-to web development company, specializing in website design and development with a strong emphasis on search engine optimization.",
+  "keywords": "web, app, seo, search, engine, optimization, buchanan, computer, design, designed, designer, company, development, develop, website, site, professional, experienced, best, create, business, goals  ",
+  "openingHours": "Mo, Tu, We, Th, Fr, Sa, Su",
+  "telephone": "+13024648832",
+  "email": "buchanancomp@gmail.com",
+  "naics": "5415",
+  "image": "https://buchanandevops.com/twitter-card.png",
+  "currenciesAccepted": "USD",
+  "paymentAccepted": "Cash, Credit Card, Cryptocurrency",
+  "priceRange": "$$$$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "8 Osprey Lane",
+    "addressLocality": "Middletown",
+    "addressRegion": "DE",
+    "postalCode": "19709",
+    "addressCountry": "US"
+  },
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.44238,
+      "longitude": -75.64644
+    },
+
+    "geoRadius": "5000 mi"
+  },
+  "title": "Buchanan DevOps",
+  "titleTemplate": "%s - Buchanan DevOps",
+
+  "openGraph": {
+    "title": "Buchanan DevOps",
+    "description": "We're the go-to web development company, specializing in website design and development with a strong emphasis on search engine optimization.",
+    "type": "website",
+    "url": "https://buchanandevops.com",
+    "site_name": "Buchanan DevOps",
+    "images": [
+      {
+        "url": "https://buchanandevops.com/twitter-card.png",
+        "width": "800",
+        "height": "600",
+        "alt": "Buchanan DevOps Twitter Card Image"
+      }
+    ]
+  },
+  "twitter": {
+    "handle": "@buchanandevops",
+    "site": "@buchanandevops",
+    "cardType": "summary_large_image",
+    "altText": "Buchanan DevOps Twitter Card Image",
+    "description": "We're the go-to web development company, specializing in website design and development with a strong emphasis on search engine optimization."
+  }
+}

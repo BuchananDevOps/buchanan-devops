@@ -1,0 +1,78 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Search Engine Optimization (SEO) consists of key techniques and data structuring that increase website visibility while enabling search engines to parse a websites data accurately to provide relevant results to customers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does my business need SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, all websites require SEO to be structured properly. Google often changes their best practices which requires additional structuring and integrations to keep things up to date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does SEO work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Search engines weren't built to understand the English language. They were built to particularly mirror how libraries are with the Dewey Decimal Classification System. Essentially SEO is the classification of a webpage to discern the sites categories, content and services. Schema.org offers a collection of data schema's which give developers the ability to translate who, what, when, where and why a particular webpage exists. When these schemas are integrated properly a website gains page authority over competitors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to rank on Google?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many companies will tell you a week or a month, but the truth is it all depends. It takes time for a website to perform organically as Google ranks how relevant the content is. A solid timeframe is between six months to a year to see a return on an SEO investment. Google My Business Listings rank incredibly fast."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the most important SEO Ranking factors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Googles ranking algorithm isn't publicly available but from our experience we've identified these key factors for successful a seo strategy: Integrated Structured Data, User Time on Site, Content Length, Followed Backlinks, and Bounce Rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Social Media help to increase my website's ranking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, that’s a common misconception that posting on social media helps increase your websites rank in the search engines. Social Media content creation will increase your brand awareness and could potentially cause customers to seek out your website from the search engines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Technical SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Technical SEO is single handedly the most effective method for gaining page authority and ranking within the search engines results. It's a combination of how Google Crawls (reads webpage) and indexes your site. Ensuring best practices, structured schema integrations, canonicalization, XML sitemaps, and most importantly the site speed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should my PageSpeed score be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PageSpeed is Google's measure of your site's speed broken down into a few categories. For performance we recommend 90/100 or better. The other three categories are best practices, accessibility, and SEO. We recommend those all be 100/100.Check your site https://pagespeed.web.dev/ with Google PageSpeed Insights by simply entering your website’s URL to see that current state of your websites performance. We follow those guidelines and recommendations when hired for SEO specific projects."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is PageRank?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PageRank is a system built by the founders of Google that gives a page authority as a more reputable source of information. It's a measure of the importance of a web page according to the quantity and quality of the content and links that point to it."
+      }
+    }
+  ]
+}
