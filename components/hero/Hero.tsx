@@ -2,9 +2,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { FC } from "react"
 
-import AcresHero from "@/public/portfolio/hero/7acres-wd-hero.webp"
-import CsaGroupHero from "@/public/portfolio/hero/csagroup-wd-hero.webp"
-import RailWorksHero from "@/public/portfolio/hero/railworks-wd-hero.webp"
 import ProductionDark from "@/public/content/production-dark.svg"
 
 const Hero: FC = () => {
@@ -13,18 +10,17 @@ const Hero: FC = () => {
       <div className="absolute inset-y-0 hidden w-full min-w-[1360px] bg-[url('/public/img/beams-templates-header.png')] bg-[length:2000px_100%] bg-[position:calc(50%_+_220px)_-50px] bg-no-repeat lg:block" />
       <div className="mx-auto max-w-container px-4 pt-4 sm:px-6 lg:flex lg:px-8">
         <div className="relative z-20 mx-auto max-w-[40rem] pb-16 pt-16 lg:mx-0 lg:w-[40rem] lg:max-w-none lg:flex-none lg:pb-24 lg:pr-4 lg:pt-20">
-        <div
-          aria-hidden="true"
-          className="col-start-1 row-start-1 h-7 text-base font-semibold leading-7 text-sky-500"
-        >
-          Buchanan DevOps
-        </div>
+          <div
+            aria-hidden="true"
+            className="col-start-1 row-start-1 h-7 text-base font-semibold leading-7 text-sky-500"
+          >
+            Buchanan DevOps
+          </div>
           <h1 className="col-start-1 row-start-2 mt-4 max-w-[36rem] text-4xl font-extrabold tracking-tight text-black sm:text-7xl xl:max-w-[43.5rem]">
-          Build your next idea even faster.
-        </h1>
-
+            Build your next idea even faster.
+          </h1>
           <p className="mt-6 px-3 text-lg text-black  max-w-3xl mx-auto dark:text-slate-400">
-          We&apos;re the go-to web design company, specializing in{" "}
+            We&apos;re the go-to web design company, specializing in{" "}
             <code className="font-mono font-medium text-sky-500 dark:text-sky-400">
               custom websites
             </code>
@@ -78,12 +74,10 @@ const Hero: FC = () => {
                   src={ProductionDark}
                 />
               </div>
-
             </div>
           </div>
         </div>
       </div>
-     
       <div className="pointer-events-none absolute inset-0 shadow-[inset_0_-1px_1px_rgba(0,0,0,0.06)]" />
     </div>
   )

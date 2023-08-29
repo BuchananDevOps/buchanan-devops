@@ -7,44 +7,6 @@ import clsx from "clsx"
 
 import Logo from "./Logo"
 
-const Featured: FC = () => {
-  return (
-    <a
-      className="ml-3 text-xs leading-5 font-medium text-sky-600 dark:text-sky-400 bg-sky-400/10 rounded-full py-1 px-3 hidden xl:flex items-center hover:bg-sky-400/20"
-      href="https://buchanandevops.com/"
-      rel="noreferrer"
-      target="_blank"
-    >
-      <strong className="font-semibold">Featured Announcement</strong>
-      <svg
-        aria-hidden="true"
-        className="ml-2 text-sky-600 dark:text-sky-400/70"
-        fill="currentColor"
-        height="2"
-        width="2"
-      >
-        <circle cx="1" cy="1" r="1" />
-      </svg>
-      <span className="ml-2">Featured Header message announcement</span>
-      <svg
-        aria-hidden="true"
-        className="ml-3 overflow-visible text-sky-300 dark:text-sky-400"
-        height="6"
-        width="3"
-      >
-        <path
-          d="M0 0L3 3L0 6"
-          fill="none"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-        />
-      </svg>
-    </a>
-  )
-}
-
 type NavProps = {
   className?: string
   display: string
@@ -239,7 +201,6 @@ const Header: FC<HeaderProps> = ({ hasNav }) => {
                 <span className="sr-only">Buchanan DevOps Home Page</span>
                 <Logo className="w-auto h-5" />
               </Link>
-
               <div className="relative hidden lg:flex items-center ml-auto">
                 <nav className="text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200">
                   <ul className="flex space-x-8">
@@ -252,9 +213,13 @@ const Header: FC<HeaderProps> = ({ hasNav }) => {
                     href="https://www.linkedin.com/in/buchanandevops/"
                     target="_blank"
                   >
-                    <span className="sr-only">Buchanan DevOps on GitHub</span>
-                    <svg height="24" viewBox="0 0 16 16" width="24"><path fill="currentColor" d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path></svg>
-
+                    <span className="sr-only">Buchanan DevOps LinkedIn</span>
+                    <svg height="24" viewBox="0 0 16 16" width="24">
+                      <path
+                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                        fill="currentColor"
+                      />
+                    </svg>
                   </Link>
                 </div>
               </div>
@@ -263,12 +228,21 @@ const Header: FC<HeaderProps> = ({ hasNav }) => {
                 type="button"
                 onClick={handleContact}
               >
-                <span className="sr-only">Search</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-</svg>
-
-                
+                <span className="sr-only">Contact</span>
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </button>
               <NavPopover className="ml-2 -my-1" display="lg:hidden" />
             </div>
