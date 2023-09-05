@@ -1,29 +1,32 @@
-import { FC, SetStateAction, useEffect, useState } from "react"
+import { useRouter } from "next/router"
+import { useEffect, useState } from "react"
 
 import useAxios from "axios-hooks"
 
 import FormContainer from "./FormContainer"
 
-const ContactForm: FC = () => {
+const DevopsForm = () => {
   const [firstname, setFirstname] = useState("")
   const [lastname, setLastname] = useState("")
   const [email, setEmail] = useState("")
-  const [phone, setPhone] = useState("")
   const [company, setCompany] = useState("")
-  const [topic, setTopic] = useState("default")
+  const [phone, setPhone] = useState("")
+  const [topic, setTopic] = useState("")
   const [message, setMessage] = useState("")
   const [pageUri, setPageUri] = useState<string>()
 
+  const router = useRouter()
+
   const [{ data, loading, error }, refetch] = useAxios(
     {
-      url: "/api/contact",
+      url: "/api/forms",
       method: "POST",
       data: {
         firstname,
         lastname,
         email,
-        phone,
         company,
+        phone,
         topic,
         message,
         pageUri,
@@ -37,8 +40,9 @@ const ContactForm: FC = () => {
       setFirstname("")
       setLastname("")
       setEmail("")
-      setPhone("")
       setCompany("")
+      setPhone("")
+      setTopic("")
       setMessage("")
     }
   }, [data?.success, loading, error])
@@ -46,12 +50,19 @@ const ContactForm: FC = () => {
   useEffect(() => {
     setPageUri(window.location.href)
   })
+
+  useEffect(() => {
+    if (data?.success === true) {
+      router.push("/thank-you")
+    }
+  }, [data?.success])
+
   return (
     <FormContainer
       description="All fields are required. Someone will reach out shortly."
       heading="Get things started today!"
     >
-      <form action="/api/contact" className="form px-4 sm:px-0">
+      <form className="form px-4 sm:px-0">
         <fieldset className="space-y-2">
           <div className="grid grid-cols-6 gap-2">
             <div className="col-span-6 sm:col-span-3">
@@ -62,15 +73,11 @@ const ContactForm: FC = () => {
                 </span>
                 <input
                   required
-                  aria-label="firstName"
-                  className="mt-1"
-                  inputMode="text"
-                  name="firstName"
+                  className="text-neutral-900  focus:text-neutral-200  mt-1 block w-full  text-sm shadow-sm placeholder-slate-400"
+                  placeholder="First Name"
                   type="text"
                   value={firstname}
-                  onChange={(e: {
-                    target: { value: SetStateAction<string> }
-                  }) => setFirstname(e.target.value)}
+                  onChange={e => setFirstname(e.target.value)}
                 />
               </label>
             </div>
@@ -82,15 +89,11 @@ const ContactForm: FC = () => {
                 </span>
                 <input
                   required
-                  aria-label="lastName"
                   className="text-neutral-900  focus:text-neutral-200  mt-1 block w-full  text-sm shadow-sm placeholder-slate-400"
-                  inputMode="text"
-                  name="lastName"
+                  placeholder="Last Name"
                   type="text"
                   value={lastname}
-                  onChange={(e: {
-                    target: { value: SetStateAction<string> }
-                  }) => setLastname(e.target.value)}
+                  onChange={e => setLastname(e.target.value)}
                 />
               </label>
             </div>
@@ -102,15 +105,11 @@ const ContactForm: FC = () => {
                 </span>
                 <input
                   required
-                  aria-label="email"
                   className="text-neutral-900  focus:text-neutral-200  mt-1 block w-full  text-sm shadow-sm placeholder-slate-400"
-                  inputMode="text"
-                  name="email"
+                  placeholder="Email"
                   type="email"
                   value={email}
-                  onChange={(e: {
-                    target: { value: SetStateAction<string> }
-                  }) => setEmail(e.target.value)}
+                  onChange={e => setEmail(e.target.value)}
                 />
               </label>
             </div>
@@ -122,15 +121,11 @@ const ContactForm: FC = () => {
                 </span>
                 <input
                   required
-                  aria-label="company"
                   className="text-neutral-900  focus:text-neutral-200  mt-1 block w-full  text-sm shadow-sm placeholder-slate-400"
-                  inputMode="text"
-                  name="company"
+                  placeholder="Company"
                   type="text"
                   value={company}
-                  onChange={(e: {
-                    target: { value: SetStateAction<string> }
-                  }) => setCompany(e.target.value)}
+                  onChange={e => setCompany(e.target.value)}
                 />
               </label>
             </div>
@@ -142,15 +137,11 @@ const ContactForm: FC = () => {
                 </span>
                 <input
                   required
-                  aria-label="phone"
-                  className="text-neutral-200 focus:text-neutral-200  mt-1 block w-full   text-sm shadow-sm placeholder-slate-400"
-                  inputMode="text"
-                  name="phone"
+                  className="text-neutral-900  focus:text-neutral-200  mt-1 block w-full  text-sm shadow-sm placeholder-slate-400"
+                  placeholder="Phone"
                   type="text"
                   value={phone}
-                  onChange={(e: {
-                    target: { value: SetStateAction<string> }
-                  }) => setPhone(e.target.value)}
+                  onChange={e => setPhone(e.target.value)}
                 />
               </label>
             </div>
@@ -162,18 +153,15 @@ const ContactForm: FC = () => {
                 </span>
                 <select
                   required
-                  className="mt-1"
-                  inputMode="text"
-                  name="topic"
                   value={topic}
                   onChange={e => setTopic(e.target.value)}
                 >
                   <option value="">Select an option</option>
-                  <option value="seoservices">SEO Services</option>
-                  <option value="webdesign">Web Design</option>
+                  <option value="seo">SEO Services</option>
+                  <option value="web-design">Web Design</option>
                   <option value="pricing">Pricing</option>
                   <option value="maintenance">Maintenance</option>
-                  <option value="technicalsupport">Technical Support</option>
+                  <option value="support">Technical Support</option>
                   <option value="other">Other</option>
                 </select>
               </label>
@@ -187,32 +175,27 @@ const ContactForm: FC = () => {
                 <textarea
                   required
                   className="text-neutral-900  focus:text-neutral-200  mt-1 block w-full  text-sm shadow-sm placeholder-slate-400"
-                  id="text-area"
                   maxLength={1500}
-                  name="message"
                   placeholder="Some details about your request"
                   value={message}
-                  onChange={(e: {
-                    target: { value: SetStateAction<string> }
-                  }) => setMessage(e.target.value)}
+                  onChange={e => setMessage(e.target.value)}
                 />
                 <span className="text-right text-xs text-secondary">
                   0/1500
                 </span>
               </label>
             </div>
+            <button
+              className="bg-slate-900/50 mt-2 hover:bg-slate-700/50 focus:outline-none ring-1  hover:ring-green-400 text-white font-semibold h-10 w-full px-6 rounded-lg flex items-center justify-center"
+              type="submit"
+              onClick={() => refetch()}
+            >
+              Submit
+            </button>
           </div>
-          <button
-            className="bg-slate-900/50 mt-2 hover:bg-slate-700/50 focus:outline-none ring-1  hover:ring-green-400 text-white font-semibold h-10 w-full px-6 rounded-lg flex items-center justify-center"
-            type="submit"
-            onChange={() => refetch()}
-          >
-            Send
-          </button>
         </fieldset>
       </form>
     </FormContainer>
   )
 }
-
-export default ContactForm
+export default DevopsForm

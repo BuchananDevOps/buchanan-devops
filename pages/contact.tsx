@@ -2,7 +2,7 @@ import dynamic from "next/dynamic"
 import Link from "next/link"
 import { FC } from "react"
 
-const ContactForm = dynamic(() => import("@/components/form/ContactForm"))
+const DevOpsForm = dynamic(() => import("@/components/form/DevOpsForm"))
 const Contact: FC = () => {
   return (
     <main className="pb-8 lg:pb-12">
@@ -24,11 +24,11 @@ const Contact: FC = () => {
                 </p>
                 <p>
                   Submit the form with your question or call{" "}
-                  <Link href="tel:+13024648832">+1 302 464 8832</Link> and
+                  <Link href="tel:+13024648818">+1 302 464 8818</Link> and
                   we&apos;ll get back to you shortly. If you&apos;re an existing
                   client and have a technical support question, please{" "}
                   <Link
-                    href="mailto:buchanancomp@gmail.com?subject=Project Support Request"
+                    href="mailto:buchanandevops@gmail.com?subject=Project Support Request"
                     title="Email Address us for Support"
                   >
                     reach out through email.
@@ -57,7 +57,7 @@ const Contact: FC = () => {
                 <p />
               </div>
             </div>
-            <ContactForm />
+            <DevOpsForm />
           </section>
         </div>
       </div>

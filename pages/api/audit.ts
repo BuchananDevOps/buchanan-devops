@@ -3,8 +3,8 @@ import type { NextApiRequest, NextApiResponse } from "next"
 import axios from "axios"
 
 const HUBSPOT_API_KEY = process.env.NEXT_PUBLIC_HUBSPOT_TOKEN
-const HUBSPOT_PORTAL_ID = "39910446"
-const HUBSPOT_FORM_GUID = "9b37a985-c808-453f-920d-a7f47159cb43"
+const HUBSPOT_PORTAL_ID = "43763570"
+const HUBSPOT_FORM_GUID = "4958be3f-fa37-4e1b-96f6-b081a866b10e"
 
 type Response = {
   success: boolean
@@ -23,7 +23,7 @@ export default async (req: NextApiRequest, res: NextApiResponse<Response>) => {
   }
 
   try {
-    await axios({
+    const response = await axios({
       method: "POST",
       url: `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_GUID}`,
       data: {

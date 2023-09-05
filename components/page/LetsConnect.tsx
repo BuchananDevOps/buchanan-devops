@@ -1,6 +1,7 @@
+import dynamic from "next/dynamic"
 import { FC } from "react"
 
-import ContactForm from "../form/ContactForm"
+const DevOpsForm = dynamic(() => import("@/components/form/DevOpsForm"))
 
 const LetsConnect: FC = () => {
   return (
@@ -42,7 +43,7 @@ const LetsConnect: FC = () => {
               <p />
             </div>
           </div>
-          <ContactForm />
+          <DevOpsForm />
         </section>
       </div>
     </div>

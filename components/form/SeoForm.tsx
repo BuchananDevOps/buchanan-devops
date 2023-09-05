@@ -1,4 +1,5 @@
-import { FC, SetStateAction, useEffect, useState } from "react"
+import { useRouter } from "next/router"
+import { FC, useEffect, useState } from "react"
 
 import useAxios from "axios-hooks"
 
@@ -6,6 +7,8 @@ const SeoForm: FC = () => {
   const [domain, setDomain] = useState("")
   const [email, setEmail] = useState("")
   const [pageUri, setPageUri] = useState<string>()
+
+  const router = useRouter()
 
   const [{ data, loading, error }, refetch] = useAxios(
     {
@@ -27,6 +30,12 @@ const SeoForm: FC = () => {
     setPageUri(window.location.href)
   })
 
+  useEffect(() => {
+    if (data?.success === true) {
+      router.push("/thank-you")
+    }
+  }, [data?.success])
+
   return (
     <form className="form">
       <fieldset className="space-y-2">
@@ -36,14 +45,10 @@ const SeoForm: FC = () => {
               <input
                 required
                 className="text-neutral-900 ring-1 focus:text-neutral-200 valid:text-green-400"
-                id="contact-form__domain"
-                name="domain"
                 placeholder="https://yourwebsite.com"
                 type="text"
                 value={domain}
-                onChange={(e: { target: { value: SetStateAction<string> } }) =>
-                  setDomain(e.target.value)
-                }
+                onChange={e => setDomain(e.target.value)}
               />
             </label>
           </div>
@@ -52,23 +57,13 @@ const SeoForm: FC = () => {
               <input
                 required
                 className="text-neutral-900 ring-1 focus:text-neutral-200 valid:text-green-400"
-                id="contact-form__email"
-                name="email"
                 placeholder="example@company.com"
                 type="email"
                 value={email}
-                onChange={(e: { target: { value: SetStateAction<string> } }) =>
-                  setEmail(e.target.value)
-                }
+                onChange={e => setEmail(e.target.value)}
               />
             </label>
           </div>
-          <input name="action" type="hidden" value="contact_us" />
-          <input
-            name="page"
-            type="hidden"
-            value='{"title":"SEO Audit — Buchanan DevOps"}'
-          />
           <div className="col-span-12 sm:col-span-2">
             <button
               className="bg-slate-900/50 mt-2 hover:bg-slate-700/50 focus:outline-none ring-1  hover:ring-green-400 text-white font-semibold h-10 w-full px-6 rounded-lg flex items-center justify-center"
