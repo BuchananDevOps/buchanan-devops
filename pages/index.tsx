@@ -1,3 +1,4 @@
+import BestPractices from "@/components/cta/BestPractices"
 import { NextPage } from "next"
 import dynamic from "next/dynamic"
 import Head from "next/head"
@@ -28,6 +29,7 @@ const Home: NextPage = () => {
       </Head>
       <Hero />
       <PartnerCTA heading="Trusted by the best." page="home" />
+      <BestPractices />
     </>
   )
 }
