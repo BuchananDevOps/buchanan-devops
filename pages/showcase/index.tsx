@@ -95,8 +95,8 @@ const Showcase: FC<ShowcaseProps> = () => {
           Checkout some of our favorite websites we&apos;ve built.
         </p>
         <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
-          Your company deserves a <em>professional website</em>. Starting
-          at <em>$3,000 - $4,000</em> we&apos;d be happy to get things moving
+          Your company deserves a <em>professional website</em>. Starting at{" "}
+          <em>$3,000 - $4,000</em> we&apos;d be happy to get things moving
           forward...
         </p>
       </div>

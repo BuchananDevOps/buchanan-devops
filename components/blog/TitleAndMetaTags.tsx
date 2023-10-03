@@ -1,40 +1,37 @@
-import React from 'react';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
+import Head from "next/head"
+import { useRouter } from "next/router"
+import React from "react"
 
 type TitleAndMetaTagsProps = {
-  title?: string;
-  description?: string;
-  image?: string;
-  url?: string;
-  pathname?: string;
-};
+  title?: string
+  description?: string
+  image?: string
+  url?: string
+  pathname?: string
+}
 
-export function TitleAndMetaTags({
-  title = 'Buchanan DevOps',
-  description = 'Everything you need to develop a design, website or web app.',
+export const TitleAndMetaTags = ({
+  title = "Buchanan DevOps",
+  description = "Everything you need to develop a design, website or web app.",
   image,
-  url = 'https://buchanandevops.com',
+  url = "https://buchanandevops.com",
   pathname,
-}: TitleAndMetaTagsProps) {
-  const router = useRouter();
+}: TitleAndMetaTagsProps) => {
+  const router = useRouter()
 
-  const imageUrl = `${url}/social/${image || 'default.png'}`;
-  const path = pathname || router.pathname;
+  const imageUrl = `${url}/social/${image || "default.png"}`
+  const path = pathname || router.pathname
 
   return (
     <Head>
       <title>{title}</title>
-
-      <meta name="description" content={description} />
-
-      <meta property="og:url" content={`${url}${path}`} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={imageUrl} />
-
-      <meta name="twitter:site" content="@buchanandevops" />
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta content={description} name="description" />
+      <meta content={`${url}${path}`} property="og:url" />
+      <meta content={title} property="og:title" />
+      <meta content={description} property="og:description" />
+      <meta content={imageUrl} property="og:image" />
+      <meta content="@buchanandevops" name="twitter:site" />
+      <meta content="summary_large_image" name="twitter:card" />
     </Head>
-  );
+  )
 }

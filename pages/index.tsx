@@ -1,7 +1,8 @@
-import BestPractices from "@/components/cta/BestPractices"
 import { NextPage } from "next"
 import dynamic from "next/dynamic"
 import Head from "next/head"
+
+import BestPractices from "@/components/cta/BestPractices"
 
 const Hero = dynamic(() => import("@/components/hero/Hero"))
 const PartnerCTA = dynamic(() => import("@/components/cta/PartnerCTA"))
