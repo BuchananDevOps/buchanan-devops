@@ -30,7 +30,6 @@ const Home: NextPage = () => {
       </Head>
       <Hero />
       <PartnerCTA heading="Trusted by the best." page="home" />
-      <BestPractices />
     </>
   )
 }
