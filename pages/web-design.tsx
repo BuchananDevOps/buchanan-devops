@@ -115,13 +115,13 @@ const WebDesign: NextPage = () => {
         </div>
       </SectionComp>
       <PortfolioCta />
-      <LetsConnect />
       <Faq
         heading={"Frequently asked Web Design questions"}
         id={"web-faq"}
         subHeading={"Everything you need to know"}
         type="web"
       />
+      <LetsConnect />
     </>
   )
 }

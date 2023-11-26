@@ -15,6 +15,7 @@ type Props = {
 }
 
 const LetsConnect = dynamic(() => import("@/components/page/LetsConnect"))
+const CaseStudies = dynamic(() => import("@/components/section/case-studies"))
 
 const ShowcaseItem: FC<Props> = ({
   name,
@@ -113,6 +114,7 @@ const Showcase: FC<ShowcaseProps> = () => {
           />
         ))}
       </ul>
+      <CaseStudies />
       <LetsConnect />
     </main>
   )

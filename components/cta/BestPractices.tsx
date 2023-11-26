@@ -5,22 +5,21 @@ import Section from "../page/Section"
 
 const BestPractices: FC = () => {
   return (
-    <Section id="best-practices">
+    <Section id="best-practices" isBordered={false}>
       <h2 className="text-slate-900 text-center text-4xl tracking-tight font-extrabold sm:text-5xl dark:text-white">
-        “Best practices” don’t actually work.
+        “Best websites” don&apos;t actually work.
       </h2>
       <figure>
         <blockquote>
           <p className="mt-6 max-w-3xl mx-auto text-lg text-center">
-            I’ve written{" "}
+            True project success goes beyond the end result; it&apos;s about the
+            collaborative journey marked by innovation and resilience, turning
+            challenges into triumphs. While many claim to offer the{" "}
             <span className="text-sky-500 font-semibold dark:text-sky-400">
-              a few thousand words
+              &apos;best web design or SEO,&apos;
             </span>{" "}
-            on why traditional &lsquo;web design&rsquo; and &lsquo;search engine
-            optimization&rsquo; strategy is antiquated and hard to maintain, but
-            the truth is you&apos;re never going to believe me until you
-            actually see the increased website traffic and revenue from building
-            a custom website vs. wordpress, wix or templating providers.
+            we understand it&apos;s more than just a popular keyword—it&apos;s
+            about genuine expertise and meaningful results.
           </p>
         </blockquote>
         <figcaption className="mt-6 flex items-center justify-center space-x-4 text-left">

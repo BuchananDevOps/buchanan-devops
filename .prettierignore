@@ -1,3 +1,4 @@
 # Ignore artifacts:
 .husky
 .next
+case-study.tsx

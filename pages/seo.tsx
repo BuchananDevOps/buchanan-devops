@@ -113,6 +113,12 @@ const SeoPage: NextPage = () => {
         </div>
       </SectionFlow>
       <OffPage />
+      <Faq
+        heading={"Frequently asked SEO questions"}
+        id={"seo-faq"}
+        subHeading={"Everything you need to know."}
+        type="seo"
+      />
       <SectionCenter
         description={
           "Discover inisghts, trends, ranking, popular keywords, opportunities, and your site's overall SEO performance."
@@ -133,12 +139,6 @@ const SeoPage: NextPage = () => {
           </div>
         </div>
       </SectionCenter>
-      <Faq
-        heading={"Frequently asked SEO questions"}
-        id={"seo-faq"}
-        subHeading={"Everything you need to know."}
-        type="seo"
-      />
     </>
   )
 }

@@ -20,4 +20,5 @@ collapse-context.ts
 collapse.tsx
 input.tsx
 features.ts
-
+case-study.tsx
+ImageGallery.tsx

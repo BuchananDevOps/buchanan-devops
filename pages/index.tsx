@@ -2,10 +2,12 @@ import { NextPage } from "next"
 import dynamic from "next/dynamic"
 import Head from "next/head"
 
-import BestPractices from "@/components/cta/BestPractices"
-
 const Hero = dynamic(() => import("@/components/hero/Hero"))
 const PartnerCTA = dynamic(() => import("@/components/cta/PartnerCTA"))
+const BestPractices = dynamic(() => import("@/components/cta/BestPractices"))
+const LetsConnect = dynamic(() => import("@/components/page/LetsConnect"))
+const CaseStudies = dynamic(() => import("@/components/section/case-studies"))
+const Testimonials = dynamic(() => import("@/components/section/testimonials"))
 
 const Home: NextPage = () => {
   return (
@@ -30,6 +32,10 @@ const Home: NextPage = () => {
       </Head>
       <Hero />
       <PartnerCTA heading="Trusted by the best." page="home" />
+      <BestPractices />
+      <Testimonials />
+      <CaseStudies />
+      <LetsConnect />
     </>
   )
 }

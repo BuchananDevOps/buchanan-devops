@@ -12,6 +12,7 @@ type Props = {
     route: string
   }
   isDark?: boolean
+  className?: string
 }
 
 const Heading: FC<Props> = ({
@@ -19,10 +20,11 @@ const Heading: FC<Props> = ({
   subHeading,
   description,
   button,
+  className,
   isDark = false,
 }) => {
   return (
-    <div className="">
+    <div className={className}>
       <h2
         className={clsx("text-base font-semibold leading-7", {
           "text-sky-500": isDark === false,
