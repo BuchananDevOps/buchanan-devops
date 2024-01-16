@@ -108,6 +108,7 @@ export const NavItems: FC = () => {
         <Link
           className="hover:text-sky-500 dark:hover:text-sky-400"
           href="/seo"
+          title="Search Engine Optimization"
         >
           Seo
         </Link>
@@ -116,6 +117,7 @@ export const NavItems: FC = () => {
         <Link
           className="hover:text-sky-500 dark:hover:text-sky-400"
           href="/web-design"
+          title="Web Design"
         >
           Web Design
         </Link>
@@ -123,7 +125,17 @@ export const NavItems: FC = () => {
       <li>
         <Link
           className="hover:text-sky-500 dark:hover:text-sky-400"
+          href="/articles"
+          title="Articles"
+        >
+          Articles
+        </Link>
+      </li>
+      <li>
+        <Link
+          className="hover:text-sky-500 dark:hover:text-sky-400"
           href="/showcase"
+          title="Portfolio Showcase"
         >
           Showcase
         </Link>
@@ -132,6 +144,7 @@ export const NavItems: FC = () => {
         <Link
           className="hover:text-sky-500 dark:hover:text-sky-400"
           href="/contact"
+          title="Contact Buchanan DevOps"
         >
           Contact
         </Link>
