@@ -19,7 +19,7 @@
   "name": "Web Design",
   "brand": "Buchanan DevOps",
   "description": "The best web design is crafted with experience. Visually-stunning, high performance websites, built with React, Next.js and TailwindCSS.",
-  "image": "https://buchanandevops.com/twitter-card.png",
+  "image": "https://buchanandevops.com/web-design-twitter-card.png",
   "areaServed": {
     "@type": "GeoCircle",
     "geoMidpoint": {
