@@ -15,6 +15,7 @@ const CategoryBadge: FC<Props> = ({ category }) => {
         "bg-teal-800": category === "Development",
       })}
       id="category-badge"
+      itemProp="articleSection"
     >
       {category}
     </div>

@@ -41,6 +41,7 @@ const ArticleFooter: FC<Props> = ({
             <span
               key={item}
               className="p-1 text-white text-sm bg-sky-600 rounded-sm mr-1"
+              itemProp="keywords"
             >
               {item}
             </span>
@@ -60,6 +61,7 @@ const ArticleFooter: FC<Props> = ({
               href={item.link}
               target="_blank"
               title={item.title}
+              itemProp="mention"
             >
               {item.title}
             </Link>
@@ -77,9 +79,10 @@ const ArticleFooter: FC<Props> = ({
               key={item.containerTitle}
               className="flex flex-wrap text-xs border-b my-2"
               id="citation"
+              itemProp="citation"
             >
               {item.lastName && item.firstName && (
-                <span className="" id="name">
+                <span className="" id="name" >
                   {item.lastName}, {item.firstName}.
                 </span>
               )}

@@ -16,7 +16,7 @@ const Article: FC = () => {
   }
 
   return (
-    <article className="max-w-3xl mx-auto px-6" id="article">
+    <article itemScope itemProp="https://schema.org/Article" className="max-w-3xl mx-auto px-6" id="article" >
       <Heading
         category={currentArticle.category}
         datePublished={currentArticle.datePublished}

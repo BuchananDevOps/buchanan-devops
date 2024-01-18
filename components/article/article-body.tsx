@@ -21,6 +21,7 @@ const ArticleBody: FC<Props> = ({ articleBody, backstory }) => {
             <h2
               className=" text-3xl font-extrabold tracking-tight text-slate-900 mt-4"
               id="article_backstory_section_title"
+              itemProp="backstory"
             >
               Backstory
             </h2>
@@ -30,7 +31,7 @@ const ArticleBody: FC<Props> = ({ articleBody, backstory }) => {
           </>
         )}
       </div>
-      <div className="" id="article_body">
+      <div className="" id="article_body" itemProp="articleBody">
         {articleBody.map(paragraph => (
           <>
             {paragraph.image && (
@@ -41,6 +42,7 @@ const ArticleBody: FC<Props> = ({ articleBody, backstory }) => {
                 id="article_body_image"
                 src={paragraph.image}
                 width={600}
+                itemProp="image"
               />
             )}
             {paragraph.articleSection && (
