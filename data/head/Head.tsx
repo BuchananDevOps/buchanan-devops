@@ -22,6 +22,8 @@ function getSchema() {
       return { seo_service, seoFaq }
     case "/web-design":
       return { web_service, webFaq }
+    case "/article": 
+      return {}
     case "/showcase":
       return { creative_work }
     case "/contact":
