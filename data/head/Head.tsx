@@ -3,7 +3,6 @@ import type { FC } from "react"
 
 import contact_page from "@/data/contact_page.json"
 import creative_work from "@/data/creative_work.json"
-import data_schema from "@/data/data_schema.json"
 import local_business from "@/data/local_business.json"
 import seo_service from "@/data/seo_service.json"
 import web_service from "@/data/web_service.json"
@@ -29,7 +28,7 @@ function getSchema() {
     case "/contact":
       return { contact_page }
     default:
-      return { data_schema }
+      return {}
   }
 }
 

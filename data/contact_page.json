@@ -2,22 +2,8 @@
   "@context": "https://schema.org",
   "@type": "ContactPage",
   "name": "Contact",
-  "description": "We're the go-to web development company, specializing in website design and development with a strong emphasis on search engine optimization.",
-  "keywords": "web, app, seo, search, engine, optimization, buchanan, computer, design, designed, designer, company, development, develop, website, site, professional, experienced, best, create, business, goals",
+  "description": "Discover how you can add power to your business with a modern website, structured data integration, built-in high performing seo, analyze real-time data, and more.",
+  "keywords": "contact, buchanan devops, web design, seo, search engine optimization, web development, estimate, proposal",
   "image": "https://buchanandevops.com/twitter-card.png",
-  "url": "https://buchanandevops.com/contact",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+1-302-464-8818",
-    "contactType": "customer support",
-    "email": "buchanandevops@gmail.com"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "8 Osprey Lane",
-    "addressLocality": "Middletown",
-    "addressRegion": "Delaware",
-    "postalCode": "19709",
-    "addressCountry": "New Castle County"
-  }
+  "url": "https://buchanandevops.com/contact"
 }
