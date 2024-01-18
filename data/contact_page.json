@@ -2,35 +2,22 @@
   "@context": "https://schema.org",
   "@type": "ContactPage",
   "name": "Contact",
-  "brand": "Buchanan Compouter",
-  "employee": "John Buchanan",
-  "foundingDate": "2011-08-05",
   "description": "We're the go-to web development company, specializing in website design and development with a strong emphasis on search engine optimization.",
-  "keywords": "web, app, seo, search, engine, optimization, buchanan, computer, design, designed, designer, company, development, develop, website, site, professional, experienced, best, create, business, goals  ",
-  "openingHours": "Mo, Tu, We, Th, Fr, Sa, Su",
-  "telephone": "+13024648818",
-  "email": "buchanancomp@gmail.com",
-  "naics": ["541511", "541430"],
+  "keywords": "web, app, seo, search, engine, optimization, buchanan, computer, design, designed, designer, company, development, develop, website, site, professional, experienced, best, create, business, goals",
   "image": "https://buchanandevops.com/twitter-card.png",
-  "currenciesAccepted": "USD",
-  "paymentAccepted": "Cash, Credit Card, Cryptocurrency",
-  "priceRange": "$$$$$",
+  "url": "https://buchanandevops.com/contact",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-302-464-8818",
+    "contactType": "customer support",
+    "email": "buchanandevops@gmail.com"
+  },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "8 Osprey Lane",
     "addressLocality": "Middletown",
-    "addressRegion": "DE",
+    "addressRegion": "Delaware",
     "postalCode": "19709",
-    "addressCountry": "US"
-  },
-  "areaServed": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": 39.44238,
-      "longitude": -75.64644
-    },
-
-    "geoRadius": "5000 mi"
+    "addressCountry": "New Castle County"
   }
 }
