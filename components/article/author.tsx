@@ -21,7 +21,9 @@ const ArticleAuthor: FC<Props> = ({ image, name, handle }) => {
         />
       </div>
       <div className="flex flex-col ml-4" id="article_author_name">
-        <p itemProp="author" className=" font-semibold mb-0">{name}</p>
+        <p className=" font-semibold mb-0" itemProp="author">
+          {name}
+        </p>
         <Link
           className=""
           href={`https://twitter.com/${handle}`}

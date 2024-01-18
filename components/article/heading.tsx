@@ -38,11 +38,11 @@ const Heading: FC<Props> = ({
         />
         <div className="flex flex-wrap md:flex-row" id="">
           <div className="flex flex-row mx-2 my-2" id="article_heading_date">
-            <CalendarDaysIcon className="h-6 w-6 mr-1" /> 
+            <CalendarDaysIcon className="h-6 w-6 mr-1" />
             <span itemProp="datePublished">{datePublished}</span>
           </div>
           <div className="flex flex-row mx-2 my-2" id="article_heading_time">
-            <ClockIcon className="h-6 w-6 mr-1" /> 
+            <ClockIcon className="h-6 w-6 mr-1" />
             <span itemProp="">{timeRequired}</span>
           </div>
           <div

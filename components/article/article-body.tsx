@@ -40,9 +40,9 @@ const ArticleBody: FC<Props> = ({ articleBody, backstory }) => {
                 className=""
                 height={400}
                 id="article_body_image"
+                itemProp="image"
                 src={paragraph.image}
                 width={600}
-                itemProp="image"
               />
             )}
             {paragraph.articleSection && (

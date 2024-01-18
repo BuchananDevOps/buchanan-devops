@@ -59,9 +59,9 @@ const ArticleFooter: FC<Props> = ({
               key={item.title}
               className="pr-1 mr-1 text-blue-600 border-r"
               href={item.link}
+              itemProp="mention"
               target="_blank"
               title={item.title}
-              itemProp="mention"
             >
               {item.title}
             </Link>
@@ -82,7 +82,7 @@ const ArticleFooter: FC<Props> = ({
               itemProp="citation"
             >
               {item.lastName && item.firstName && (
-                <span className="" id="name" >
+                <span className="" id="name">
                   {item.lastName}, {item.firstName}.
                 </span>
               )}
