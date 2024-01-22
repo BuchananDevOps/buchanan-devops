@@ -47,11 +47,6 @@ function getSchema() {
               url: "https://buchanandevops.com/logo-black.svg",
             },
           },
-          url: `http://www.buchanandevops.com/articles/${slug}`,
-          mainEntityOfPage: {
-            "@type": "WebPage",
-            "@id": `https://buchanandevops.com/articles/${slug}`,
-          },
           datePublished: currentArticle.datePublished, // Set dynamically
           description: currentArticle.description,
           articleBody: currentArticle.articleBody,
