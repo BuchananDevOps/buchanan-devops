@@ -118,7 +118,7 @@ export const articles = [
         link: "https://search.worldcat.org/title/1277046918",
       },
     ],
-    category: "Web Design",
+    genre: "Web Design",
     datePublished: "January 9, 2024",
     description:
       "Explore the evolution of design systems deployed in production environments, from Bootstrap to JavaScript and Tailwind CSS. Uncover the rich history shaping modern web development.",

@@ -23,8 +23,8 @@ const Article: FC = () => {
       itemProp="https://schema.org/Article"
     >
       <Heading
-        category={currentArticle.category}
         datePublished={currentArticle.datePublished}
+        genre={currentArticle.genre}
         headline={currentArticle.headline}
         timeRequired={currentArticle.timeRequired}
       />

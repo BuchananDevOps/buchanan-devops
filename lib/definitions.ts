@@ -36,7 +36,7 @@ export type Article = {
     location?: string
     link: string
   }[]
-  category: "Web Design" | "Seo" | "Development"
+  genre: "Web Design" | "Seo" | "Development"
   datePublished: string
   description: string
   headline: string

@@ -8,13 +8,16 @@ import seo_service from "@/data/seo_service.json"
 import web_service from "@/data/web_service.json"
 import { gtagUrl, renderSnippet } from "@/lib/analytics"
 
+import { articles } from "../articles"
 import seoFaq from "../seoFaq.json"
 import webFaq from "../webFaq.json"
 import SEO from "./Seo"
 
 function getSchema() {
+  const router = useRouter()
   const pathname = useRouter().pathname
-  const query = useRouter()
+  const { slug } = router.query
+  const currentArticle = articles.find(article => article.slug === slug)
 
   switch (pathname) {
     case "/":
@@ -24,17 +27,17 @@ function getSchema() {
 
     case "/web-design":
       return { web_service, webFaq }
-    case "/article":
+    case `/articles/${currentArticle?.slug}`:
       return {
         "@context": "https://schema.org/Article",
         "@type": "Article",
-        headline: "",
-        alternativeHeadline: "",
-        image: "http://example.com/image.jpg",
+        headline: `${currentArticle?.headline}`,
+        alternativeHeadline: `${currentArticle?.alternateHeading}`,
+        image: `${currentArticle?.image}`,
         author: "John Buchanan",
-        genre: "search engine optimization",
-        keywords: "",
-        wordcount: "",
+        genre: `${currentArticle?.genre}`,
+        keywords: `${currentArticle?.keywords}`,
+        wordcount: `${currentArticle?.wordCount}`,
         publisher: {
           "@type": "Organization",
           name: "Buchanan DevOps",

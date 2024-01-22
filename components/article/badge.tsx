@@ -3,23 +3,23 @@ import { FC } from "react"
 import clsx from "clsx"
 
 type Props = {
-  category: "Web Design" | "Seo" | "Development" | string
+  genre: "Web Design" | "Seo" | "Development" | string
 }
 
-const CategoryBadge: FC<Props> = ({ category }) => {
+const GenreBadge: FC<Props> = ({ genre }) => {
   return (
     <div
       className={clsx("px-2 text-white rounded text-sm flex items-center", {
-        "bg-blue-600": category === "Web Design",
-        "bg-green-800": category === "Seo",
-        "bg-teal-800": category === "Development",
+        "bg-blue-600": genre === "Web Design",
+        "bg-green-800": genre === "Seo",
+        "bg-teal-800": genre === "Development",
       })}
-      id="category-badge"
+      id="genre-badge"
       itemProp="articleSection"
     >
-      {category}
+      {genre}
     </div>
   )
 }
 
-export default CategoryBadge
+export default GenreBadge

@@ -1,14 +1,14 @@
 import Link from "next/link"
 import { FC } from "react"
 
-import CategoryBadge from "@/components/article/badge"
+import GenreBadge from "@/components/article/badge"
 import { articles } from "@/data/articles"
 
 type Props = {
   title: string
   description: string
   datePublished: string
-  category: any
+  genre: any
   slug: string
   author: {
     name: string
@@ -19,7 +19,7 @@ const ArticleItem: FC<Props> = ({
   title,
   description,
   datePublished,
-  category,
+  genre,
   slug,
   author,
 }) => {
@@ -34,7 +34,7 @@ const ArticleItem: FC<Props> = ({
         <div className="">{datePublished} &nbsp;</div>
         <div className="">by {author.name} &nbsp;</div>
         <div className="">
-          <CategoryBadge category={category} />
+          <GenreBadge genre={genre} />
         </div>
       </div>
       <div className="">
@@ -54,9 +54,9 @@ const Articles: FC = () => {
             author={{
               name: "John Buchanan",
             }}
-            category={article.category}
             datePublished={article.datePublished}
             description={article.description}
+            genre={article.genre}
             slug={article.slug}
             title={article.headline}
           />
