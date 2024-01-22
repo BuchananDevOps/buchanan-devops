@@ -18,7 +18,7 @@ type Props = {
     location?: string
     link: string
   }[]
-  keywords?: string[]
+  keywords?: string
   className?: string
 }
 
@@ -36,16 +36,13 @@ const ArticleFooter: FC<Props> = ({
             Tags:
           </h6>
         )}
-        {keywords &&
-          keywords.map(item => (
             <span
-              key={item}
+              key={keywords}
               className="p-1 text-white text-sm bg-sky-600 rounded-sm mr-1"
               itemProp="keywords"
             >
-              {item}
+              {keywords}
             </span>
-          ))}
       </div>
       <div id="article_footer_mentions">
         {mentions && (
