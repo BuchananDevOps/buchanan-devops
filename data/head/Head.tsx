@@ -27,7 +27,7 @@ function getSchema() {
 
     case "/web-design":
       return { web_service, webFaq }
-    case `/articles/${currentArticle?.slug}`:
+    case `/articles/`:
       return {
         "@context": "https://schema.org/Article",
         "@type": "Article",
