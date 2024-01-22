@@ -14,15 +14,45 @@ import SEO from "./Seo"
 
 function getSchema() {
   const pathname = useRouter().pathname
+  const query = useRouter()
+
   switch (pathname) {
     case "/":
       return { local_business }
     case "/seo":
       return { seo_service, seoFaq }
+
     case "/web-design":
       return { web_service, webFaq }
     case "/article":
-      return {}
+      return {
+        "@context": "https://schema.org/Article",
+        "@type": "Article",
+        headline: "",
+        alternativeHeadline: "",
+        image: "http://example.com/image.jpg",
+        author: "John Buchanan",
+        genre: "search engine optimization",
+        keywords: "",
+        wordcount: "",
+        publisher: {
+          "@type": "Organization",
+          name: "Buchanan DevOps",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://buchanandevops.com/logo-black.svg",
+          },
+        },
+        url: "http://www.buchanandevops.com",
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": "https://buchanandevops.com/article",
+        },
+        datePublished: "2015-09-20",
+        description: "We love to do stuff to help people and stuff",
+        articleBody:
+          "You can paste your entire post in here, and yes it can get really really long.",
+      }
     case "/showcase":
       return { creative_work }
     case "/contact":

@@ -156,7 +156,8 @@ export const articles = [
     url: "https://buchanandevops.com/articles/sample",
     title: "Article Title for Sample Article",
     thumbnail: "/articles/design-systems/article-image.webp",
-    thumbnailUrl: "https://buchanandevops.com/articles/design-systems/article-image.webp",
+    thumbnailUrl:
+      "https://buchanandevops.com/articles/design-systems/article-image.webp",
     image: "public/articles/design-systems/article-image.webp",
     timeRequired: "25 mins",
     wordCount: "900",
