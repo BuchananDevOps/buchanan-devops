@@ -27,35 +27,37 @@ function getSchema() {
 
     case "/web-design":
       return { web_service, webFaq }
-    case `/articles/`:
-      return {
-        "@context": "https://schema.org/Article",
-        "@type": "Article",
-        headline: `${currentArticle?.headline}`,
-        alternativeHeadline: `${currentArticle?.alternateHeading}`,
-        image: `${currentArticle?.image}`,
-        author: "John Buchanan",
-        genre: `${currentArticle?.genre}`,
-        keywords: `${currentArticle?.keywords}`,
-        wordcount: `${currentArticle?.wordCount}`,
-        publisher: {
-          "@type": "Organization",
-          name: "Buchanan DevOps",
-          logo: {
-            "@type": "ImageObject",
-            url: "https://buchanandevops.com/logo-black.svg",
+      case "/articles/[slug]":
+      if (currentArticle) {
+        return {
+          "@context": "https://schema.org/Article",
+          "@type": "Article",
+          headline: currentArticle.headline,
+          alternativeHeadline: currentArticle.alternateHeading,
+          image: currentArticle.image,
+          author: "John Buchanan",
+          genre: currentArticle.genre,
+          keywords: currentArticle.keywords,
+          wordcount: currentArticle.wordCount,
+          publisher: {
+            "@type": "Organization",
+            name: "Buchanan DevOps",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://buchanandevops.com/logo-black.svg",
+            },
           },
-        },
-        url: "http://www.buchanandevops.com",
-        mainEntityOfPage: {
-          "@type": "WebPage",
-          "@id": "https://buchanandevops.com/article",
-        },
-        datePublished: "2015-09-20",
-        description: "We love to do stuff to help people and stuff",
-        articleBody:
-          "You can paste your entire post in here, and yes it can get really really long.",
+          url: `http://www.buchanandevops.com/articles/${slug}`,
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `https://buchanandevops.com/articles/${slug}`,
+          },
+          datePublished: currentArticle.datePublished, // Set dynamically
+          description: currentArticle.description,
+          articleBody: currentArticle.articleBody,
+        };
       }
+      return {};
     case "/showcase":
       return { creative_work }
     case "/contact":
