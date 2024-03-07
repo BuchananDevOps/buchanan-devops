@@ -125,15 +125,6 @@ export const NavItems: FC = () => {
       <li>
         <Link
           className="hover:text-sky-500 dark:hover:text-sky-400"
-          href="/articles"
-          title="Articles"
-        >
-          Articles
-        </Link>
-      </li>
-      <li>
-        <Link
-          className="hover:text-sky-500 dark:hover:text-sky-400"
           href="/showcase"
           title="Portfolio Showcase"
         >

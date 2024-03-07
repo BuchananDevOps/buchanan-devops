@@ -36,13 +36,13 @@ const ArticleFooter: FC<Props> = ({
             Tags:
           </h6>
         )}
-            <span
-              key={keywords}
-              className="p-1 text-white text-sm bg-sky-600 rounded-sm mr-1"
-              itemProp="keywords"
-            >
-              {keywords}
-            </span>
+        <span
+          key={keywords}
+          className="p-1 text-white text-sm bg-sky-600 rounded-sm mr-1"
+          itemProp="keywords"
+        >
+          {keywords}
+        </span>
       </div>
       <div id="article_footer_mentions">
         {mentions && (

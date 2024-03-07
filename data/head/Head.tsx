@@ -27,7 +27,7 @@ function getSchema() {
 
     case "/web-design":
       return { web_service, webFaq }
-      case "/articles/[slug]":
+    case "/articles/[slug]":
       if (currentArticle) {
         return {
           "@context": "https://schema.org/Article",
@@ -50,9 +50,9 @@ function getSchema() {
           datePublished: currentArticle.datePublished, // Set dynamically
           description: currentArticle.description,
           articleBody: currentArticle.articleBody,
-        };
+        }
       }
-      return {};
+      return {}
     case "/showcase":
       return { creative_work }
     case "/contact":
