@@ -12,7 +12,7 @@ const BestPractices: FC = () => {
       <figure>
         <blockquote>
           <p className="mt-6 max-w-3xl mx-auto text-lg text-center">
-            True project success goes beyond the end result; it&apos;s about the
+            True project success goes beyond the end result; it&apos;s about
             generating revenue by engaging customers, turning clicks into
             conversions.
           </p>
